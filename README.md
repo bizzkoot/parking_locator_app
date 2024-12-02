@@ -1,5 +1,7 @@
 # Parking Locator App
-![parking icon](https://github.com/user-attachments/assets/c24c8cb4-323c-457c-9bb3-6533a50ede57)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c24c8cb4-323c-457c-9bb3-6533a50ede57" alt="Parking Locator Icon">
+</p>
 
 
 A smart Android application that helps users remember where they parked their car by capturing the location with a photo and floor level information, with integrated one-tap Google Maps walking navigation to guide you back to your vehicle.
@@ -34,7 +36,7 @@ A smart Android application that helps users remember where they parked their ca
 
 ## Installation
 
-1. Download the APK from the releases section
+1. Download the APK from the [release](https://github.com/bizzkoot/parking_locator_app/releases) section
 2. Enable "Install from Unknown Sources" in your Android settings
 3. Install the APK on your Android device
 4. Grant required permissions (Camera and Location) when prompted
@@ -56,3 +58,8 @@ A smart Android application that helps users remember where they parked their ca
 - Camera permission
 - Location services enabled
 - Google Maps installed for navigation
+
+## Developer's Note
+
+This is my first Android application, developed entirely using VS Code with Cody assistant, starting from zero programming knowledge. This project demonstrates how modern AI tools can help newcomers create functional mobile applications. Feel free to use this as inspiration for your own journey into app development!
+
