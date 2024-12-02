@@ -17,15 +17,19 @@ A smart Android application that helps users remember where they parked their ca
 ## Screenshots
 
 - Main camera view
+
 ![Screenshot_20241202_211139_Parking Locator](https://github.com/user-attachments/assets/3a5ba38e-3f64-4a80-8d2f-bec842b910a9)
 
 - Location saving interface
+
 ![Screenshot_20241202_211153_Parking Locator](https://github.com/user-attachments/assets/37aa69c2-7edd-4372-8ae1-7a04998fb75d)
 
 - Saved location view with photo
+
 ![Screenshot_20241202_211209_Parking Locator](https://github.com/user-attachments/assets/c72567a6-2ab5-42c1-845a-27071f47ce29)
 
 - Navigation screen
+
 ![Screenshot_20241202_211216_Maps](https://github.com/user-attachments/assets/1d80f624-99b6-4160-90c8-4baa821fb2d9)
 
 ## Installation
