@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app"
+    name=":app"
+    type="APP"
+    maven="parking_locator_app:app:"
+    gradle="7.4.2"
+    buildFolder="build"
+    bootClassPath="/Users/muhammadfaiz/Library/Android/sdk/platforms/android-34/android.jar:/Users/muhammadfaiz/Library/Android/sdk/build-tools/30.0.3/core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-34"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Parking Locator</string>
+    <string name="capture_location">Capture Location</string>
+    <string name="floor_hint">Enter Floor/Section Level</string>
+</resources>

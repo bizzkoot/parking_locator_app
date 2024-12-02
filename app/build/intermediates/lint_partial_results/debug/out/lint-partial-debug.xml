@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 7.4.2" type="partial_results">
+    <map id="UnusedResources">
+        <location id="R.string.floor_hint"
+            file="${:app*debug*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="5"
+            column="13"
+            startOffset="178"
+            endLine="5"
+            endColumn="30"
+            endOffset="195"/>
+        <location id="R.string.capture_location"
+            file="${:app*debug*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="4"
+            column="13"
+            startOffset="116"
+            endLine="4"
+            endColumn="36"
+            endOffset="139"/>
+        <entry
+            name="model"
+            string="attr[colorPrimaryVariant(R)],color[black(U),teal_200(U),white(U),teal_700(U),ic_launcher_background(U),purple_700(U),purple_500(U)],drawable[ic_launcher_foreground(U)],id[captureButton(U),viewLocationButton(U),floorLevelInput(U),viewFinder(U)],layout[activity_main(U)],mipmap[ic_launcher_round(U),ic_launcher(U)],string[capture_location(D),app_name(U),floor_hint(D)],style[Theme_ParkingLocator(U),Theme_MaterialComponents_DayNight_DarkActionBar(R)];e^5^8,f^5^8,13^14^7^6^3^2^4^1^0;;;"/>
+    </map>
+
+</incidents>

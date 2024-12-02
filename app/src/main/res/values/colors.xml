@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="primary">#FF2196F3</color>
+    <color name="primary_dark">#FF1976D2</color>
+    <color name="accent">#FF03DAC5</color>
+    <color name="background">#FFFFFFFF</color>
+    <color name="surface">#FFFFFFFF</color>
+    <color name="text_on_surface">#FF000000</color>
+    <color name="text_secondary">#99000000</color>
+    <color name="text_on_primary">#FFFFFFFF</color>
+    <color name="camera_button_dark">#1A237E</color>
+</resources>

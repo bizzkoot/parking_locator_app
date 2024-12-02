@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-merged_res-37:/drawable_ic_navigation.xml.flat",
+        "source": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-main-39:/drawable/ic_navigation.xml"
+    },
+    {
+        "merged": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-merged_res-37:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-main-39:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-merged_res-37:/drawable_rounded_camera_preview.xml.flat",
+        "source": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-main-39:/drawable/rounded_camera_preview.xml"
+    },
+    {
+        "merged": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-merged_res-37:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-main-39:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.parkinglocator.app-merged_res-37:/layout_activity_main.xml.flat",
+        "source": "com.example.parkinglocator.app-main-39:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-merged_res-37:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-main-39:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-merged_res-37:/layout_activity_main.xml.flat",
+        "source": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-main-39:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-merged_res-37:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-main-39:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-merged_res-37:/drawable_ic_camera.xml.flat",
+        "source": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-main-39:/drawable/ic_camera.xml"
+    },
+    {
+        "merged": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-merged_res-37:/layout_dialog_parking_details.xml.flat",
+        "source": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-main-39:/layout/dialog_parking_details.xml"
+    },
+    {
+        "merged": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-merged_res-37:/drawable_camera_grid_overlay.xml.flat",
+        "source": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-main-39:/drawable/camera_grid_overlay.xml"
+    },
+    {
+        "merged": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-merged_res-37:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-main-39:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-merged_res-37:/anim_m3_side_sheet_enter_from_left.xml.flat",
+        "source": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-main-39:/anim/m3_side_sheet_enter_from_left.xml"
+    },
+    {
+        "merged": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-merged_res-37:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-main-39:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-merged_res-37:/drawable_bottom_sheet_handle.xml.flat",
+        "source": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-main-39:/drawable/bottom_sheet_handle.xml"
+    },
+    {
+        "merged": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-merged_res-37:/drawable_ic_location.xml.flat",
+        "source": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-main-39:/drawable/ic_location.xml"
+    },
+    {
+        "merged": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-merged_res-37:/drawable_loading_circle.xml.flat",
+        "source": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-main-39:/drawable/loading_circle.xml"
+    },
+    {
+        "merged": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-merged_res-37:/animator_loading_rotation.xml.flat",
+        "source": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-main-39:/animator/loading_rotation.xml"
+    },
+    {
+        "merged": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-merged_res-37:/drawable_loading_animation.xml.flat",
+        "source": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-main-39:/drawable/loading_animation.xml"
+    },
+    {
+        "merged": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-merged_res-37:/animator_button_state_list_anim.xml.flat",
+        "source": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-main-39:/animator/button_state_list_anim.xml"
+    },
+    {
+        "merged": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-merged_res-37:/anim_m3_side_sheet_exit_to_left.xml.flat",
+        "source": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-main-39:/anim/m3_side_sheet_exit_to_left.xml"
+    },
+    {
+        "merged": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-merged_res-37:/layout_bottom_sheet_location.xml.flat",
+        "source": "/Users/muhammadfaiz/.gradle/daemon/8.11.1/com.example.parkinglocator.app-main-39:/layout/bottom_sheet_location.xml"
+    }
+]
