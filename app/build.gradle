@@ -5,8 +5,12 @@ plugins {
 
 android {
     namespace 'com.bizzkoot.parkinglocator'
-    compileSdk 34
-    
+    compileSdk 35
+
+    buildFeatures {
+        buildConfig = true
+    }
+
     defaultConfig {
         applicationId "com.bizzkoot.parkinglocator"
         minSdk 24
@@ -60,4 +64,5 @@ dependencies {
     implementation 'androidx.camera:camera-view:1.4.0'
     implementation 'com.google.android.gms:play-services-location:21.3.0'
     implementation "androidx.exifinterface:exifinterface:1.3.7"
+    implementation 'androidx.compose.material3:material3:1.3.1'
 }

@@ -1,4 +1,4 @@
-#Mon Dec 02 23:10:21 MYT 2024
+#Tue Dec 03 00:34:04 MYT 2024
 base.0=/Users/muhammadfaiz/Desktop/parking_locator_app/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

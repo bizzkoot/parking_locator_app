@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.bizzkoot.parkinglocator.app-mergeReleaseResources-34:/values-w600dp-land-v13/values-w600dp-land-v13.xml",
+            "outputFile": "com.bizzkoot.parkinglocator.app-mergeReleaseResources-63:/values-w600dp-land-v13/values-w600dp-land-v13.xml",
             "map": [
                 {
-                    "source": "/Users/muhammadfaiz/.gradle/caches/8.11.1/transforms/486aadd5ebc3f28a8e84eb1a28fb369c/transformed/material-1.9.0/res/values-w600dp-land-v13/values-w600dp-land-v13.xml",
+                    "source": "/Users/muhammadfaiz/.gradle/caches/8.11.1/transforms/b53bb749b3e00da46cb080ea2156f02f/transformed/material-1.12.0/res/values-w600dp-land-v13/values-w600dp-land-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

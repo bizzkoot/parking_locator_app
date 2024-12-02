@@ -1,4 +1,0 @@
-com.bizzkoot.parkinglocator.test.app-androidTest-0 /Users/muhammadfaiz/Desktop/parking_locator_app/app/build/generated/res/resValues/androidTest/debug
-com.bizzkoot.parkinglocator.test.app-mergeDebugAndroidTestResources-1 /Users/muhammadfaiz/Desktop/parking_locator_app/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
-com.bizzkoot.parkinglocator.test.app-mergeDebugAndroidTestResources-2 /Users/muhammadfaiz/Desktop/parking_locator_app/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
-com.bizzkoot.parkinglocator.test.app-debugAndroidTest-3 /Users/muhammadfaiz/Desktop/parking_locator_app/app/build/intermediates/merged_res/debugAndroidTest/mergeDebugAndroidTestResources

@@ -7,7 +7,7 @@
     mergedManifest="build/intermediates/merged_manifest/release/processReleaseMainManifest/AndroidManifest.xml"
     proguardFiles="build/intermediates/default_proguard_files/global/proguard-android-optimize.txt-8.7.2:proguard-rules.pro"
     partialResultsDir="build/intermediates/lint_vital_partial_results/release/lintVitalAnalyzeRelease/out"
-    desugaredMethodsFiles="/Users/muhammadfaiz/.gradle/caches/8.11.1/transforms/1c2957366202ca16d83455cc3346c7c4/transformed/D8BackportedDesugaredMethods.txt">
+    desugaredMethodsFiles="/Users/muhammadfaiz/.gradle/caches/8.11.1/transforms/082ef3fc76b51d38741a8bba24ae9243/transformed/D8BackportedDesugaredMethods.txt">
   <buildFeatures
       namespacing="REQUIRED"/>
   <sourceProviders>
@@ -27,6 +27,6 @@
       applicationId="com.bizzkoot.parkinglocator"
       generatedSourceFolders="build/generated/ap_generated_sources/release/out:build/generated/source/buildConfig/release"
       generatedResourceFolders="build/generated/res/resValues/release"
-      desugaredMethodsFiles="/Users/muhammadfaiz/.gradle/caches/8.11.1/transforms/1c2957366202ca16d83455cc3346c7c4/transformed/D8BackportedDesugaredMethods.txt">
+      desugaredMethodsFiles="/Users/muhammadfaiz/.gradle/caches/8.11.1/transforms/082ef3fc76b51d38741a8bba24ae9243/transformed/D8BackportedDesugaredMethods.txt">
   </artifact>
 </variant>
