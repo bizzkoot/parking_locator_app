@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.bizzkoot.parkinglocator.app-mergeDebugResources-34:/values-v29/values-v29.xml",
+            "map": [
+                {
+                    "source": "/Users/muhammadfaiz/.gradle/caches/8.11.1/transforms/a92d8679099c35a36e9a44db82c52308/transformed/jetified-core-splashscreen-1.0.1/res/values-v29/values-v29.xml",
+                    "from": {
+                        "startLines": "2,7",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,374",
+                        "endLines": "6,8",
+                        "endColumns": "12,12",
+                        "endOffsets": "369,464"
+                    }
+                }
+            ]
+        }
+    ]
+}

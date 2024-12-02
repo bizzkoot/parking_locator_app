@@ -1,7 +1,4 @@
-#Mon Dec 02 20:50:25 MYT 2024
-base.1=/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/build/intermediates/dex/release/mergeDexRelease/classes2.dex
-path.1=classes2.dex
-base.0=/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
-renamed.1=classes2.dex
-renamed.0=classes.dex
+#Mon Dec 02 23:10:21 MYT 2024
+base.0=/Users/muhammadfaiz/Desktop/parking_locator_app/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 path.0=classes.dex
+renamed.0=classes.dex
