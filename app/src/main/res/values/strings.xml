@@ -3,4 +3,9 @@
     <string name="app_name">Parking Locator</string>
     <string name="capture_location">Capture Location</string>
     <string name="floor_hint">Enter Floor/Section Level</string>
+    <string name="floor_level">Floor Level</string>
+    <string name="save_parking_location">Save Parking Location</string>
+    <string name="view_saved_location">View Saved Location</string>
+    <string name="todo">TODO</string>
+    <string name="loading_indicator">Loading indicator</string>
 </resources>

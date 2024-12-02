@@ -425,6 +425,8 @@
     <attr format="reference" name="materialSearchBarStyle"/>
     <attr format="reference" name="materialSearchViewPrefixStyle"/>
     <attr format="reference" name="materialSearchViewStyle"/>
+    <attr format="dimension" name="materialSearchViewToolbarHeight"/>
+    <attr format="reference" name="materialSearchViewToolbarStyle"/>
     <attr name="materialSwitchStyle" type="reference"/>
     <attr format="reference" name="materialThemeOverlay"/>
     <attr format="reference" name="materialTimePickerStyle"/>
@@ -483,6 +485,8 @@
         <enum name="startVertical" value="1"/>
         <enum name="startHorizontal" value="2"/>
         <enum name="flip" value="3"/>
+        <enum name="below" value="4"/>
+        <enum name="above" value="5"/>
     </attr>
     <attr format="float" name="path_percent"/>
     <attr format="float" name="perpendicularPath_percent"/>
@@ -596,6 +600,7 @@
         <enum name="end" value="6"/>
     </attr>
     <attr format="color" name="trackColor"/>
+    <attr format="dimension" name="trackStopIndicatorSize"/>
     <attr format="reference" name="transformPivotTarget"/>
     <attr format="boolean" name="transitionDisable"/>
     <attr format="string|enum" name="transitionEasing">
@@ -741,29 +746,29 @@
     <color name="m3_ref_palette_error95">#fffceeee</color>
     <color name="m3_ref_palette_error99">#fffffbf9</color>
     <color name="m3_ref_palette_neutral0">#ff000000</color>
-    <color name="m3_ref_palette_neutral10">#ff1c1b1f</color>
+    <color name="m3_ref_palette_neutral10">#ff1d1b20</color>
     <color name="m3_ref_palette_neutral100">#ffffffff</color>
-    <color name="m3_ref_palette_neutral12">#ff201f23</color>
-    <color name="m3_ref_palette_neutral17">#ff2b292d</color>
-    <color name="m3_ref_palette_neutral20">#ff313033</color>
-    <color name="m3_ref_palette_neutral22">#ff313033</color>
-    <color name="m3_ref_palette_neutral24">#ff313033</color>
-    <color name="m3_ref_palette_neutral30">#ff484649</color>
-    <color name="m3_ref_palette_neutral4">#ff0e0e11</color>
-    <color name="m3_ref_palette_neutral40">#ff605d62</color>
-    <color name="m3_ref_palette_neutral50">#ff787579</color>
-    <color name="m3_ref_palette_neutral6">#ff141317</color>
-    <color name="m3_ref_palette_neutral60">#ff939094</color>
-    <color name="m3_ref_palette_neutral70">#ffaeaaae</color>
-    <color name="m3_ref_palette_neutral80">#ffc9c5ca</color>
-    <color name="m3_ref_palette_neutral87">#ffddd8dd</color>
-    <color name="m3_ref_palette_neutral90">#ffe6e1e5</color>
-    <color name="m3_ref_palette_neutral92">#ffece7ec</color>
-    <color name="m3_ref_palette_neutral94">#fff1ecf1</color>
-    <color name="m3_ref_palette_neutral95">#fff4eff4</color>
-    <color name="m3_ref_palette_neutral96">#fff7f2f7</color>
-    <color name="m3_ref_palette_neutral98">#fffdf8fd</color>
-    <color name="m3_ref_palette_neutral99">#fffffbfe</color>
+    <color name="m3_ref_palette_neutral12">#ff211f26</color>
+    <color name="m3_ref_palette_neutral17">#ff2b2930</color>
+    <color name="m3_ref_palette_neutral20">#ff322f35</color>
+    <color name="m3_ref_palette_neutral22">#ff36343b</color>
+    <color name="m3_ref_palette_neutral24">#ff3b383e</color>
+    <color name="m3_ref_palette_neutral30">#ff48464c</color>
+    <color name="m3_ref_palette_neutral4">#ff0f0d13</color>
+    <color name="m3_ref_palette_neutral40">#ff605d64</color>
+    <color name="m3_ref_palette_neutral50">#ff79767d</color>
+    <color name="m3_ref_palette_neutral6">#ff141218</color>
+    <color name="m3_ref_palette_neutral60">#ff938f96</color>
+    <color name="m3_ref_palette_neutral70">#ffaea9b1</color>
+    <color name="m3_ref_palette_neutral80">#ffcac5cd</color>
+    <color name="m3_ref_palette_neutral87">#ffded8e1</color>
+    <color name="m3_ref_palette_neutral90">#ffe6e0e9</color>
+    <color name="m3_ref_palette_neutral92">#ffece6f0</color>
+    <color name="m3_ref_palette_neutral94">#fff3edf7</color>
+    <color name="m3_ref_palette_neutral95">#fff5eff7</color>
+    <color name="m3_ref_palette_neutral96">#fff7f2fa</color>
+    <color name="m3_ref_palette_neutral98">#fffef7ff</color>
+    <color name="m3_ref_palette_neutral99">#fffffbff</color>
     <color name="m3_ref_palette_neutral_variant0">#ff000000</color>
     <color name="m3_ref_palette_neutral_variant10">#ff1d1a22</color>
     <color name="m3_ref_palette_neutral_variant100">#ffffffff</color>
@@ -817,7 +822,7 @@
     <color name="m3_ref_palette_tertiary95">#ffffecf1</color>
     <color name="m3_ref_palette_tertiary99">#fffffbfa</color>
     <color name="m3_ref_palette_white">#ffffffff</color>
-    <color name="m3_sys_color_dark_background">@color/m3_ref_palette_neutral10</color>
+    <color name="m3_sys_color_dark_background">@color/m3_ref_palette_neutral6</color>
     <color name="m3_sys_color_dark_error">@color/m3_ref_palette_error80</color>
     <color name="m3_sys_color_dark_error_container">@color/m3_ref_palette_error30</color>
     <color name="m3_sys_color_dark_inverse_on_surface">@color/m3_ref_palette_neutral20</color>
@@ -840,7 +845,7 @@
     <color name="m3_sys_color_dark_primary_container">@color/m3_ref_palette_primary30</color>
     <color name="m3_sys_color_dark_secondary">@color/m3_ref_palette_secondary80</color>
     <color name="m3_sys_color_dark_secondary_container">@color/m3_ref_palette_secondary30</color>
-    <color name="m3_sys_color_dark_surface">@color/m3_ref_palette_neutral10</color>
+    <color name="m3_sys_color_dark_surface">@color/m3_ref_palette_neutral6</color>
     <color name="m3_sys_color_dark_surface_bright">@color/m3_ref_palette_neutral24</color>
     <color name="m3_sys_color_dark_surface_container">@color/m3_ref_palette_neutral12</color>
     <color name="m3_sys_color_dark_surface_container_high">@color/m3_ref_palette_neutral17</color>
@@ -851,7 +856,7 @@
     <color name="m3_sys_color_dark_surface_variant">@color/m3_ref_palette_neutral_variant30</color>
     <color name="m3_sys_color_dark_tertiary">@color/m3_ref_palette_tertiary80</color>
     <color name="m3_sys_color_dark_tertiary_container">@color/m3_ref_palette_tertiary30</color>
-    <color name="m3_sys_color_light_background">@color/m3_ref_palette_neutral99</color>
+    <color name="m3_sys_color_light_background">@color/m3_ref_palette_neutral98</color>
     <color name="m3_sys_color_light_error">@color/m3_ref_palette_error40</color>
     <color name="m3_sys_color_light_error_container">@color/m3_ref_palette_error90</color>
     <color name="m3_sys_color_light_inverse_on_surface">@color/m3_ref_palette_neutral95</color>
@@ -874,7 +879,7 @@
     <color name="m3_sys_color_light_primary_container">@color/m3_ref_palette_primary90</color>
     <color name="m3_sys_color_light_secondary">@color/m3_ref_palette_secondary40</color>
     <color name="m3_sys_color_light_secondary_container">@color/m3_ref_palette_secondary90</color>
-    <color name="m3_sys_color_light_surface">@color/m3_ref_palette_neutral99</color>
+    <color name="m3_sys_color_light_surface">@color/m3_ref_palette_neutral98</color>
     <color name="m3_sys_color_light_surface_bright">@color/m3_ref_palette_neutral98</color>
     <color name="m3_sys_color_light_surface_container">@color/m3_ref_palette_neutral94</color>
     <color name="m3_sys_color_light_surface_container_high">@color/m3_ref_palette_neutral92</color>
@@ -1163,6 +1168,13 @@
     <dimen name="m3_appbar_size_compact">@dimen/m3_comp_top_app_bar_small_container_height</dimen>
     <dimen name="m3_appbar_size_large">@dimen/m3_comp_top_app_bar_large_container_height</dimen>
     <dimen name="m3_appbar_size_medium">@dimen/m3_comp_top_app_bar_medium_container_height</dimen>
+    <dimen name="m3_back_progress_bottom_container_max_scale_x_distance">48dp</dimen>
+    <dimen name="m3_back_progress_bottom_container_max_scale_y_distance">24dp</dimen>
+    <dimen name="m3_back_progress_main_container_max_translation_y">24dp</dimen>
+    <dimen name="m3_back_progress_main_container_min_edge_gap">8dp</dimen>
+    <dimen name="m3_back_progress_side_container_max_scale_x_distance_grow">12dp</dimen>
+    <dimen name="m3_back_progress_side_container_max_scale_x_distance_shrink">24dp</dimen>
+    <dimen name="m3_back_progress_side_container_max_scale_y_distance">48dp</dimen>
     <dimen name="m3_badge_horizontal_offset">1.5dp</dimen>
     <dimen name="m3_badge_offset">6dp</dimen>
     <dimen name="m3_badge_size">@dimen/m3_comp_badge_size</dimen>
@@ -1171,6 +1183,7 @@
     <dimen name="m3_badge_with_text_offset">12dp</dimen>
     <dimen name="m3_badge_with_text_size">@dimen/m3_comp_badge_large_size</dimen>
     <dimen name="m3_badge_with_text_vertical_offset">4dp</dimen>
+    <dimen name="m3_badge_with_text_vertical_padding">2dp</dimen>
     <dimen name="m3_bottom_nav_item_active_indicator_height">@dimen/m3_comp_navigation_bar_active_indicator_height</dimen>
     <dimen name="m3_bottom_nav_item_active_indicator_margin_horizontal">4dp</dimen>
     <dimen name="m3_bottom_nav_item_active_indicator_width">@dimen/m3_comp_navigation_bar_active_indicator_width</dimen>
@@ -1243,7 +1256,9 @@
     <dimen name="m3_comp_bottom_app_bar_container_elevation">@dimen/m3_sys_elevation_level2</dimen>
     <dimen name="m3_comp_bottom_app_bar_container_height">80dp</dimen>
     <item format="float" name="m3_comp_checkbox_selected_disabled_container_opacity" type="dimen">0.38</item>
-    <dimen name="m3_comp_circular_progress_indicator_active_indicator_width">4dp</dimen>
+    <dimen name="m3_comp_date_picker_modal_date_today_container_outline_width">1dp</dimen>
+    <dimen name="m3_comp_date_picker_modal_header_container_height">120dp</dimen>
+    <dimen name="m3_comp_date_picker_modal_range_selection_header_container_height">128dp</dimen>
     <dimen name="m3_comp_divider_thickness">1dp</dimen>
     <dimen name="m3_comp_elevated_button_container_elevation">@dimen/m3_sys_elevation_level1</dimen>
     <dimen name="m3_comp_elevated_button_disabled_container_elevation">@dimen/m3_sys_elevation_level0</dimen>
@@ -1290,7 +1305,6 @@
     <dimen name="m3_comp_input_chip_unselected_outline_width">1dp</dimen>
     <dimen name="m3_comp_input_chip_with_avatar_avatar_size">24dp</dimen>
     <dimen name="m3_comp_input_chip_with_leading_icon_leading_icon_size">18dp</dimen>
-    <dimen name="m3_comp_linear_progress_indicator_active_indicator_height">4dp</dimen>
     <dimen name="m3_comp_menu_container_elevation">@dimen/m3_sys_elevation_level2</dimen>
     <dimen name="m3_comp_navigation_bar_active_indicator_height">32dp</dimen>
     <dimen name="m3_comp_navigation_bar_active_indicator_width">64dp</dimen>
@@ -1311,7 +1325,10 @@
     <dimen name="m3_comp_navigation_rail_active_indicator_width">56dp</dimen>
     <dimen name="m3_comp_navigation_rail_container_elevation">@dimen/m3_sys_elevation_level0</dimen>
     <dimen name="m3_comp_navigation_rail_container_width">80dp</dimen>
+    <dimen name="m3_comp_navigation_rail_focus_state_layer_opacity">@dimen/m3_sys_state_focus_state_layer_opacity</dimen>
+    <dimen name="m3_comp_navigation_rail_hover_state_layer_opacity">@dimen/m3_sys_state_hover_state_layer_opacity</dimen>
     <dimen name="m3_comp_navigation_rail_icon_size">24dp</dimen>
+    <dimen name="m3_comp_navigation_rail_pressed_state_layer_opacity">@dimen/m3_sys_state_pressed_state_layer_opacity</dimen>
     <dimen name="m3_comp_outlined_autocomplete_menu_container_elevation">@dimen/m3_sys_elevation_level2</dimen>
     <item format="float" name="m3_comp_outlined_button_disabled_outline_opacity" type="dimen">0.12</item>
     <dimen name="m3_comp_outlined_button_outline_width">1dp</dimen>
@@ -1329,11 +1346,13 @@
     <dimen name="m3_comp_primary_navigation_tab_active_hover_state_layer_opacity">@dimen/m3_sys_state_hover_state_layer_opacity</dimen>
     <dimen name="m3_comp_primary_navigation_tab_active_indicator_height">3dp</dimen>
     <dimen name="m3_comp_primary_navigation_tab_active_pressed_state_layer_opacity">@dimen/m3_sys_state_pressed_state_layer_opacity</dimen>
-    <dimen name="m3_comp_primary_navigation_tab_divider_height">1dp</dimen>
     <dimen name="m3_comp_primary_navigation_tab_inactive_focus_state_layer_opacity">@dimen/m3_sys_state_focus_state_layer_opacity</dimen>
     <dimen name="m3_comp_primary_navigation_tab_inactive_hover_state_layer_opacity">@dimen/m3_sys_state_hover_state_layer_opacity</dimen>
     <dimen name="m3_comp_primary_navigation_tab_inactive_pressed_state_layer_opacity">@dimen/m3_sys_state_pressed_state_layer_opacity</dimen>
     <dimen name="m3_comp_primary_navigation_tab_with_icon_icon_size">24dp</dimen>
+    <dimen name="m3_comp_progress_indicator_active_indicator_track_space">4dp</dimen>
+    <dimen name="m3_comp_progress_indicator_stop_indicator_size">4dp</dimen>
+    <dimen name="m3_comp_progress_indicator_track_thickness">4dp</dimen>
     <item format="float" name="m3_comp_radio_button_disabled_selected_icon_opacity" type="dimen">0.38</item>
     <item format="float" name="m3_comp_radio_button_disabled_unselected_icon_opacity" type="dimen">0.38</item>
     <dimen name="m3_comp_radio_button_selected_focus_state_layer_opacity">@dimen/m3_sys_state_focus_state_layer_opacity</dimen>
@@ -1342,6 +1361,7 @@
     <dimen name="m3_comp_radio_button_unselected_focus_state_layer_opacity">@dimen/m3_sys_state_focus_state_layer_opacity</dimen>
     <dimen name="m3_comp_radio_button_unselected_hover_state_layer_opacity">@dimen/m3_sys_state_hover_state_layer_opacity</dimen>
     <dimen name="m3_comp_radio_button_unselected_pressed_state_layer_opacity">@dimen/m3_sys_state_pressed_state_layer_opacity</dimen>
+    <item format="float" name="m3_comp_scrim_container_opacity" type="dimen">0.32</item>
     <dimen name="m3_comp_search_bar_avatar_size">30dp</dimen>
     <dimen name="m3_comp_search_bar_container_elevation">@dimen/m3_sys_elevation_level3</dimen>
     <dimen name="m3_comp_search_bar_container_height">56dp</dimen>
@@ -1354,15 +1374,21 @@
     <dimen name="m3_comp_secondary_navigation_tab_focus_state_layer_opacity">@dimen/m3_sys_state_focus_state_layer_opacity</dimen>
     <dimen name="m3_comp_secondary_navigation_tab_hover_state_layer_opacity">@dimen/m3_sys_state_hover_state_layer_opacity</dimen>
     <dimen name="m3_comp_secondary_navigation_tab_pressed_state_layer_opacity">@dimen/m3_sys_state_pressed_state_layer_opacity</dimen>
+    <dimen name="m3_comp_sheet_bottom_docked_drag_handle_height">4dp</dimen>
+    <dimen name="m3_comp_sheet_bottom_docked_drag_handle_width">32dp</dimen>
     <dimen name="m3_comp_sheet_bottom_docked_modal_container_elevation">@dimen/m3_sys_elevation_level1</dimen>
     <dimen name="m3_comp_sheet_bottom_docked_standard_container_elevation">@dimen/m3_sys_elevation_level1</dimen>
     <dimen name="m3_comp_sheet_side_docked_container_width">256dp</dimen>
     <dimen name="m3_comp_sheet_side_docked_modal_container_elevation">@dimen/m3_sys_elevation_level1</dimen>
     <dimen name="m3_comp_sheet_side_docked_standard_container_elevation">@dimen/m3_sys_elevation_level0</dimen>
+    <dimen name="m3_comp_slider_active_handle_height">44dp</dimen>
+    <dimen name="m3_comp_slider_active_handle_leading_space">6dp</dimen>
+    <dimen name="m3_comp_slider_active_handle_width">4dp</dimen>
     <item format="float" name="m3_comp_slider_disabled_active_track_opacity" type="dimen">0.38</item>
     <item format="float" name="m3_comp_slider_disabled_handle_opacity" type="dimen">0.38</item>
     <item format="float" name="m3_comp_slider_disabled_inactive_track_opacity" type="dimen">0.12</item>
-    <dimen name="m3_comp_slider_inactive_track_height">4dp</dimen>
+    <dimen name="m3_comp_slider_inactive_track_height">16dp</dimen>
+    <dimen name="m3_comp_slider_stop_indicator_size">4dp</dimen>
     <dimen name="m3_comp_snackbar_container_elevation">@dimen/m3_sys_elevation_level3</dimen>
     <dimen name="m3_comp_suggestion_chip_container_height">32dp</dimen>
     <dimen name="m3_comp_suggestion_chip_elevated_container_elevation">@dimen/m3_sys_elevation_level1</dimen>
@@ -1413,8 +1439,11 @@
     <dimen name="m3_fab_translation_z_pressed">6dp</dimen>
     <dimen name="m3_large_fab_max_image_size">36dp</dimen>
     <dimen name="m3_large_fab_size">96dp</dimen>
+    <dimen name="m3_large_text_vertical_offset_adjustment">4dp</dimen>
     <dimen name="m3_menu_elevation">@dimen/m3_comp_menu_container_elevation</dimen>
+    <dimen name="m3_nav_badge_with_text_vertical_offset">14dp</dimen>
     <dimen name="m3_navigation_drawer_layout_corner_size">16dp</dimen>
+    <dimen name="m3_navigation_item_active_indicator_label_padding">4dp</dimen>
     <dimen name="m3_navigation_item_horizontal_padding">28dp</dimen>
     <dimen name="m3_navigation_item_icon_padding">12dp</dimen>
     <dimen name="m3_navigation_item_shape_inset_bottom">0dp</dimen>
@@ -1431,8 +1460,11 @@
     <dimen name="m3_navigation_rail_item_active_indicator_margin_horizontal">4dp</dimen>
     <dimen name="m3_navigation_rail_item_active_indicator_width">@dimen/m3_comp_navigation_rail_active_indicator_width</dimen>
     <dimen name="m3_navigation_rail_item_min_height">60dp</dimen>
-    <dimen name="m3_navigation_rail_item_padding_bottom">8dp</dimen>
+    <dimen name="m3_navigation_rail_item_padding_bottom">12dp</dimen>
+    <dimen name="m3_navigation_rail_item_padding_bottom_with_large_font">20dp</dimen>
     <dimen name="m3_navigation_rail_item_padding_top">4dp</dimen>
+    <dimen name="m3_navigation_rail_item_padding_top_with_large_font">12dp</dimen>
+    <dimen name="m3_navigation_rail_label_padding_horizontal">2dp</dimen>
     <dimen name="m3_ripple_default_alpha">@dimen/m3_sys_state_dragged_state_layer_opacity</dimen>
     <dimen name="m3_ripple_focused_alpha">@dimen/m3_sys_state_focus_state_layer_opacity</dimen>
     <dimen name="m3_ripple_hovered_alpha">@dimen/m3_sys_state_hover_state_layer_opacity</dimen>
@@ -1455,7 +1487,6 @@
     <dimen name="m3_side_sheet_width">@dimen/m3_comp_sheet_side_docked_container_width</dimen>
     <item format="float" name="m3_simple_item_color_hovered_alpha" type="dimen">0.08</item>
     <item format="float" name="m3_simple_item_color_selected_alpha" type="dimen">0.12</item>
-    <dimen name="m3_slider_inactive_track_height">@dimen/m3_comp_slider_inactive_track_height</dimen>
     <dimen name="m3_slider_thumb_elevation">2dp</dimen>
     <dimen name="m3_small_fab_max_image_size">24dp</dimen>
     <dimen name="m3_small_fab_size">40dp</dimen>
@@ -1504,9 +1535,9 @@
     <item format="float" name="m3_sys_motion_easing_standard_decelerate_control_y1" type="dimen">0</item>
     <item format="float" name="m3_sys_motion_easing_standard_decelerate_control_y2" type="dimen">1</item>
     <item format="float" name="m3_sys_state_dragged_state_layer_opacity" type="dimen">0.16</item>
-    <item format="float" name="m3_sys_state_focus_state_layer_opacity" type="dimen">0.12</item>
+    <item format="float" name="m3_sys_state_focus_state_layer_opacity" type="dimen">0.1</item>
     <item format="float" name="m3_sys_state_hover_state_layer_opacity" type="dimen">0.08</item>
-    <item format="float" name="m3_sys_state_pressed_state_layer_opacity" type="dimen">0.12</item>
+    <item format="float" name="m3_sys_state_pressed_state_layer_opacity" type="dimen">0.1</item>
     <dimen name="m3_timepicker_display_stroke_width">2dp</dimen>
     <dimen name="m3_timepicker_window_elevation">@dimen/m3_comp_time_picker_container_elevation</dimen>
     <dimen name="m3_toolbar_text_size_title">20dp</dimen>
@@ -1514,6 +1545,7 @@
     <dimen name="material_clock_display_height">80dp</dimen>
     <dimen name="material_clock_display_padding">24dp</dimen>
     <dimen name="material_clock_display_width">96dp</dimen>
+    <dimen name="material_clock_face_margin_bottom">24dp</dimen>
     <dimen name="material_clock_face_margin_top">44dp</dimen>
     <dimen name="material_clock_hand_center_dot_radius">4dp</dimen>
     <dimen name="material_clock_hand_padding">4dp</dimen>
@@ -1546,7 +1578,6 @@
     <dimen name="material_textinput_min_width">56dp</dimen>
     <dimen name="material_time_picker_minimum_screen_height">560dp</dimen>
     <dimen name="material_time_picker_minimum_screen_width">340dp</dimen>
-    <dimen name="material_timepicker_dialog_buttons_margin_top">24dp</dimen>
     <dimen name="mtrl_alert_dialog_background_inset_bottom">80dp</dimen>
     <dimen name="mtrl_alert_dialog_background_inset_end">24dp</dimen>
     <dimen name="mtrl_alert_dialog_background_inset_start">24dp</dimen>
@@ -1712,6 +1743,7 @@
     <dimen name="mtrl_slider_label_square_side">26dp</dimen>
     <dimen name="mtrl_slider_thumb_elevation">1dp</dimen>
     <dimen name="mtrl_slider_thumb_radius">10dp</dimen>
+    <dimen name="mtrl_slider_tick_min_spacing">8dp</dimen>
     <dimen name="mtrl_slider_tick_radius">1dp</dimen>
     <dimen name="mtrl_slider_track_height">4dp</dimen>
     <dimen name="mtrl_slider_track_side_padding">16dp</dimen>
@@ -1724,6 +1756,7 @@
     <dimen name="mtrl_snackbar_padding_horizontal">8dp</dimen>
     <dimen name="mtrl_switch_text_padding">16dp</dimen>
     <dimen name="mtrl_switch_thumb_elevation">4dp</dimen>
+    <dimen name="mtrl_switch_thumb_icon_size">16dp</dimen>
     <dimen name="mtrl_switch_thumb_size">32dp</dimen>
     <dimen name="mtrl_switch_track_height">@dimen/m3_comp_switch_track_height</dimen>
     <dimen name="mtrl_switch_track_width">@dimen/m3_comp_switch_track_width</dimen>
@@ -1752,7 +1785,7 @@
     <dimen name="notification_main_column_padding_top">10dp</dimen>
     <dimen name="notification_media_narrow_margin">@dimen/notification_content_margin_start</dimen>
     <dimen name="notification_right_icon_size">16dp</dimen>
-    <dimen name="notification_right_side_padding_top">2dp</dimen>
+    <dimen name="notification_right_side_padding_top">4dp</dimen>
     <dimen name="notification_small_icon_background_padding">3dp</dimen>
     <dimen name="notification_small_icon_size_as_large">24dp</dimen>
     <dimen name="notification_subtext_size">13sp</dimen>
@@ -1814,10 +1847,17 @@
     <item name="action_bar_spinner" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
+    <item name="androidx_compose_ui_view_composition_context" type="id"/>
+    <item name="compose_view_saveable_id_tag" type="id"/>
+    <item name="consume_window_insets_tag" type="id"/>
     <item name="fragment_container_view_tag" type="id"/>
     <item name="ghost_view" type="id"/>
     <item name="ghost_view_holder" type="id"/>
+    <item name="hide_graphics_layer_in_inspector_tag" type="id"/>
+    <item name="hide_in_inspector_tag" type="id"/>
     <item name="home" type="id"/>
+    <item name="inspection_slot_table_set" type="id"/>
+    <item name="is_pooling_container_tag" type="id"/>
     <item name="item_touch_helper_previous_elevation" type="id"/>
     <item name="line1" type="id"/>
     <item name="line3" type="id"/>
@@ -1838,8 +1878,10 @@
     <item name="navigation_bar_item_large_label_view" type="id"/>
     <item name="navigation_bar_item_small_label_view" type="id"/>
     <item name="parent_matrix" type="id"/>
+    <item name="pooling_container_listener_holder_tag" type="id"/>
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
+    <item name="report_drawn" type="id"/>
     <item name="row_index_key" type="id"/>
     <item name="save_non_transition_alpha" type="id"/>
     <item name="save_overlay_view" type="id"/>
@@ -1871,8 +1913,11 @@
     <item name="textinput_prefix_text" type="id"/>
     <item name="textinput_suffix_text" type="id"/>
     <item name="title" type="id"/>
+    <item name="transition_clip" type="id"/>
     <item name="transition_current_scene" type="id"/>
+    <item name="transition_image_transform" type="id"/>
     <item name="transition_layout_save" type="id"/>
+    <item name="transition_pause_alpha" type="id"/>
     <item name="transition_position" type="id"/>
     <item name="transition_scene_layoutid_cache" type="id"/>
     <item name="transition_transform" type="id"/>
@@ -1884,6 +1929,7 @@
     <id name="view_tree_saved_state_registry_owner"/>
     <id name="view_tree_view_model_store_owner"/>
     <item name="visible_removing_fragment_view_tag" type="id"/>
+    <item name="wrapped_composition_tag" type="id"/>
     <integer name="abc_config_activityDefaultDur">220</integer>
     <integer name="abc_config_activityShortDur">150</integer>
     <integer name="app_bar_elevation_anim_duration">150</integer>
@@ -1895,6 +1941,7 @@
     <integer name="design_tab_indicator_anim_duration_ms">300</integer>
     <integer name="google_play_services_version">12451000</integer>
     <integer name="hide_password_duration">320</integer>
+    <integer name="m3_badge_max_number">999</integer>
     <integer name="m3_btn_anim_delay_ms">100</integer>
     <integer name="m3_btn_anim_duration_ms">100</integer>
     <integer name="m3_card_anim_delay_ms">75</integer>
@@ -1923,6 +1970,7 @@
     <integer name="m3_sys_shape_corner_large_corner_family">0</integer>
     <integer name="m3_sys_shape_corner_medium_corner_family">0</integer>
     <integer name="m3_sys_shape_corner_small_corner_family">0</integer>
+    <integer name="m3c_window_layout_in_display_cutout_mode">1</integer>
     <integer name="material_motion_duration_long_1">300</integer>
     <integer name="material_motion_duration_long_2">350</integer>
     <integer name="material_motion_duration_medium_1">200</integer>
@@ -1939,10 +1987,10 @@
     <integer name="mtrl_card_anim_delay_ms">75</integer>
     <integer name="mtrl_card_anim_duration_ms">120</integer>
     <integer name="mtrl_chip_anim_duration">100</integer>
-    <integer name="mtrl_switch_thumb_motion_duration">@integer/m3_sys_motion_duration_medium4</integer>
-    <integer name="mtrl_switch_thumb_post_morphing_duration">@integer/m3_sys_motion_duration_medium1</integer>
-    <integer name="mtrl_switch_thumb_pre_morphing_duration">@integer/m3_sys_motion_duration_short3</integer>
-    <integer name="mtrl_switch_thumb_pressed_duration">@integer/m3_sys_motion_duration_short3</integer>
+    <integer name="mtrl_switch_thumb_motion_duration">@integer/m3_sys_motion_duration_medium1</integer>
+    <integer name="mtrl_switch_thumb_post_morphing_duration">@integer/m3_sys_motion_duration_short3</integer>
+    <integer name="mtrl_switch_thumb_pre_morphing_duration">@integer/m3_sys_motion_duration_short2</integer>
+    <integer name="mtrl_switch_thumb_pressed_duration">@integer/m3_sys_motion_duration_short2</integer>
     <integer name="mtrl_switch_thumb_viewport_center_coordinate">16</integer>
     <integer name="mtrl_switch_thumb_viewport_size">32</integer>
     <integer name="mtrl_switch_track_viewport_height">32</integer>
@@ -2005,6 +2053,8 @@
     <string name="character_counter_overflowed_content_description">Character limit exceeded %1$d of %2$d</string>
     <string name="character_counter_pattern" translatable="false">%1$d/%2$d</string>
     <string name="clear_text_end_icon_content_description">Clear text</string>
+    <string name="close_drawer">"Close navigation menu"</string>
+    <string name="close_sheet">"Close sheet"</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text"><ns2:g id="app_name">%1$s</ns2:g> won\'t work unless you enable Google Play services.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Enable Google Play services</string>
@@ -2023,6 +2073,9 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="default_error_message">"Invalid input"</string>
+    <string name="default_popup_window_title" ns1:ignore="ExtraTranslation">"Pop-Up Window"</string>
+    <string name="dropdown_menu">"Dropdown menu"</string>
     <string description="Screen reader announcement for when a checkbox is on error. [CHAR LIMIT=NONE]" name="error_a11y_label">
     Error: invalid
   </string>
@@ -2031,9 +2084,14 @@
     <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
     <string name="fab_transformation_sheet_behavior" translatable="false">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
     <string name="floor_hint">Enter Floor/Section Level</string>
+    <string name="floor_level">Floor Level</string>
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
     <string description="Content description for an icon that appears in the title area of a dialog" name="icon_content_description">Dialog Icon</string>
+    <string name="in_progress">In progress</string>
+    <string name="indeterminate">Partially checked</string>
     <string name="item_view_role_description">Tab</string>
+    <string name="loading_indicator">Loading indicator</string>
+    <string name="m3_exceed_max_badge_text_suffix" translatable="false"><ns2:g example="Some te" id="part of a long text">%1$s</ns2:g><ns2:g example="…" id="suffix">%2$s</ns2:g></string>
     <string name="m3_ref_typeface_brand_medium" translatable="false">sans-serif-medium</string>
     <string name="m3_ref_typeface_brand_regular" translatable="false">sans-serif</string>
     <string name="m3_ref_typeface_plain_medium" translatable="false">sans-serif-medium</string>
@@ -2049,6 +2107,67 @@
     <string name="m3_sys_motion_easing_standard" translatable="false">cubic-bezier(0.2, 0, 0, 1)</string>
     <string name="m3_sys_motion_easing_standard_accelerate" translatable="false">cubic-bezier(0.3, 0, 1, 1)</string>
     <string name="m3_sys_motion_easing_standard_decelerate" translatable="false">cubic-bezier(0, 0, 0, 1)</string>
+    <string name="m3c_bottom_sheet_collapse_description">Collapse bottom sheet</string>
+    <string name="m3c_bottom_sheet_dismiss_description">Dismiss bottom sheet</string>
+    <string name="m3c_bottom_sheet_drag_handle_description">Drag handle</string>
+    <string name="m3c_bottom_sheet_expand_description">Expand bottom sheet</string>
+    <string name="m3c_bottom_sheet_pane_title">Bottom Sheet</string>
+    <string name="m3c_date_input_headline">Entered date</string>
+    <string name="m3c_date_input_headline_description">Entered date: %1$s</string>
+    <string name="m3c_date_input_invalid_for_pattern">Date does not match expected pattern: %1$s</string>
+    <string name="m3c_date_input_invalid_not_allowed">Date not allowed: %1$s</string>
+    <string name="m3c_date_input_invalid_year_range">
+        Date out of expected year range %1$s - %2$s
+    </string>
+    <string name="m3c_date_input_label">Date</string>
+    <string name="m3c_date_input_no_input_description">None</string>
+    <string name="m3c_date_input_title">Select date</string>
+    <string name="m3c_date_picker_headline">"Selected date"</string>
+    <string name="m3c_date_picker_headline_description">Current selection: %1$s</string>
+    <string name="m3c_date_picker_navigate_to_year_description">Navigate to year %1$s</string>
+    <string name="m3c_date_picker_no_selection_description">None</string>
+    <string name="m3c_date_picker_scroll_to_earlier_years">Scroll to show earlier years</string>
+    <string name="m3c_date_picker_scroll_to_later_years">Scroll to show later years</string>
+    <string name="m3c_date_picker_switch_to_calendar_mode">Switch to calendar input mode</string>
+    <string name="m3c_date_picker_switch_to_day_selection">
+        "Swipe to select a year, or tap to switch back to selecting a day"
+    </string>
+    <string name="m3c_date_picker_switch_to_input_mode">Switch to text input mode</string>
+    <string name="m3c_date_picker_switch_to_next_month">"Change to next month"</string>
+    <string name="m3c_date_picker_switch_to_previous_month">"Change to previous month"</string>
+    <string name="m3c_date_picker_switch_to_year_selection">"Switch to selecting a year"</string>
+    <string name="m3c_date_picker_title">"Select date"</string>
+    <string name="m3c_date_picker_today_description">Today</string>
+    <string name="m3c_date_picker_year_picker_pane_title">Year picker visible</string>
+    <string name="m3c_date_range_input_invalid_range_input">Invalid date range input</string>
+    <string name="m3c_date_range_input_title">Enter dates</string>
+    <string name="m3c_date_range_picker_day_in_range">In range</string>
+    <string name="m3c_date_range_picker_end_headline">End date</string>
+    <string name="m3c_date_range_picker_scroll_to_next_month">Scroll to show the next month</string>
+    <string name="m3c_date_range_picker_scroll_to_previous_month">Scroll to show the previous month</string>
+    <string name="m3c_date_range_picker_start_headline">Start date</string>
+    <string name="m3c_date_range_picker_title">Select dates</string>
+    <string name="m3c_dialog">"Dialog"</string>
+    <string name="m3c_dropdown_menu_collapsed">Collapsed</string>
+    <string name="m3c_dropdown_menu_expanded">Expanded</string>
+    <string name="m3c_dropdown_menu_toggle">Toggle dropdown menu</string>
+    <string name="m3c_search_bar_search">Search</string>
+    <string name="m3c_snackbar_dismiss">Dismiss</string>
+    <string name="m3c_suggestions_available">Suggestions below</string>
+    <string name="m3c_time_picker_am">AM</string>
+    <string name="m3c_time_picker_hour">Hour</string>
+    <string name="m3c_time_picker_hour_24h_suffix">%1$d hours</string>
+    <string name="m3c_time_picker_hour_selection">Select hour</string>
+    <string name="m3c_time_picker_hour_suffix">%1$d o\'clock</string>
+    <string name="m3c_time_picker_hour_text_field">for hour</string>
+    <string name="m3c_time_picker_minute">Minute</string>
+    <string name="m3c_time_picker_minute_selection">Select minutes</string>
+    <string name="m3c_time_picker_minute_suffix">%1$d minutes</string>
+    <string name="m3c_time_picker_minute_text_field">for minutes</string>
+    <string name="m3c_time_picker_period_toggle_description">Select AM or PM</string>
+    <string name="m3c_time_picker_pm">PM</string>
+    <string name="m3c_tooltip_long_press_label">Show tooltip</string>
+    <string name="m3c_tooltip_pane_description">Tooltip</string>
     <string name="material_clock_display_divider" translatable="false">:</string>
     <string description="Description for the toggle to choose between AM and PM [CHAR_LIMIT=NONE]" name="material_clock_toggle_content_description">Select AM or PM</string>
     <string description="Spoken suffix for an hour in the 24-hour clock [CHAR_LIMIT=10]" name="material_hour_24h_suffix"><ns2:g id="number">%1$s</ns2:g> hours</string>
@@ -2102,7 +2221,7 @@
     <string description="A single date [CHAR_LIMIT=60]" name="mtrl_picker_date_header_selected">%1$s</string>
     <string description="Indicates that the user must take the action of picking a date within the calendar [CHAR_LIMIT=60]" name="mtrl_picker_date_header_title">Select Date</string>
     <string description="Placeholder for a single date [CHAR_LIMIT=60]" name="mtrl_picker_date_header_unselected">Selected date</string>
-    <string description="a11y string to indicate this is a header for a column of days for one day of the week (e.g., Monday) [CHAR_LIMIT=NONE]" name="mtrl_picker_day_of_week_column_header">Column of days: %1$s</string>
+    <string description="a11y string to indicate this is a header for a column of days for one day of the week (e.g., Monday) [CHAR_LIMIT=NONE]" name="mtrl_picker_day_of_week_column_header">%1$s</string>
     <string description="a11y string that informs the user that the focused day is the end of a range [CHAR_LIMIT=NONE]" name="mtrl_picker_end_date_description">End date %1$s</string>
     <string description="Indicates that the user entered date cannot be parsed because its format is wrong. [CHAR_LIMIT=36]" name="mtrl_picker_invalid_format">Invalid format.</string>
     <string description="Tells a user what an example valid entry looks like. [CHAR_LIMIT=18]" name="mtrl_picker_invalid_format_example">Example: %1$s</string>
@@ -2139,20 +2258,36 @@
     <string name="mtrl_switch_track_path" translatable="false">M0,16 A16,16 0 0,1 16,0 H36 A16,16 0 0,1 36,32 H16 A16,16 0 0,1 0,16</string>
     <string description="Button text to indicate that the widget will ignore the user&apos;s selection [CHAR_LIMIT=16]" name="mtrl_timepicker_cancel">Cancel</string>
     <string description="Button text to indicate that the widget will save the user&apos;s selection [CHAR_LIMIT=16]" name="mtrl_timepicker_confirm">OK</string>
+    <string name="navigation_menu">"Navigation menu"</string>
+    <string name="not_selected">Not selected</string>
     <string name="password_toggle_content_description">Show password</string>
     <string name="path_password_eye" translatable="false">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
     <string name="path_password_eye_mask_strike_through" translatable="false">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_eye_mask_visible" translatable="false">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
+    <string name="range_end">"Range end"</string>
+    <string name="range_start">"Range start"</string>
+    <string name="save_parking_location">Save Parking Location</string>
     <string name="search_menu_title">Search</string>
     <string name="searchbar_scrolling_view_behavior" translatable="false">
     com.google.android.material.search.SearchBar$ScrollingViewBehavior
   </string>
     <string description="Content description for the X button to clear text [CHAR_LIMIT=NONE]" name="searchview_clear_text_content_description">Clear text</string>
     <string description="Content description for the navigation button to return to the previous screen [CHAR_LIMIT=NONE]" name="searchview_navigation_content_description">Back</string>
+    <string name="selected">Selected</string>
     <string description="Title of the side sheet&apos;s accessibility pane that is spoken by TalkBack when the side sheet appears on screen. [CHAR_LIMIT=NONE]" name="side_sheet_accessibility_pane_title">Side Sheet</string>
     <string name="side_sheet_behavior" translatable="false">com.google.android.material.sidesheet.SideSheetBehavior</string>
+    <string name="state_empty">Empty</string>
+    <string name="state_off">Off</string>
+    <string name="state_on">On</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="switch_role">Switch</string>
+    <string name="tab">Tab</string>
+    <string name="template_percent"><ns2:g id="percentage">%1$d</ns2:g> percent.</string>
+    <string name="todo">TODO</string>
+    <string name="tooltip_description">tooltip</string>
+    <string name="tooltip_label">show tooltip</string>
+    <string name="view_saved_location">View Saved Location</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
@@ -2167,9 +2302,14 @@
     <item name="android:windowExitAnimation">@anim/m3_bottom_sheet_slide_out</item>
   </style>
     <style name="Animation.Material3.SideSheetDialog" parent="Animation.AppCompat.Dialog">
-    <item name="android:windowEnterAnimation">@anim/m3_side_sheet_slide_in</item>
-    <item name="android:windowExitAnimation">@anim/m3_side_sheet_slide_out</item>
+    <item name="android:windowEnterAnimation">@anim/m3_side_sheet_enter_from_right</item>
+    <item name="android:windowExitAnimation">@anim/m3_side_sheet_exit_to_right</item>
   </style>
+    <style name="Animation.Material3.SideSheetDialog.Left">
+    <item name="android:windowEnterAnimation">@anim/m3_side_sheet_enter_from_left</item>
+    <item name="android:windowExitAnimation">@anim/m3_side_sheet_exit_to_left</item>
+  </style>
+    <style name="Animation.Material3.SideSheetDialog.Right"/>
     <style name="Animation.MaterialComponents.BottomSheetDialog" parent="Animation.AppCompat.Dialog">
     <item name="android:windowEnterAnimation">@anim/mtrl_bottom_sheet_slide_in</item>
     <item name="android:windowExitAnimation">@anim/mtrl_bottom_sheet_slide_out</item>
@@ -2501,10 +2641,24 @@
     <style name="Base.Theme.Material3.Dark" parent="Base.V14.Theme.Material3.Dark"/>
     <style name="Base.Theme.Material3.Dark.BottomSheetDialog" parent="Base.V14.Theme.Material3.Dark.BottomSheetDialog"/>
     <style name="Base.Theme.Material3.Dark.Dialog" parent="Base.V14.Theme.Material3.Dark.Dialog"/>
+    <style name="Base.Theme.Material3.Dark.Dialog.FixedSize">
+    <item name="windowFixedWidthMajor">@dimen/abc_dialog_fixed_width_major</item>
+    <item name="windowFixedWidthMinor">@dimen/abc_dialog_fixed_width_minor</item>
+    <item name="windowFixedHeightMajor">@dimen/abc_dialog_fixed_height_major</item>
+    <item name="windowFixedHeightMinor">@dimen/abc_dialog_fixed_height_minor</item>
+  </style>
+    <style name="Base.Theme.Material3.Dark.DialogWhenLarge" parent="Base.Theme.Material3.Dark"/>
     <style name="Base.Theme.Material3.Dark.SideSheetDialog" parent="Base.V14.Theme.Material3.Dark.SideSheetDialog"/>
     <style name="Base.Theme.Material3.Light" parent="Base.V14.Theme.Material3.Light"/>
     <style name="Base.Theme.Material3.Light.BottomSheetDialog" parent="Base.V14.Theme.Material3.Light.BottomSheetDialog"/>
     <style name="Base.Theme.Material3.Light.Dialog" parent="Base.V14.Theme.Material3.Light.Dialog"/>
+    <style name="Base.Theme.Material3.Light.Dialog.FixedSize">
+    <item name="windowFixedWidthMajor">@dimen/abc_dialog_fixed_width_major</item>
+    <item name="windowFixedWidthMinor">@dimen/abc_dialog_fixed_width_minor</item>
+    <item name="windowFixedHeightMajor">@dimen/abc_dialog_fixed_height_major</item>
+    <item name="windowFixedHeightMinor">@dimen/abc_dialog_fixed_height_minor</item>
+  </style>
+    <style name="Base.Theme.Material3.Light.DialogWhenLarge" parent="Base.Theme.Material3.Light"/>
     <style name="Base.Theme.Material3.Light.SideSheetDialog" parent="Base.V14.Theme.Material3.Light.SideSheetDialog"/>
     <style name="Base.Theme.MaterialComponents" parent="Base.V14.Theme.MaterialComponents"/>
     <style name="Base.Theme.MaterialComponents.Bridge" parent="Base.V14.Theme.MaterialComponents.Bridge"/>
@@ -2639,6 +2793,7 @@
     <style name="Base.ThemeOverlay.Material3.Dialog" parent="Base.ThemeOverlay.MaterialComponents.Dialog">
     <item name="materialButtonStyle">@style/Widget.Material3.Button.TextButton.Dialog.Flush</item>
     <item name="android:windowAnimationStyle">@style/MaterialAlertDialog.Material3.Animation</item>
+    <item name="android:backgroundDimAmount">@dimen/m3_comp_scrim_container_opacity</item>
   </style>
     <style name="Base.ThemeOverlay.Material3.SideSheetDialog" parent="Base.V14.ThemeOverlay.Material3.SideSheetDialog"/>
     <style name="Base.ThemeOverlay.Material3.TextInputEditText" parent="ThemeOverlay.MaterialComponents.TextInputEditText">
@@ -2728,6 +2883,7 @@
     <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Material3.BottomSheetDialog</item>
     <item name="materialAlertDialogTheme">@style/ThemeOverlay.Material3.MaterialAlertDialog</item>
     <item name="sideSheetDialogTheme">@style/ThemeOverlay.Material3.SideSheetDialog</item>
+    <item name="android:backgroundDimAmount">@dimen/m3_comp_scrim_container_opacity</item>
 
     
     <item name="materialCalendarStyle">@style/Widget.Material3.MaterialCalendar</item>
@@ -2784,11 +2940,14 @@
     <item name="materialCardViewOutlinedStyle">@style/Widget.Material3.CardView.Outlined</item>
     <item name="materialCardViewFilledStyle">@style/Widget.Material3.CardView.Filled</item>
     <item name="materialCardViewElevatedStyle">@style/Widget.Material3.CardView.Elevated</item>
+    <item name="materialSearchBarStyle">@style/Widget.Material3.SearchBar</item>
+    <item name="materialSearchViewStyle">@style/Widget.Material3.SearchView</item>
+    <item name="materialSearchViewPrefixStyle">@style/Widget.Material3.SearchView.Prefix</item>
+    <item name="materialSearchViewToolbarHeight">@dimen/m3_searchview_height</item>
+    <item name="materialSearchViewToolbarStyle">@style/Widget.Material3.SearchView.Toolbar</item>
     <item name="materialSwitchStyle">@style/Widget.Material3.CompoundButton.MaterialSwitch</item>
     <item name="navigationRailStyle">@style/Widget.Material3.NavigationRailView</item>
     <item name="navigationViewStyle">@style/Widget.Material3.NavigationView</item>
-    <item name="materialSearchBarStyle">@style/Widget.Material3.SearchBar</item>
-    <item name="materialSearchViewStyle">@style/Widget.Material3.SearchView</item>
     <item name="radioButtonStyle">@style/Widget.Material3.CompoundButton.RadioButton</item>
     <item name="sliderStyle">@style/Widget.Material3.Slider</item>
     <item name="snackbarStyle">@style/Widget.Material3.Snackbar</item>
@@ -3036,12 +3195,15 @@
     <item name="materialCardViewOutlinedStyle">@style/Widget.Material3.CardView.Outlined</item>
     <item name="materialCardViewFilledStyle">@style/Widget.Material3.CardView.Filled</item>
     <item name="materialCardViewElevatedStyle">@style/Widget.Material3.CardView.Elevated</item>
+    <item name="materialSearchBarStyle">@style/Widget.Material3.SearchBar</item>
+    <item name="materialSearchViewStyle">@style/Widget.Material3.SearchView</item>
+    <item name="materialSearchViewPrefixStyle">@style/Widget.Material3.SearchView.Prefix</item>
+    <item name="materialSearchViewToolbarHeight">@dimen/m3_searchview_height</item>
+    <item name="materialSearchViewToolbarStyle">@style/Widget.Material3.SearchView.Toolbar</item>
     <item name="materialSwitchStyle">@style/Widget.Material3.CompoundButton.MaterialSwitch</item>
     <item name="navigationRailStyle">@style/Widget.Material3.NavigationRailView</item>
     <item name="navigationViewStyle">@style/Widget.Material3.NavigationView</item>
     <item name="radioButtonStyle">@style/Widget.Material3.CompoundButton.RadioButton</item>
-    <item name="materialSearchBarStyle">@style/Widget.Material3.SearchBar</item>
-    <item name="materialSearchViewStyle">@style/Widget.Material3.SearchView</item>
     <item name="sliderStyle">@style/Widget.Material3.Slider</item>
     <item name="snackbarStyle">@style/Widget.Material3.Snackbar</item>
     <item name="snackbarButtonStyle">@style/Widget.Material3.Button.TextButton.Snackbar</item>
@@ -3161,6 +3323,7 @@
     
     <item name="alertDialogTheme">@style/ThemeOverlay.Material3.Dialog.Alert</item>
     <item name="materialAlertDialogTheme">@style/ThemeOverlay.Material3.MaterialAlertDialog</item>
+    <item name="android:backgroundDimAmount">@dimen/m3_comp_scrim_container_opacity</item>
 
     
     <item name="materialCalendarStyle">@style/Widget.Material3.MaterialCalendar</item>
@@ -3258,6 +3421,7 @@
     <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Material3.BottomSheetDialog</item>
     <item name="materialAlertDialogTheme">@style/ThemeOverlay.Material3.MaterialAlertDialog</item>
     <item name="sideSheetDialogTheme">@style/ThemeOverlay.Material3.SideSheetDialog</item>
+    <item name="android:backgroundDimAmount">@dimen/m3_comp_scrim_container_opacity</item>
 
     
     <item name="materialCalendarStyle">@style/Widget.Material3.MaterialCalendar</item>
@@ -3314,11 +3478,14 @@
     <item name="materialCardViewOutlinedStyle">@style/Widget.Material3.CardView.Outlined</item>
     <item name="materialCardViewFilledStyle">@style/Widget.Material3.CardView.Filled</item>
     <item name="materialCardViewElevatedStyle">@style/Widget.Material3.CardView.Elevated</item>
+    <item name="materialSearchBarStyle">@style/Widget.Material3.SearchBar</item>
+    <item name="materialSearchViewStyle">@style/Widget.Material3.SearchView</item>
+    <item name="materialSearchViewPrefixStyle">@style/Widget.Material3.SearchView.Prefix</item>
+    <item name="materialSearchViewToolbarHeight">@dimen/m3_searchview_height</item>
+    <item name="materialSearchViewToolbarStyle">@style/Widget.Material3.SearchView.Toolbar</item>
     <item name="materialSwitchStyle">@style/Widget.Material3.CompoundButton.MaterialSwitch</item>
     <item name="navigationRailStyle">@style/Widget.Material3.NavigationRailView</item>
     <item name="navigationViewStyle">@style/Widget.Material3.NavigationView</item>
-    <item name="materialSearchBarStyle">@style/Widget.Material3.SearchBar</item>
-    <item name="materialSearchViewStyle">@style/Widget.Material3.SearchView</item>
     <item name="radioButtonStyle">@style/Widget.Material3.CompoundButton.RadioButton</item>
     <item name="sliderStyle">@style/Widget.Material3.Slider</item>
     <item name="snackbarStyle">@style/Widget.Material3.Snackbar</item>
@@ -3566,12 +3733,15 @@
     <item name="materialCardViewOutlinedStyle">@style/Widget.Material3.CardView.Outlined</item>
     <item name="materialCardViewFilledStyle">@style/Widget.Material3.CardView.Filled</item>
     <item name="materialCardViewElevatedStyle">@style/Widget.Material3.CardView.Elevated</item>
+    <item name="materialSearchBarStyle">@style/Widget.Material3.SearchBar</item>
+    <item name="materialSearchViewStyle">@style/Widget.Material3.SearchView</item>
+    <item name="materialSearchViewPrefixStyle">@style/Widget.Material3.SearchView.Prefix</item>
+    <item name="materialSearchViewToolbarHeight">@dimen/m3_searchview_height</item>
+    <item name="materialSearchViewToolbarStyle">@style/Widget.Material3.SearchView.Toolbar</item>
     <item name="materialSwitchStyle">@style/Widget.Material3.CompoundButton.MaterialSwitch</item>
     <item name="navigationRailStyle">@style/Widget.Material3.NavigationRailView</item>
     <item name="navigationViewStyle">@style/Widget.Material3.NavigationView</item>
     <item name="radioButtonStyle">@style/Widget.Material3.CompoundButton.RadioButton</item>
-    <item name="materialSearchBarStyle">@style/Widget.Material3.SearchBar</item>
-    <item name="materialSearchViewStyle">@style/Widget.Material3.SearchView</item>
     <item name="sliderStyle">@style/Widget.Material3.Slider</item>
     <item name="snackbarStyle">@style/Widget.Material3.Snackbar</item>
     <item name="snackbarButtonStyle">@style/Widget.Material3.Button.TextButton.Snackbar</item>
@@ -3691,6 +3861,7 @@
     
     <item name="alertDialogTheme">@style/ThemeOverlay.Material3.Dialog.Alert</item>
     <item name="materialAlertDialogTheme">@style/ThemeOverlay.Material3.MaterialAlertDialog</item>
+    <item name="android:backgroundDimAmount">@dimen/m3_comp_scrim_container_opacity</item>
 
     
     <item name="materialCalendarStyle">@style/Widget.Material3.MaterialCalendar</item>
@@ -4371,7 +4542,7 @@
     <item name="buttonBarPositiveButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog</item>
     <item name="buttonBarNegativeButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog</item>
     <item name="buttonBarNeutralButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog.Flush</item>
-    <item name="android:backgroundDimAmount">0.32</item>
+    <item name="android:backgroundDimAmount">@dimen/m3_comp_scrim_container_opacity</item>
     <item name="materialAlertDialogBodyTextStyle">@style/MaterialAlertDialog.MaterialComponents.Body.Text</item>
   </style>
     <style name="Base.V14.Widget.MaterialComponents.AutoCompleteTextView" parent="Widget.AppCompat.AutoCompleteTextView">
@@ -5168,15 +5339,15 @@
     <style name="Base.Widget.Material3.ActionBar.Solid" parent="Widget.AppCompat.ActionBar.Solid">
     <item name="titleTextStyle">@style/TextAppearance.Material3.ActionBar.Title</item>
     <item name="subtitleTextStyle">@style/TextAppearance.Material3.ActionBar.Subtitle</item>
-    <item name="background">@macro/m3_comp_top_app_bar_small_container_color</item>
-    <item name="backgroundStacked">@macro/m3_comp_top_app_bar_small_container_color</item>
-    <item name="backgroundSplit">@macro/m3_comp_top_app_bar_small_container_color</item>
+    <item name="background">@macro/m3_comp_top_app_bar_small_on_scroll_container_color</item>
+    <item name="backgroundStacked">@macro/m3_comp_top_app_bar_small_on_scroll_container_color</item>
+    <item name="backgroundSplit">@macro/m3_comp_top_app_bar_small_on_scroll_container_color</item>
   </style>
     <style name="Base.Widget.Material3.ActionMode" parent="Widget.AppCompat.ActionMode">
     <item name="titleTextStyle">@style/TextAppearance.Material3.ActionBar.Title</item>
     <item name="subtitleTextStyle">@style/TextAppearance.Material3.ActionBar.Subtitle</item>
-    <item name="background">@macro/m3_comp_top_app_bar_small_container_color</item>
-    <item name="backgroundSplit">@macro/m3_comp_top_app_bar_small_container_color</item>
+    <item name="background">@macro/m3_comp_top_app_bar_small_on_scroll_container_color</item>
+    <item name="backgroundSplit">@macro/m3_comp_top_app_bar_small_on_scroll_container_color</item>
   </style>
     <style name="Base.Widget.Material3.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
     <item name="android:background">@macro/m3_comp_navigation_bar_container_color</item>
@@ -5192,6 +5363,8 @@
     <item name="itemPaddingTop">@dimen/m3_bottom_nav_item_padding_top</item>
     <item name="itemPaddingBottom">@dimen/m3_bottom_nav_item_padding_bottom</item>
     <item name="android:minHeight">@dimen/m3_bottom_nav_min_height</item>
+    <item name="materialThemeOverlay">@style/ThemeOverlay.Material3.BottomNavigationView</item>
+    <item name="shapeAppearance">@style/ShapeAppearance.M3.Comp.NavigationBar.Container.Shape</item>
   </style>
     <style name="Base.Widget.Material3.CardView" parent="Widget.MaterialComponents.CardView">
     <item name="enforceMaterialTheme">true</item>
@@ -5329,9 +5502,9 @@
     <style name="Base.Widget.Material3.Light.ActionBar.Solid" parent="Widget.AppCompat.Light.ActionBar.Solid">
     <item name="titleTextStyle">@style/TextAppearance.Material3.ActionBar.Title</item>
     <item name="subtitleTextStyle">@style/TextAppearance.Material3.ActionBar.Subtitle</item>
-    <item name="background">@macro/m3_comp_top_app_bar_small_container_color</item>
-    <item name="backgroundStacked">@macro/m3_comp_top_app_bar_small_container_color</item>
-    <item name="backgroundSplit">@macro/m3_comp_top_app_bar_small_container_color</item>
+    <item name="background">@macro/m3_comp_top_app_bar_small_on_scroll_container_color</item>
+    <item name="backgroundStacked">@macro/m3_comp_top_app_bar_small_on_scroll_container_color</item>
+    <item name="backgroundSplit">@macro/m3_comp_top_app_bar_small_on_scroll_container_color</item>
   </style>
     <style name="Base.Widget.Material3.MaterialCalendar.NavigationButton" parent="Widget.Material3.Button.TextButton.Dialog.Flush">
     <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
@@ -5340,7 +5513,7 @@
     <style name="Base.Widget.Material3.Snackbar" parent="Base.Widget.MaterialComponents.Snackbar">
     <item name="enforceMaterialTheme">true</item>
     <item name="materialThemeOverlay">@style/ThemeOverlay.Material3.Snackbar</item>
-    <item name="backgroundTint">?attr/colorSurfaceInverse</item>
+    <item name="backgroundTint">@macro/m3_comp_snackbar_container_color</item>
     <item name="actionTextColorAlpha">@dimen/m3_snackbar_action_text_color_alpha</item>
   </style>
     <style name="Base.Widget.Material3.TabLayout" parent="Widget.MaterialComponents.TabLayout">
@@ -5355,6 +5528,7 @@
     <item name="tabRippleColor">@color/m3_tabs_ripple_color</item>
     <item name="tabIndicatorFullWidth">false</item>
     <item name="tabIndicatorAnimationDuration">?attr/motionDurationLong2</item>
+    <item name="materialThemeOverlay">@style/ThemeOverlay.Material3.TabLayout</item>
   </style>
     <style name="Base.Widget.Material3.TabLayout.OnSurface" parent="Widget.Material3.TabLayout">
     <item name="android:background">@android:color/transparent</item>
@@ -5490,6 +5664,9 @@
     <item name="boxStrokeErrorColor">@color/mtrl_error</item>
     <item name="boxStrokeWidth">@dimen/mtrl_textinput_box_stroke_width_default</item>
     <item name="boxStrokeWidthFocused">@dimen/mtrl_textinput_box_stroke_width_focused</item>
+    
+    <item name="cursorColor">@null</item>
+    <item name="cursorErrorColor">@color/mtrl_error</item>
 
     <item name="counterTextAppearance">?attr/textAppearanceCaption</item>
     <item name="counterOverflowTextAppearance">?attr/textAppearanceCaption</item>
@@ -5528,7 +5705,31 @@
     <style name="CardView.Light">
         <item name="cardBackgroundColor">@color/cardview_light_background</item>
     </style>
+    <style name="DialogWindowTheme">
+        <item name="android:windowClipToOutline">false</item>
+    </style>
+    <style name="EdgeToEdgeFloatingDialogTheme" parent="android:Theme.DeviceDefault.Dialog">
+        <item name="android:windowLayoutInDisplayCutoutMode" ns1:targetApi="27">@integer/m3c_window_layout_in_display_cutout_mode</item>
+        <item name="android:windowClipToOutline">false</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowElevation">0dp</item>
+    </style>
+    <style name="EdgeToEdgeFloatingDialogWindowTheme">
+        <item name="android:dialogTheme">@style/EdgeToEdgeFloatingDialogTheme</item>
+    </style>
+    <style name="FloatingDialogTheme">
+        <item name="android:windowIsFloating">false</item>
+    </style>
+    <style name="FloatingDialogWindowTheme">
+        <item name="android:windowClipToOutline">false</item>
+        <item name="android:dialogTheme">@style/FloatingDialogTheme</item>
+    </style>
     <style name="MaterialAlertDialog.Material3" parent="MaterialAlertDialog.MaterialComponents">
+    <item name="backgroundTint">@macro/m3_comp_dialog_container_color</item>
     <item name="enforceMaterialTheme">true</item>
     <item name="android:layout">@layout/m3_alert_dialog</item>
     <item name="shapeAppearance">@macro/m3_comp_dialog_container_shape</item>
@@ -5573,6 +5774,7 @@
     <item name="android:textAlignment" ns1:ignore="NewApi">gravity</item>
   </style>
     <style name="MaterialAlertDialog.MaterialComponents" parent="AlertDialog.AppCompat">
+    <item name="backgroundTint">?attr/colorSurface</item>
     <item name="android:layout">@layout/mtrl_alert_dialog</item>
     <item name="listItemLayout">@layout/mtrl_alert_select_dialog_item</item>
     <item name="multiChoiceItemLayout">@layout/mtrl_alert_select_dialog_multichoice</item>
@@ -5846,10 +6048,13 @@
     <style name="ShapeAppearance.M3.Comp.Badge.Large.Shape" parent="ShapeAppearance.M3.Sys.Shape.Corner.Full"/>
     <style name="ShapeAppearance.M3.Comp.Badge.Shape" parent="ShapeAppearance.M3.Sys.Shape.Corner.Full"/>
     <style name="ShapeAppearance.M3.Comp.BottomAppBar.Container.Shape" parent="ShapeAppearance.M3.Sys.Shape.Corner.None"/>
+    <style name="ShapeAppearance.M3.Comp.DatePicker.Modal.Date.Container.Shape" parent="ShapeAppearance.M3.Sys.Shape.Corner.Full"/>
     <style name="ShapeAppearance.M3.Comp.FilledButton.Container.Shape" parent="ShapeAppearance.M3.Sys.Shape.Corner.Full"/>
     <style name="ShapeAppearance.M3.Comp.NavigationBar.ActiveIndicator.Shape" parent="ShapeAppearance.M3.Sys.Shape.Corner.Full"/>
+    <style name="ShapeAppearance.M3.Comp.NavigationBar.Container.Shape" parent="ShapeAppearance.M3.Sys.Shape.Corner.None"/>
     <style name="ShapeAppearance.M3.Comp.NavigationDrawer.ActiveIndicator.Shape" parent="ShapeAppearance.M3.Sys.Shape.Corner.Full"/>
     <style name="ShapeAppearance.M3.Comp.NavigationRail.ActiveIndicator.Shape" parent="ShapeAppearance.M3.Sys.Shape.Corner.Full"/>
+    <style name="ShapeAppearance.M3.Comp.NavigationRail.Container.Shape" parent="ShapeAppearance.M3.Sys.Shape.Corner.None"/>
     <style name="ShapeAppearance.M3.Comp.SearchBar.Avatar.Shape" parent="ShapeAppearance.M3.Sys.Shape.Corner.Full"/>
     <style name="ShapeAppearance.M3.Comp.SearchBar.Container.Shape" parent="ShapeAppearance.M3.Sys.Shape.Corner.Full"/>
     <style name="ShapeAppearance.M3.Comp.SearchView.FullScreen.Container.Shape" parent="ShapeAppearance.M3.Sys.Shape.Corner.None"/>
@@ -6397,7 +6602,7 @@
     <item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
     <item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
   </style>
-    <style name="Theme.Material3.Dark.DialogWhenLarge" parent="Base.Theme.Material3.Dark.Dialog"/>
+    <style name="Theme.Material3.Dark.DialogWhenLarge" parent="Base.Theme.Material3.Dark.DialogWhenLarge"/>
     <style name="Theme.Material3.Dark.NoActionBar">
     <item name="windowActionBar">false</item>
     <item name="windowNoTitle">true</item>
@@ -6412,8 +6617,17 @@
     <style name="Theme.Material3.DayNight.NoActionBar" parent="Theme.Material3.Light.NoActionBar"/>
     <style name="Theme.Material3.DayNight.SideSheetDialog" parent="Theme.Material3.Light.SideSheetDialog"/>
     <style name="Theme.Material3.DynamicColors.Dark" parent="Theme.Material3.Dark"/>
+    <style name="Theme.Material3.DynamicColors.Dark.NoActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+  </style>
     <style name="Theme.Material3.DynamicColors.DayNight" parent="Theme.Material3.DynamicColors.Light"/>
+    <style name="Theme.Material3.DynamicColors.DayNight.NoActionBar" parent="Theme.Material3.DynamicColors.Light.NoActionBar"/>
     <style name="Theme.Material3.DynamicColors.Light" parent="Theme.Material3.Light"/>
+    <style name="Theme.Material3.DynamicColors.Light.NoActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+  </style>
     <style name="Theme.Material3.Light" parent="Base.Theme.Material3.Light"/>
     <style name="Theme.Material3.Light.BottomSheetDialog" parent="Base.Theme.Material3.Light.BottomSheetDialog"/>
     <style name="Theme.Material3.Light.Dialog" parent="Base.Theme.Material3.Light.Dialog"/>
@@ -6425,7 +6639,7 @@
     <item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
     <item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
   </style>
-    <style name="Theme.Material3.Light.DialogWhenLarge" parent="Base.Theme.Material3.Light.Dialog"/>
+    <style name="Theme.Material3.Light.DialogWhenLarge" parent="Base.Theme.Material3.Light.DialogWhenLarge"/>
     <style name="Theme.Material3.Light.NoActionBar">
     <item name="windowActionBar">false</item>
     <item name="windowNoTitle">true</item>
@@ -6596,6 +6810,9 @@
     <item name="colorControlNormal">?attr/colorOnSurface</item>
     <item name="actionMenuTextColor">?attr/colorOnSurface</item>
   </style>
+    <style name="ThemeOverlay.Material3.BottomNavigationView" parent="">
+    <item name="badgeStyle">@style/Widget.Material3.BottomNavigation.Badge</item>
+  </style>
     <style name="ThemeOverlay.Material3.BottomSheetDialog" parent="Base.ThemeOverlay.Material3.BottomSheetDialog"/>
     <style name="ThemeOverlay.Material3.Button" parent="">
     
@@ -6639,11 +6856,11 @@
   </style>
     <style name="ThemeOverlay.Material3.Chip" parent="">
     
-    <item name="colorControlNormal">@color/m3_chip_text_color</item>
+    <item name="colorControlNormal">?attr/colorOnSurfaceVariant</item>
   </style>
     <style name="ThemeOverlay.Material3.Chip.Assist" parent="">
     
-    <item name="colorControlNormal">@color/m3_assist_chip_icon_tint_color</item>
+    <item name="colorControlNormal">?attr/colorPrimary</item>
   </style>
     <style name="ThemeOverlay.Material3.Dark" parent="ThemeOverlay.MaterialComponents.Dark">
     
@@ -6848,6 +7065,9 @@
     
     <item name="android:textViewStyle">@style/Widget.Material3.MaterialTimePicker.Display.HelperText</item>
   </style>
+    <style name="ThemeOverlay.Material3.NavigationRailView" parent="">
+    <item name="badgeStyle">@style/Widget.Material3.NavigationRailView.Badge</item>
+  </style>
     <style name="ThemeOverlay.Material3.NavigationView" parent="">
     <item name="android:listDivider">?attr/colorOutline</item>
   </style>
@@ -6915,6 +7135,9 @@
     <style name="ThemeOverlay.Material3.SideSheetDialog" parent="Base.ThemeOverlay.Material3.SideSheetDialog"/>
     <style name="ThemeOverlay.Material3.Snackbar" parent="">
     <item name="colorOnSurface">?attr/colorOnBackground</item>
+  </style>
+    <style name="ThemeOverlay.Material3.TabLayout" parent="">
+    <item name="badgeStyle">@style/Widget.Material3.Badge.AdjustToBounds</item>
   </style>
     <style name="ThemeOverlay.Material3.TextInputEditText" parent="Base.ThemeOverlay.Material3.TextInputEditText">
     <item name="colorControlNormal">?attr/colorOnSurfaceVariant</item>
@@ -7325,6 +7548,7 @@
     <style name="Widget.Material3.AppBarLayout" parent="Widget.MaterialComponents.AppBarLayout.Surface">
     <item name="liftOnScroll">true</item>
     <item name="android:background">@macro/m3_comp_top_app_bar_small_container_color</item>
+    <item name="liftOnScrollColor">@macro/m3_comp_top_app_bar_small_on_scroll_container_color</item>
     <item name="android:stateListAnimator" ns1:ignore="NewApi">
       @animator/m3_appbar_state_list_animator
     </item>
@@ -7335,30 +7559,34 @@
   </style>
     <style name="Widget.Material3.AutoCompleteTextView.FilledBox" parent="Widget.MaterialComponents.AutoCompleteTextView.FilledBox">
     <item name="android:textAppearance">@macro/m3_comp_filled_autocomplete_text_field_input_text_type</item>
-    <item name="simpleItemSelectedColor">@macro/m3_comp_filled_autocomplete_menu_list_item_selected_container_color</item>
+    <item name="simpleItemSelectedColor">@macro/m3_comp_menu_list_item_selected_container_color</item>
     <item name="simpleItemSelectedRippleColor">@color/m3_simple_item_ripple_color</item>
     <item name="simpleItemLayout">@layout/m3_auto_complete_simple_item</item>
+    <item name="dropDownBackgroundTint">@macro/m3_comp_filled_autocomplete_menu_container_color</item>
     <item name="android:popupElevation" ns1:ignore="NewApi">@dimen/m3_comp_filled_autocomplete_menu_container_elevation</item>
   </style>
     <style name="Widget.Material3.AutoCompleteTextView.FilledBox.Dense" parent="Widget.MaterialComponents.AutoCompleteTextView.FilledBox.Dense">
     <item name="android:textAppearance">@macro/m3_comp_filled_autocomplete_text_field_input_text_type</item>
-    <item name="simpleItemSelectedColor">@macro/m3_comp_filled_autocomplete_menu_list_item_selected_container_color</item>
+    <item name="simpleItemSelectedColor">@macro/m3_comp_menu_list_item_selected_container_color</item>
     <item name="simpleItemSelectedRippleColor">@color/m3_simple_item_ripple_color</item>
     <item name="simpleItemLayout">@layout/m3_auto_complete_simple_item</item>
+    <item name="dropDownBackgroundTint">@macro/m3_comp_filled_autocomplete_menu_container_color</item>
     <item name="android:popupElevation" ns1:ignore="NewApi">@dimen/m3_comp_filled_autocomplete_menu_container_elevation</item>
   </style>
     <style name="Widget.Material3.AutoCompleteTextView.OutlinedBox" parent="Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox">
     <item name="android:textAppearance">@macro/m3_comp_outlined_autocomplete_text_field_input_text_type</item>
-    <item name="simpleItemSelectedColor">@macro/m3_comp_outlined_autocomplete_menu_list_item_selected_container_color</item>
+    <item name="simpleItemSelectedColor">@macro/m3_comp_menu_list_item_selected_container_color</item>
     <item name="simpleItemSelectedRippleColor">@color/m3_simple_item_ripple_color</item>
     <item name="simpleItemLayout">@layout/m3_auto_complete_simple_item</item>
+    <item name="dropDownBackgroundTint">@macro/m3_comp_outlined_autocomplete_menu_container_color</item>
     <item name="android:popupElevation" ns1:ignore="NewApi">@dimen/m3_comp_outlined_autocomplete_menu_container_elevation</item>
   </style>
     <style name="Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense" parent="Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox.Dense">
     <item name="android:textAppearance">@macro/m3_comp_outlined_autocomplete_text_field_input_text_type</item>
-    <item name="simpleItemSelectedColor">@macro/m3_comp_outlined_autocomplete_menu_list_item_selected_container_color</item>
+    <item name="simpleItemSelectedColor">@macro/m3_comp_menu_list_item_selected_container_color</item>
     <item name="simpleItemSelectedRippleColor">@color/m3_simple_item_ripple_color</item>
     <item name="simpleItemLayout">@layout/m3_auto_complete_simple_item</item>
+    <item name="dropDownBackgroundTint">@macro/m3_comp_outlined_autocomplete_menu_container_color</item>
     <item name="android:popupElevation" ns1:ignore="NewApi">@dimen/m3_comp_outlined_autocomplete_menu_container_elevation</item>
   </style>
     <style name="Widget.Material3.Badge" parent="Widget.MaterialComponents.Badge">
@@ -7379,6 +7607,10 @@
     <item name="verticalOffsetWithText">@dimen/m3_badge_with_text_offset</item>
     <item name="badgeTextAppearance">@macro/m3_comp_badge_large_label_text_type</item>
     <item name="badgeWithTextShapeAppearance">@style/ShapeAppearance.M3.Comp.Badge.Shape</item>
+    <item name="badgeVerticalPadding">@dimen/m3_badge_with_text_vertical_padding</item>
+  </style>
+    <style name="Widget.Material3.Badge.AdjustToBounds" parent="Widget.Material3.Badge">
+    <item name="autoAdjustToWithinGrandparentBounds">true</item>
   </style>
     <style name="Widget.Material3.BottomAppBar" parent="Widget.MaterialComponents.BottomAppBar">
     <item name="android:minHeight">@dimen/m3_bottomappbar_height</item>
@@ -7432,6 +7664,9 @@
     <item name="navigationIconTint">?attr/colorOnSurfaceVariant</item>
     <item name="materialThemeOverlay">@style/ThemeOverlay.Material3.BottomAppBar.Legacy</item>
   </style>
+    <style name="Widget.Material3.BottomNavigation.Badge" parent="Widget.Material3.Badge.AdjustToBounds">
+    <item name="verticalOffsetWithText">@dimen/m3_nav_badge_with_text_vertical_offset</item>
+  </style>
     <style name="Widget.Material3.BottomNavigationView" parent="Base.Widget.Material3.BottomNavigationView">
     <item name="compatShadowEnabled">false</item>
   </style>
@@ -7461,7 +7696,7 @@
     <item name="android:minWidth">@dimen/mtrl_min_touch_target_size</item>
     <item name="android:minHeight">@dimen/mtrl_min_touch_target_size</item>
     <item name="android:paddingBottom">@dimen/m3_bottom_sheet_drag_handle_bottom_padding</item>
-    <item name="srcCompat">@drawable/mtrl_bottomsheet_drag_handle</item>
+    <item name="srcCompat">@drawable/m3_bottom_sheet_drag_handle</item>
     <item name="tint">@macro/m3_comp_sheet_bottom_docked_drag_handle_color</item>
   </style>
     <style name="Widget.Material3.BottomSheet.Modal">
@@ -7773,12 +8008,37 @@
     <item name="chipSpacingVertical">8dp</item>
   </style>
     <style name="Widget.Material3.CircularProgressIndicator" parent="Widget.MaterialComponents.CircularProgressIndicator">
-    <item name="trackThickness">@dimen/m3_comp_circular_progress_indicator_active_indicator_width</item>
-    <item name="indicatorColor">@macro/m3_comp_circular_progress_indicator_active_indicator_color</item>
+    <item name="trackThickness">@dimen/m3_comp_progress_indicator_track_thickness</item>
+    <item name="indicatorColor">@macro/m3_comp_progress_indicator_active_indicator_color</item>
+    <item name="trackColor">@macro/m3_comp_progress_indicator_track_color</item>
+    <item name="trackCornerRadius">2dp</item>
+    <item name="indicatorTrackGapSize">@dimen/m3_comp_progress_indicator_active_indicator_track_space</item>
   </style>
-    <style name="Widget.Material3.CircularProgressIndicator.ExtraSmall" parent="Widget.MaterialComponents.CircularProgressIndicator.ExtraSmall"/>
-    <style name="Widget.Material3.CircularProgressIndicator.Medium" parent="Widget.MaterialComponents.CircularProgressIndicator.Medium"/>
-    <style name="Widget.Material3.CircularProgressIndicator.Small" parent="Widget.MaterialComponents.CircularProgressIndicator.Small"/>
+    <style name="Widget.Material3.CircularProgressIndicator.ExtraSmall">
+    <item name="trackThickness">@dimen/mtrl_progress_circular_track_thickness_extra_small</item>
+    <item name="indicatorSize">@dimen/mtrl_progress_circular_size_extra_small</item>
+    <item name="indicatorInset">@dimen/mtrl_progress_circular_inset_extra_small</item>
+    <item name="trackCornerRadius">1.25dp</item>
+    <item name="indicatorTrackGapSize">2dp</item>
+  </style>
+    <style name="Widget.Material3.CircularProgressIndicator.Legacy" parent="Widget.MaterialComponents.CircularProgressIndicator">
+    <item name="trackThickness">4dp</item>
+    <item name="indicatorColor">?attr/colorPrimary</item>
+    <item name="trackColor">@android:color/transparent</item>
+    <item name="trackCornerRadius">0dp</item>
+    <item name="indicatorTrackGapSize">0dp</item>
+  </style>
+    <style name="Widget.Material3.CircularProgressIndicator.Legacy.ExtraSmall" parent="Widget.MaterialComponents.CircularProgressIndicator.ExtraSmall"/>
+    <style name="Widget.Material3.CircularProgressIndicator.Legacy.Medium" parent="Widget.MaterialComponents.CircularProgressIndicator.Medium"/>
+    <style name="Widget.Material3.CircularProgressIndicator.Legacy.Small" parent="Widget.MaterialComponents.CircularProgressIndicator.Small"/>
+    <style name="Widget.Material3.CircularProgressIndicator.Medium"/>
+    <style name="Widget.Material3.CircularProgressIndicator.Small">
+    <item name="trackThickness">@dimen/mtrl_progress_circular_track_thickness_small</item>
+    <item name="indicatorSize">@dimen/mtrl_progress_circular_size_small</item>
+    <item name="indicatorInset">@dimen/mtrl_progress_circular_inset_small</item>
+    <item name="trackCornerRadius">1.5dp</item>
+    <item name="indicatorTrackGapSize">3dp</item>
+  </style>
     <style name="Widget.Material3.CollapsingToolbar" parent="Base.Widget.Material3.CollapsingToolbar">
     <item name="scrimVisibleHeightTrigger">@dimen/m3_appbar_scrim_height_trigger</item>
     <item name="expandedTitleTextAppearance">?attr/textAppearanceHeadlineSmall</item>
@@ -7801,6 +8061,7 @@
     <item name="track">@drawable/mtrl_switch_track</item>
     <item name="trackDecoration">@drawable/mtrl_switch_track_decoration</item>
     <item name="thumbTint">@color/mtrl_switch_thumb_tint</item>
+    <item name="thumbIconSize">@dimen/mtrl_switch_thumb_icon_size</item>
     <item name="thumbIconTint">@color/mtrl_switch_thumb_icon_tint</item>
     <item name="trackTint">@color/mtrl_switch_track_tint</item>
     <item name="trackDecorationTint">@color/mtrl_switch_track_decoration_tint</item>
@@ -7875,13 +8136,25 @@
   </style>
     <style name="Widget.Material3.Light.ActionBar.Solid" parent="Base.Widget.Material3.Light.ActionBar.Solid"/>
     <style name="Widget.Material3.LinearProgressIndicator" parent="Widget.MaterialComponents.LinearProgressIndicator">
-    <item name="trackThickness">@dimen/m3_comp_linear_progress_indicator_active_indicator_height</item>
-    <item name="trackColor">@macro/m3_comp_linear_progress_indicator_track_color</item>
-    <item name="indicatorColor">@macro/m3_comp_linear_progress_indicator_active_indicator_color</item>
+    <item name="trackThickness">@dimen/m3_comp_progress_indicator_track_thickness</item>
+    <item name="trackColor">@macro/m3_comp_progress_indicator_track_color</item>
+    <item name="indicatorColor">@macro/m3_comp_progress_indicator_active_indicator_color</item>
+    <item name="trackCornerRadius">2dp</item>
+    <item name="indicatorTrackGapSize">@dimen/m3_comp_progress_indicator_active_indicator_track_space</item>
+    <item name="trackStopIndicatorSize">@dimen/m3_comp_progress_indicator_stop_indicator_size</item>
+  </style>
+    <style name="Widget.Material3.LinearProgressIndicator.Legacy" parent="Widget.MaterialComponents.LinearProgressIndicator">
+    <item name="trackThickness">4dp</item>
+    <item name="indicatorColor">?attr/colorPrimary</item>
+    <item name="trackColor">?attr/colorSurfaceContainerHighest</item>
+    <item name="trackCornerRadius">0dp</item>
+    <item name="indicatorTrackGapSize">0dp</item>
+    <item name="trackStopIndicatorSize">0dp</item>
   </style>
     <style name="Widget.Material3.MaterialButtonToggleGroup" parent="Widget.MaterialComponents.MaterialButtonToggleGroup"/>
     <style name="Widget.Material3.MaterialCalendar" parent="Widget.MaterialComponents.MaterialCalendar">
     <item name="android:windowFullscreen">false</item>
+    <item name="backgroundTint">@macro/m3_comp_date_picker_modal_container_color</item>
     <item name="dayStyle">@style/Widget.Material3.MaterialCalendar.Day</item>
     <item name="dayInvalidStyle">@style/Widget.Material3.MaterialCalendar.Day.Invalid</item>
     <item name="daySelectedStyle">@style/Widget.Material3.MaterialCalendar.Day.Selected</item>
@@ -7889,37 +8162,39 @@
     <item name="yearStyle">@style/Widget.Material3.MaterialCalendar.Year</item>
     <item name="yearSelectedStyle">@style/Widget.Material3.MaterialCalendar.Year.Selected</item>
     <item name="yearTodayStyle">@style/Widget.Material3.MaterialCalendar.Year.Today</item>
-    <item name="rangeFillColor">?attr/colorSurfaceVariant</item>
-    <item name="shapeAppearance">?attr/shapeAppearanceCornerExtraLarge</item>
+    <item name="rangeFillColor">@macro/m3_comp_date_picker_modal_range_selection_active_indicator_container_color</item>
+    <item name="shapeAppearance">@macro/m3_comp_date_picker_modal_container_shape</item>
   </style>
     <style name="Widget.Material3.MaterialCalendar.Day" parent="Widget.Material3.MaterialCalendar.Item">
+    <item name="itemShapeAppearance">@style/ShapeAppearance.M3.Comp.DatePicker.Modal.Date.Container.Shape</item>
     <item name="android:width">@dimen/mtrl_calendar_day_width</item>
     <item name="android:height">@dimen/mtrl_calendar_day_height</item>
     <item name="android:insetTop">@dimen/mtrl_calendar_day_vertical_padding</item>
     <item name="android:insetBottom">@dimen/mtrl_calendar_day_vertical_padding</item>
     <item name="android:insetLeft">@dimen/mtrl_calendar_day_horizontal_padding</item>
     <item name="android:insetRight">@dimen/mtrl_calendar_day_horizontal_padding</item>
+    <item name="itemTextColor">@macro/m3_comp_date_picker_modal_date_unselected_label_text_color</item>
   </style>
     <style name="Widget.Material3.MaterialCalendar.Day.Invalid">
     <item name="itemTextColor">@color/m3_calendar_item_disabled_text</item>
     <item name="itemStrokeWidth">0dp</item>
   </style>
     <style name="Widget.Material3.MaterialCalendar.Day.Selected">
-    <item name="itemFillColor">?attr/colorPrimary</item>
-    <item name="itemTextColor">?attr/colorOnPrimary</item>
+    <item name="itemFillColor">@macro/m3_comp_date_picker_modal_date_selected_container_color</item>
+    <item name="itemTextColor">@macro/m3_comp_date_picker_modal_date_selected_label_text_color</item>
     <item name="itemStrokeWidth">0dp</item>
   </style>
     <style name="Widget.Material3.MaterialCalendar.Day.Today">
-    <item name="itemTextColor">?attr/colorPrimary</item>
-    <item name="itemStrokeColor">?attr/colorPrimary</item>
-    <item name="itemStrokeWidth">@dimen/mtrl_calendar_day_today_stroke</item>
+    <item name="itemTextColor">@macro/m3_comp_date_picker_modal_date_today_label_text_color</item>
+    <item name="itemStrokeColor">@macro/m3_comp_date_picker_modal_date_today_container_outline_color</item>
+    <item name="itemStrokeWidth">@dimen/m3_comp_date_picker_modal_date_today_container_outline_width</item>
   </style>
     <style name="Widget.Material3.MaterialCalendar.DayOfWeekLabel" parent="Widget.MaterialComponents.MaterialCalendar.DayOfWeekLabel">
-    <item name="android:textAppearance">?attr/textAppearanceBodyLarge</item>
-    <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+    <item name="android:textAppearance">@macro/m3_comp_date_picker_modal_weekdays_label_text_type</item>
+    <item name="android:textColor">@macro/m3_comp_date_picker_modal_weekdays_label_text_color</item>
   </style>
     <style name="Widget.Material3.MaterialCalendar.DayTextView" parent="Widget.MaterialComponents.MaterialCalendar.DayTextView">
-    <item name="android:textAppearance">?attr/textAppearanceBodyLarge</item>
+    <item name="android:textAppearance">@macro/m3_comp_date_picker_modal_date_label_text_type</item>
   </style>
     <style name="Widget.Material3.MaterialCalendar.Fullscreen">
     <item name="android:windowFullscreen">true</item>
@@ -7933,23 +8208,24 @@
     <item name="android:visibility">gone</item>
   </style>
     <style name="Widget.Material3.MaterialCalendar.HeaderLayout" parent="Widget.MaterialComponents.MaterialCalendar.HeaderLayout">
+    <item name="android:layout_height">@dimen/m3_comp_date_picker_modal_header_container_height</item>
     <item name="android:background">@android:color/transparent</item>
   </style>
     <style name="Widget.Material3.MaterialCalendar.HeaderLayout.Fullscreen">
-    <item name="android:layout_height">@dimen/mtrl_calendar_header_height_fullscreen</item>
+    <item name="android:layout_height">@dimen/m3_comp_date_picker_modal_range_selection_header_container_height</item>
   </style>
     <style name="Widget.Material3.MaterialCalendar.HeaderSelection" parent="Widget.MaterialComponents.MaterialCalendar.HeaderSelection">
-    <item name="android:textAppearance">?attr/textAppearanceHeadlineLarge</item>
-    <item name="android:textColor">?attr/colorOnSurface</item>
+    <item name="android:textAppearance">@macro/m3_comp_date_picker_modal_header_headline_type</item>
+    <item name="android:textColor">@macro/m3_comp_date_picker_modal_header_headline_color</item>
   </style>
     <style name="Widget.Material3.MaterialCalendar.HeaderSelection.Fullscreen">
-    <item name="android:textAppearance">?attr/textAppearanceHeadlineSmall</item>
+    <item name="android:textAppearance">@macro/m3_comp_date_picker_modal_range_selection_header_headline_type</item>
     <item name="android:maxLines">1</item>
     <item name="autoSizeMaxTextSize">20sp</item>
   </style>
     <style name="Widget.Material3.MaterialCalendar.HeaderTitle" parent="Widget.MaterialComponents.MaterialCalendar.HeaderTitle">
-    <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
-    <item name="android:textAppearance">?attr/textAppearanceLabelLarge</item>
+    <item name="android:textColor">@macro/m3_comp_date_picker_modal_header_supporting_text_color</item>
+    <item name="android:textAppearance">@macro/m3_comp_date_picker_modal_header_supporting_text_type</item>
     <item name="autoSizeMaxTextSize">14sp</item>
   </style>
     <style name="Widget.Material3.MaterialCalendar.HeaderToggleButton" parent="Widget.MaterialComponents.MaterialCalendar.HeaderToggleButton">
@@ -7967,8 +8243,8 @@
     <item name="iconGravity">textStart</item>
   </style>
     <style name="Widget.Material3.MaterialCalendar.MonthTextView" parent="Widget.MaterialComponents.MaterialCalendar.MonthTextView">
-    <item name="android:textAppearance">?attr/textAppearanceTitleSmall</item>
-    <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+    <item name="android:textAppearance">@macro/m3_comp_date_picker_modal_range_selection_month_subhead_type</item>
+    <item name="android:textColor">@macro/m3_comp_date_picker_modal_range_selection_month_subhead_color</item>
   </style>
     <style name="Widget.Material3.MaterialCalendar.Year" parent="Widget.Material3.MaterialCalendar.Item">
     <item name="android:width">@dimen/mtrl_calendar_year_width</item>
@@ -7977,10 +8253,11 @@
     <item name="android:insetBottom">@dimen/mtrl_calendar_year_vertical_padding</item>
     <item name="android:insetLeft">@dimen/mtrl_calendar_year_horizontal_padding</item>
     <item name="android:insetRight">@dimen/mtrl_calendar_year_horizontal_padding</item>
+    <item name="itemTextColor">@macro/m3_comp_date_picker_modal_year_selection_year_unselected_label_text_color</item>
   </style>
     <style name="Widget.Material3.MaterialCalendar.Year.Selected">
-    <item name="itemFillColor">?attr/colorPrimary</item>
-    <item name="itemTextColor">?attr/colorOnPrimary</item>
+    <item name="itemFillColor">@macro/m3_comp_date_picker_modal_year_selection_year_selected_container_color</item>
+    <item name="itemTextColor">@macro/m3_comp_date_picker_modal_year_selection_year_selected_label_text_color</item>
     <item name="itemStrokeWidth">0dp</item>
   </style>
     <style name="Widget.Material3.MaterialCalendar.Year.Today">
@@ -7998,6 +8275,7 @@
   </style>
     <style name="Widget.Material3.MaterialTimePicker" parent="Widget.MaterialComponents.TimePicker">
     <item name="shapeAppearance">@macro/m3_comp_time_picker_container_shape</item>
+    <item name="backgroundTint">@macro/m3_comp_time_picker_container_color</item>
   </style>
     <style name="Widget.Material3.MaterialTimePicker.Button" parent="Widget.MaterialComponents.TimePicker.Button">
     <item name="android:textAppearance">@macro/m3_comp_time_picker_period_selector_label_text_type</item>
@@ -8064,6 +8342,7 @@
     <item name="android:background">@macro/m3_comp_navigation_rail_container_color</item>
     <item name="backgroundTint">@null</item>
     <item name="elevation">@dimen/m3_navigation_rail_elevation</item>
+    <item name="shapeAppearance">@style/ShapeAppearance.M3.Comp.NavigationRail.Container.Shape</item>
     <item name="itemActiveIndicatorStyle">@style/Widget.Material3.NavigationRailView.ActiveIndicator</item>
     <item name="itemRippleColor">@color/m3_navigation_rail_ripple_color_selector</item>
     <item name="itemIconSize">@dimen/m3_comp_navigation_rail_icon_size</item>
@@ -8074,6 +8353,7 @@
     <item name="itemMinHeight">@dimen/m3_navigation_rail_item_min_height</item>
     <item name="itemTextAppearanceInactive">@macro/m3_comp_navigation_rail_label_text_type</item>
     <item name="itemTextAppearanceActive">@macro/m3_comp_navigation_rail_label_text_type</item>
+    <item name="materialThemeOverlay">@style/ThemeOverlay.Material3.NavigationRailView</item>
   </style>
     <style name="Widget.Material3.NavigationRailView.ActiveIndicator" parent="">
     <item name="android:width">@dimen/m3_navigation_rail_item_active_indicator_width</item>
@@ -8082,8 +8362,12 @@
     <item name="shapeAppearance">@style/ShapeAppearance.M3.Comp.NavigationRail.ActiveIndicator.Shape</item>
     <item name="android:color">@macro/m3_comp_navigation_rail_active_indicator_color</item>
   </style>
+    <style name="Widget.Material3.NavigationRailView.Badge" parent="Widget.Material3.Badge.AdjustToBounds">
+    <item name="largeFontVerticalOffsetAdjustment">@dimen/m3_large_text_vertical_offset_adjustment</item>
+    <item name="verticalOffsetWithText">@dimen/m3_nav_badge_with_text_vertical_offset</item>
+  </style>
     <style name="Widget.Material3.NavigationView" parent="Widget.MaterialComponents.NavigationView">
-    <item name="android:background">@macro/m3_comp_navigation_drawer_container_color</item>
+    <item name="android:background">@macro/m3_comp_navigation_drawer_modal_container_color</item>
     <item name="android:maxWidth">@dimen/m3_comp_navigation_drawer_container_width</item>
     <item name="subheaderColor">@macro/m3_comp_navigation_drawer_headline_color</item>
     <item name="subheaderTextAppearance">@macro/m3_comp_navigation_drawer_headline_type</item>
@@ -8110,6 +8394,7 @@
     <item name="subheaderInsetStart">@dimen/m3_navigation_menu_headline_horizontal_padding</item>
     <item name="subheaderInsetEnd">@dimen/m3_navigation_menu_headline_horizontal_padding</item>
     <item name="drawerLayoutCornerSize">@dimen/m3_navigation_drawer_layout_corner_size</item>
+    <item name="activeIndicatorLabelPadding">@dimen/m3_navigation_item_active_indicator_label_padding</item>
   </style>
     <style name="Widget.Material3.PopupMenu" parent="Widget.MaterialComponents.PopupMenu">
     <item name="android:popupElevation" ns1:ignore="NewApi">@dimen/m3_menu_elevation</item>
@@ -8130,6 +8415,7 @@
     <item name="android:minWidth">@dimen/mtrl_min_touch_target_size</item>
   </style>
     <style name="Widget.Material3.SearchBar" parent="android:Widget">
+    <item name="backgroundTint">@macro/m3_comp_search_bar_container_color</item>
     <item name="enforceMaterialTheme">true</item>
     <item name="android:minHeight">@dimen/m3_searchbar_height</item>
     <item name="android:paddingStart">@dimen/m3_searchbar_padding_start</item>
@@ -8149,10 +8435,12 @@
   </style>
     <style name="Widget.Material3.SearchBar.Outlined">
     <item name="elevation">0dp</item>
+    <item name="backgroundTint">?attr/colorSurface</item>
     <item name="strokeWidth">@dimen/m3_searchbar_outlined_stroke_width</item>
     <item name="strokeColor">?attr/colorOutline</item>
   </style>
     <style name="Widget.Material3.SearchView" parent="android:Widget">
+    <item name="backgroundTint">@macro/m3_comp_search_view_container_color</item>
     <item name="enforceMaterialTheme">true</item>
     <item name="android:elevation">@dimen/m3_searchview_elevation</item>
     <item name="android:textAppearance">@style/TextAppearance.Material3.SearchView</item>
@@ -8173,15 +8461,16 @@
     <item name="android:paddingRight">0dp</item>
     <item name="android:paddingEnd">0dp</item>
     <item name="contentInsetStartWithNavigation">0dp</item>
+    <item name="navigationIcon">@drawable/ic_arrow_back_black_24</item>
     <item name="navigationIconTint">?attr/colorOnSurface</item>
     <item name="android:minHeight">@dimen/m3_searchview_height</item>
     <item name="maxButtonHeight">@dimen/m3_searchview_height</item>
   </style>
     <style name="Widget.Material3.SideSheet" parent="">
     <item name="enforceMaterialTheme">true</item>
-    <item name="android:background">@macro/m3_comp_sheet_side_docked_container_color</item>
+    <item name="backgroundTint">@macro/m3_comp_sheet_side_docked_standard_container_color</item>
     
-    <item name="android:layout_gravity">right</item>
+    <item name="android:layout_gravity">end</item>
     <item name="android:elevation" ns1:ignore="NewApi">@dimen/m3_side_sheet_standard_elevation</item>
     <item name="shapeAppearance">@style/ShapeAppearance.M3.Comp.Sheet.Side.Docked.Container.Shape</item>
   </style>
@@ -8191,29 +8480,61 @@
     <item name="shapeAppearance">@macro/m3_comp_sheet_side_detached_container_shape</item>
   </style>
     <style name="Widget.Material3.SideSheet.Modal">
+    
+    <item name="android:layout_width">@dimen/m3_side_sheet_width</item>
+    <item name="android:layout_height">match_parent</item>
     <item name="android:elevation" ns1:ignore="NewApi">@dimen/m3_side_sheet_modal_elevation</item>
+    <item name="backgroundTint">@macro/m3_comp_sheet_side_docked_modal_container_color</item>
     <item name="shapeAppearance">@macro/m3_comp_sheet_side_docked_modal_container_shape</item>
-    <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Material3.Corner.Left</item>
   </style>
     <style name="Widget.Material3.SideSheet.Modal.Detached">
     <item name="android:layout_margin">@dimen/m3_side_sheet_margin_detached</item>
     <item name="shapeAppearance">@macro/m3_comp_sheet_side_detached_container_shape</item>
-    <item name="shapeAppearanceOverlay">@null</item>
   </style>
     <style name="Widget.Material3.Slider" parent="Widget.MaterialComponents.Slider">
-    <item name="haloColor">@color/m3_slider_halo_color</item>  
+    <item name="haloColor">#00FFFFFF</item>
     <item name="labelStyle">@style/Widget.Material3.Slider.Label</item>
     <item name="thumbColor">@color/m3_slider_thumb_color</item>
-    <item name="tickColorActive">@color/m3_slider_inactive_track_color</item> 
-    <item name="tickColorInactive">@color/m3_slider_active_track_color</item> 
+    <item name="tickColorActive">@color/m3_slider_inactive_track_color</item>
+    <item name="tickColorInactive">@color/m3_slider_active_track_color</item>
+    <item name="tickRadiusActive">@null</item>
+    <item name="tickRadiusInactive">@null</item>
     <item name="trackColorActive">@color/m3_slider_active_track_color</item>
     <item name="trackColorInactive">@color/m3_slider_inactive_track_color</item>
-    <item name="trackHeight">@dimen/m3_slider_inactive_track_height</item> 
-    <item name="thumbElevation">@dimen/m3_slider_thumb_elevation</item>
+    <item name="trackHeight">@dimen/m3_comp_slider_inactive_track_height</item>
+    <item name="thumbElevation">0dp</item>
+    <item name="trackInsideCornerSize">2dp</item>
+    <item name="thumbWidth">@dimen/m3_comp_slider_active_handle_width</item>
+    <item name="thumbHeight">@dimen/m3_comp_slider_active_handle_height</item>
+    <item name="thumbTrackGapSize">@dimen/m3_comp_slider_active_handle_leading_space</item>
+    <item name="trackStopIndicatorSize">@dimen/m3_comp_slider_stop_indicator_size</item>
   </style>
     <style name="Widget.Material3.Slider.Label" parent="Widget.Material3.Tooltip">
     <item name="android:textColor">@macro/m3_comp_slider_label_label_text_color</item>
     <item name="backgroundTint">@macro/m3_comp_slider_label_container_color</item>
+    <item name="showMarker">false</item>
+    <item name="android:padding">10dp</item>
+    <item name="android:minHeight">32dp</item>
+  </style>
+    <style name="Widget.Material3.Slider.Legacy" parent="Widget.MaterialComponents.Slider">
+    <item name="haloColor">@color/m3_slider_halo_color_legacy</item>
+    <item name="labelStyle">@style/Widget.Material3.Slider.Legacy.Label</item>
+    <item name="thumbColor">@color/m3_slider_thumb_color_legacy</item>
+    <item name="tickColorActive">@color/m3_slider_inactive_track_color_legacy</item>
+    <item name="tickColorInactive">@color/m3_slider_active_track_color_legacy</item>
+    <item name="trackColorActive">@color/m3_slider_active_track_color_legacy</item>
+    <item name="trackColorInactive">@color/m3_slider_inactive_track_color_legacy</item>
+    <item name="trackHeight">4dp</item>
+    <item name="thumbElevation">@dimen/m3_slider_thumb_elevation</item>
+    <item name="trackInsideCornerSize">0dp</item>
+    <item name="thumbWidth">@null</item>
+    <item name="thumbHeight">@null</item>
+    <item name="thumbTrackGapSize">0dp</item>
+    <item name="trackStopIndicatorSize">0dp</item>
+  </style>
+    <style name="Widget.Material3.Slider.Legacy.Label" parent="Widget.Material3.Tooltip">
+    <item name="android:textColor">?attr/colorOnPrimary</item>
+    <item name="backgroundTint">?attr/colorPrimary</item>
   </style>
     <style name="Widget.Material3.Snackbar" parent="Base.Widget.Material3.Snackbar">
     
@@ -8270,16 +8591,18 @@
     <item name="endIconTint">@color/m3_textfield_indicator_text_color</item>
     <item name="passwordToggleDrawable">@drawable/m3_password_eye</item>
 
-   
-    <item name="counterTextAppearance">@macro/m3_comp_outlined_text_field_supporting_text_type</item>
-    <item name="counterOverflowTextAppearance">@macro/m3_comp_outlined_text_field_supporting_text_type</item>
-    <item name="errorTextAppearance">@macro/m3_comp_outlined_text_field_supporting_text_type</item>
-    <item name="helperTextTextAppearance">@macro/m3_comp_outlined_text_field_supporting_text_type</item>
-    <item name="hintTextAppearance">@macro/m3_comp_outlined_text_field_supporting_text_type</item>
+    <item name="counterTextAppearance">@macro/m3_comp_filled_text_field_supporting_text_type</item>
+    <item name="counterOverflowTextAppearance">@macro/m3_comp_filled_text_field_supporting_text_type</item>
+    <item name="errorTextAppearance">@macro/m3_comp_filled_text_field_supporting_text_type</item>
+    <item name="helperTextTextAppearance">@macro/m3_comp_filled_text_field_supporting_text_type</item>
+    <item name="hintTextAppearance">@macro/m3_comp_filled_text_field_supporting_text_type</item>
    
     <item name="placeholderTextAppearance">@macro/m3_comp_filled_text_field_input_text_type</item>
     <item name="prefixTextAppearance">?attr/textAppearanceTitleMedium</item>
     <item name="suffixTextAppearance">?attr/textAppearanceTitleMedium</item>
+    
+    <item name="cursorColor">@null</item>
+    <item name="cursorErrorColor">@macro/m3_comp_filled_text_field_error_active_indicator_color</item>
     <item name="shapeAppearance">@macro/m3_comp_filled_text_field_container_shape</item>
     <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Material3.Corner.Top</item>
   </style>
@@ -8322,6 +8645,9 @@
     <item name="placeholderTextAppearance">@macro/m3_comp_outlined_text_field_input_text_type</item>
     <item name="prefixTextAppearance">?attr/textAppearanceTitleMedium</item>
     <item name="suffixTextAppearance">?attr/textAppearanceTitleMedium</item>
+    
+    <item name="cursorColor">@null</item>
+    <item name="cursorErrorColor">@macro/m3_comp_outlined_text_field_error_outline_color</item>
     <item name="shapeAppearance">@macro/m3_comp_outlined_text_field_container_shape</item>
     <item name="shapeAppearanceOverlay">@null</item>
   </style>
@@ -8414,12 +8740,13 @@
     <item name="badgeWithTextHeight">@dimen/mtrl_badge_with_text_size</item>
     <item name="badgeWidePadding">@dimen/mtrl_badge_long_text_horizontal_padding</item>
     <item name="backgroundColor">?attr/colorError</item>
-    <item name="maxCharacterCount">@integer/mtrl_badge_max_character_count</item>
+    <item name="maxNumber">@integer/m3_badge_max_number</item>
     <item name="badgeGravity">TOP_END</item>
     <item name="offsetAlignmentMode">legacy</item>
     <item name="badgeTextAppearance">@style/TextAppearance.MaterialComponents.Badge</item>
     <item name="badgeShapeAppearance">@style/ShapeAppearance.MaterialComponents.Badge</item>
     <item name="badgeWithTextShapeAppearance">@style/ShapeAppearance.MaterialComponents.Badge</item>
+    <item name="autoAdjustToWithinGrandparentBounds">false</item>
   </style>
     <style name="Widget.MaterialComponents.BottomAppBar" parent="Widget.AppCompat.Toolbar">
     <item name="enforceMaterialTheme">true</item>
@@ -8726,6 +9053,7 @@
   </style>
     <style name="Widget.MaterialComponents.MaterialCalendar" parent="android:Widget">
     <item name="android:windowFullscreen">false</item>
+    <item name="backgroundTint">?attr/colorSurface</item>
     <item name="shapeAppearance">?attr/shapeAppearanceMediumComponent</item>
     <item name="dayStyle">@style/Widget.MaterialComponents.MaterialCalendar.Day</item>
     <item name="dayInvalidStyle">@style/Widget.MaterialComponents.MaterialCalendar.Day.Invalid</item>
@@ -9035,6 +9363,7 @@
     <item name="shapeAppearance">?shapeAppearanceMediumComponent</item>
     <item name="keyboardIcon">@drawable/ic_keyboard_black_24dp</item>
     <item name="clockIcon">@drawable/ic_clock_black_24dp</item>
+    <item name="backgroundTint">?attr/colorSurface</item>
   </style>
     <style name="Widget.MaterialComponents.TimePicker.Button" parent="Widget.MaterialComponents.Button.OutlinedButton">
     <item name="backgroundTint">
@@ -9151,11 +9480,11 @@
     <declare-styleable name="ActionBar">
         
         <attr name="navigationMode">
-            <!-- Normal static title text -->
+            
             <enum name="normal" value="0"/>
-            <!-- The action bar will use a selection list for navigation. -->
+            
             <enum name="listMode" value="1"/>
-            <!-- The action bar will use a series of horizontal tabs for navigation. -->
+            
             <enum name="tabMode" value="2"/>
         </attr>
         
@@ -9323,45 +9652,32 @@
   </declare-styleable>
     <declare-styleable name="AppBarLayout_Layout">
     <attr name="layout_scrollFlags">
-      <!-- Disable scrolling on the view. This flag should not be combined with any of the other
-           scroll flags. -->
+      
       <flag name="noScroll" value="0x0"/>
 
-      <!-- The view will be scroll in direct relation to scroll events. This flag needs to be
-           set for any of the other flags to take effect. If any sibling views
-           before this one do not have this flag, then this value has no effect. -->
+      
       <flag name="scroll" value="0x1"/>
 
-      <!-- When exiting (scrolling off screen) the view will be scrolled until it is
-           'collapsed'. The collapsed height is defined by the view's minimum height. -->
+      
       <flag name="exitUntilCollapsed" value="0x2"/>
 
-      <!-- When entering (scrolling on screen) the view will scroll on any downwards
-           scroll event, regardless of whether the scrolling view is also scrolling. This
-           is commonly referred to as the 'quick return' pattern. -->
+      
       <flag name="enterAlways" value="0x4"/>
 
-      <!-- An additional flag for 'enterAlways' which modifies the returning view to
-           only initially scroll back to it's collapsed height. Once the scrolling view has
-           reached the end of it's scroll range, the remainder of this view will be scrolled
-           into view. -->
+      
       <flag name="enterAlwaysCollapsed" value="0x8"/>
 
-      <!-- Upon a scroll ending, if the view is only partially visible then it will be
-           snapped and scrolled to it's closest edge. -->
+      
       <flag name="snap" value="0x10"/>
 
-      <!-- An additional flag to be used with 'snap'. If set, the view will be snapped to its
-           top and bottom margins, as opposed to the edges of the view itself. -->
+      
       <flag name="snapMargins" value="0x20"/>
     </attr>
 
     <attr format="enum" name="layout_scrollEffect">
-      <!-- No effect will be applied to this child when its parent
-           AppBarLayout's offset changes.-->
+      
       <enum name="none" value="0"/>
-      <!-- This view will be compressed (masked and parallaxed) when it reaches
-           the top of the screen and continues to scroll out of view.-->
+      
       <enum name="compress" value="1"/>
     </attr>
 
@@ -9381,22 +9697,17 @@
 
         
         <attr name="tintMode">
-            <!-- The tint is drawn on top of the drawable.
-                 [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc] -->
+            
             <enum name="src_over" value="3"/>
-            <!-- The tint is masked by the alpha channel of the drawable. The drawable’s
-                 color channels are thrown out. [Sa * Da, Sc * Da] -->
+            
             <enum name="src_in" value="5"/>
-            <!-- The tint is drawn above the drawable, but with the drawable’s alpha
-                 channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc] -->
+            
             <enum name="src_atop" value="9"/>
-            <!-- Multiplies the color and alpha channels of the drawable with those of
-                 the tint. [Sa * Da, Sc * Dc] -->
+            
             <enum name="multiply" value="14"/>
-            <!-- [Sa + Da - Sa * Da, Sc + Dc - Sc * Dc] -->
+            
             <enum name="screen" value="15"/>
-            <!-- Combines the tint and icon color and alpha channels, clamping the
-                 result to valid color values. Saturate(S + D) -->
+            
             <enum name="add" value="16"/>
         </attr>
     </declare-styleable>
@@ -9408,22 +9719,17 @@
         <attr format="color" name="tickMarkTint"/>
         
         <attr name="tickMarkTintMode">
-            <!-- The tint is drawn on top of the drawable.
-                 [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc] -->
+            
             <enum name="src_over" value="3"/>
-            <!-- The tint is masked by the alpha channel of the drawable. The drawable’s
-                 color channels are thrown out. [Sa * Da, Sc * Da] -->
+            
             <enum name="src_in" value="5"/>
-            <!-- The tint is drawn above the drawable, but with the drawable’s alpha
-                 channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc] -->
+            
             <enum name="src_atop" value="9"/>
-            <!-- Multiplies the color and alpha channels of the drawable with those of
-                 the tint. [Sa * Da, Sc * Dc] -->
+            
             <enum name="multiply" value="14"/>
-            <!-- [Sa + Da - Sa * Da, Sc + Dc - Sc * Dc] -->
+            
             <enum name="screen" value="15"/>
-            <!-- Combines the tint and drawable color and alpha channels, clamping the
-                 result to valid color values. Saturate(S + D) -->
+            
             <enum name="add" value="16"/>
         </attr>
     </declare-styleable>
@@ -9444,10 +9750,9 @@
         <attr name="android:textAppearance"/>
         
         <attr format="enum" name="autoSizeTextType">
-            <!-- No auto-sizing (default). -->
+            
             <enum name="none" value="0"/>
-            <!-- Uniform horizontal and vertical text size scaling to fit within the
-            container. -->
+            
             <enum name="uniform" value="1"/>
         </attr>
         
@@ -9479,22 +9784,17 @@
         <attr format="color" name="drawableTint"/>
         
         <attr name="drawableTintMode">
-            <!-- The tint is drawn on top of the drawable.
-                 [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc] -->
+            
             <enum name="src_over" value="3"/>
-            <!-- The tint is masked by the alpha channel of the drawable. The drawable’s
-                 color channels are thrown out. [Sa * Da, Sc * Da] -->
+            
             <enum name="src_in" value="5"/>
-            <!-- The tint is drawn above the drawable, but with the drawable’s alpha
-                 channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc] -->
+            
             <enum name="src_atop" value="9"/>
-            <!-- Multiplies the color and alpha channels of the drawable with those of
-                 the tint. [Sa * Da, Sc * Dc] -->
+            
             <enum name="multiply" value="14"/>
-            <!-- [Sa + Da - Sa * Da, Sc + Dc - Sc * Dc] -->
+            
             <enum name="screen" value="15"/>
-            <!-- Combines the tint and drawable color and alpha channels, clamping the
-                 result to valid color values. Saturate(S + D) -->
+            
             <enum name="add" value="16"/>
         </attr>
         
@@ -9869,6 +10169,8 @@
     
     <attr format="dimension" name="badgeWidePadding"/>
     
+    <attr format="dimension" name="badgeVerticalPadding"/>
+    
     <attr format="dimension" name="badgeWithTextRadius"/>
     
     <attr format="dimension" name="badgeWidth"/>
@@ -9881,15 +10183,17 @@
     <attr format="color" name="backgroundColor"/>
     <attr format="color" name="badgeTextColor"/>
     <attr format="integer" name="maxCharacterCount"/>
+    <attr format="integer" name="maxNumber"/>
+    <attr format="string" name="badgeText"/>
     <attr format="integer" name="number"/>
     <attr name="badgeGravity">
-      <!-- Gravity.TOP | Gravity.END -->
+      
       <enum name="TOP_END" value="8388661"/>
-      <!-- Gravity.TOP | Gravity.START -->
+      
       <enum name="TOP_START" value="8388659"/>
-      <!-- Gravity.BOTTOM | Gravity.END -->
+      
       <enum name="BOTTOM_END" value="8388693"/>
-      <!-- Gravity.BOTTOM | Gravity.START -->
+      
       <enum name="BOTTOM_START" value="8388691"/>
     </attr>
     
@@ -9898,18 +10202,16 @@
     <attr format="reference" name="badgeShapeAppearance"/>
     
     <attr format="reference" name="badgeShapeAppearanceOverlay"/>
-     
+    
     <attr format="reference" name="badgeWithTextShapeAppearance"/>
     
     <attr format="reference" name="badgeWithTextShapeAppearanceOverlay"/>
 
     
     <attr name="offsetAlignmentMode">
-      <!-- The offsets begin at the edge of the anchor. -->
+      
       <enum name="edge" value="0"/>
-      <!-- Follows the legacy offset alignment behavior. The horizontal offset begins at a variable
-           permanent inset from the edge of the anchor, and the vertical offset begins at the center
-           of the badge aligned with the edge of the anchor. -->
+      
       <enum name="legacy" value="1"/>
     </attr>
 
@@ -9921,6 +10223,10 @@
     <attr format="dimension" name="horizontalOffsetWithText"/>
     
     <attr format="dimension" name="verticalOffsetWithText"/>
+    
+    <attr format="dimension" name="largeFontVerticalOffsetAdjustment"/>
+    
+    <attr format="boolean" name="autoAdjustToWithinGrandparentBounds"/>
   </declare-styleable>
     <declare-styleable name="BaseProgressIndicator">
     
@@ -9935,38 +10241,30 @@
     <attr name="trackColor"/>
     
     <attr name="showAnimationBehavior">
-      <!-- No animation used; appears immediately. -->
+      
       <enum name="none" value="0"/>
-      <!--
-        Expands from the bottom edge to the top edge for the linear type;
-        expands from the inner edge to the outer edge for the circular type.
-      -->
+      
       <enum name="outward" value="1"/>
-      <!--
-        Expands from the top edge to the bottom edge for the linear type;
-        expands from the outer edge to the inner edge for the circular type.
-      -->
+      
       <enum name="inward" value="2"/>
     </attr>
     
     <attr name="hideAnimationBehavior">
-      <!-- No animation used; disappears immediately. -->
+      
       <enum name="none" value="0"/>
-      <!--
-        Collapses from the bottom edge to the top edge for the linear type;
-        collapses from the inner edge to the outer edge for the circular type.
-      -->
+      
       <enum name="outward" value="1"/>
-      <!--
-        Collapses from the top edge to the bottom edge for the linear type;
-        collapses from the outer edge to the inner edge for the circular type.
-      -->
+      
       <enum name="inward" value="2"/>
+      
+      <enum name="escape" value="3"/>
     </attr>
     
     <attr format="integer" name="showDelay"/>
     
     <attr format="integer" name="minHideDelay"/>
+    
+    <attr format="dimension" name="indicatorTrackGapSize"/>
   </declare-styleable>
     <declare-styleable name="BottomAppBar">
     
@@ -9977,23 +10275,23 @@
     <attr name="elevation"/>
     
     <attr name="fabAlignmentMode">
-      <!-- Mode that aligns the fab to the center. -->
+      
       <enum name="center" value="0"/>
-      <!-- Mode that aligns the fab to the end. -->
+      
       <enum name="end" value="1"/>
     </attr>
     
     <attr name="fabAnchorMode">
-      <!-- Mode that anchors the fab embedded inside the BottomAppBar. -->
+      
       <enum name="embed" value="0"/>
-      <!-- Mode that anchors the fab to be cradled within the top edge of the BottomAppBar. -->
+      
       <enum name="cradle" value="1"/>
     </attr>
     
     <attr name="fabAnimationMode">
-      <!-- Mode that scales the fab down to a point, moves it, then scales the fab back to its normal size. -->
+      
       <enum name="scale" value="0"/>
-      <!-- Mode that slides the fab from one alignment mode to the next. -->
+      
       <enum name="slide" value="1"/>
     </attr>
     
@@ -10018,10 +10316,9 @@
     <attr name="paddingRightSystemWindowInsets"/>
     
     <attr name="menuAlignmentMode">
-      <!-- Mode that aligns the menu automatically to avoid the FAB. Menu will be aligned at the end
-           when the FAB is center aligned, and start when the FAB is end aligned. -->
+      
       <enum name="auto" value="0"/>
-      <!-- Mode that aligns the menu to the start. -->
+      
       <enum name="start" value="1"/>
     </attr>
   </declare-styleable>
@@ -10032,11 +10329,15 @@
     <attr name="android:minHeight"/>
     
     <attr format="boolean" name="compatShadowEnabled"/>
+    
+    <attr name="shapeAppearance"/>
+    
+    <attr name="shapeAppearanceOverlay"/>
   </declare-styleable>
     <declare-styleable name="BottomSheetBehavior_Layout">
     
     <attr format="dimension" name="behavior_peekHeight">
-      <!-- Peek at the 16:9 ratio keyline of its parent -->
+      
       <enum name="auto" value="-1"/>
     </attr>
     
@@ -10061,19 +10362,17 @@
     <attr name="backgroundTint"/>
     
     <attr name="behavior_saveFlags">
-      <!-- This flag will preserve the peekHeight on configuration change. -->
+      
       <flag name="peekHeight" value="0x1"/>
-      <!-- This flag will preserve the fitToContents boolean value on configuration change. -->
+      
       <flag name="fitToContents" value="0x2"/>
-      <!-- This flag will preserve the hideable boolean value on configuration change. -->
+      
       <flag name="hideable" value="0x4"/>
-      <!-- This flag will preserve the skipCollapsed boolean value on configuration change. -->
+      
       <flag name="skipCollapsed" value="0x8"/>
-      <!-- This flag will preserve the all the aforementioned values on configuration change. -->
+      
       <flag name="all" value="-1"/>
-      <!-- This flag will not preserve the aforementioned values on configuration change. The only
-           value preserved will be the positional state, e.g. collapsed, hidden, expanded, etc.
-           This is the default behavior. -->
+      
       <flag name="none" value="0"/>
     </attr>
     
@@ -10129,24 +10428,18 @@
         
         <attr name="android:minHeight"/>
     </declare-styleable>
-    <declare-styleable name="Carousel">
-        <attr format="reference" name="carousel_firstView"/>
-        <attr format="reference" name="carousel_previousState"/>
-        <attr format="reference" name="carousel_nextState"/>
-        <attr format="boolean" name="carousel_infinite"/>
-        <attr format="reference" name="carousel_forwardTransition"/>
-        <attr format="reference" name="carousel_backwardTransition"/>
-        <attr format="float" name="carousel_touchUp_dampeningFactor"/>
-        <attr format="enum" name="carousel_touchUpMode">
+    <declare-styleable name="Carousel"><attr format="reference" name="carousel_firstView"/><attr format="reference" name="carousel_previousState"/><attr format="reference" name="carousel_nextState"/><attr format="boolean" name="carousel_infinite"/><attr format="reference" name="carousel_forwardTransition"/><attr format="reference" name="carousel_backwardTransition"/><attr format="float" name="carousel_touchUp_dampeningFactor"/><attr format="enum" name="carousel_touchUpMode">
             <enum name="immediateStop" value="1"/>
             <enum name="carryVelocity" value="2"/>
-        </attr>
-        <attr format="float" name="carousel_touchUp_velocityThreshold"/>
-        <attr format="enum" name="carousel_emptyViewsBehavior">
+        </attr><attr format="float" name="carousel_touchUp_velocityThreshold"/><attr format="enum" name="carousel_emptyViewsBehavior">
             <enum name="invisible" value="4"/>
             <enum name="gone" value="8"/>
-        </attr>
-    </declare-styleable>
+        </attr><attr name="carousel_alignment">
+    
+    <enum name="start" value="0"/>
+    
+    <enum name="center" value="1"/>
+  </attr></declare-styleable>
     <declare-styleable name="CheckedTextView">
         <attr name="android:checkMark"/>
         
@@ -10156,22 +10449,17 @@
 
         
         <attr name="checkMarkTintMode">
-            <!-- The tint is drawn on top of the drawable.
-                 [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc] -->
+            
             <enum name="src_over" value="3"/>
-            <!-- The tint is masked by the alpha channel of the drawable. The drawable’s
-                 color channels are thrown out. [Sa * Da, Sc * Da] -->
+            
             <enum name="src_in" value="5"/>
-            <!-- The tint is drawn above the drawable, but with the drawable’s alpha
-                 channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc] -->
+            
             <enum name="src_atop" value="9"/>
-            <!-- Multiplies the color and alpha channels of the drawable with those of
-                 the tint. [Sa * Da, Sc * Dc] -->
+            
             <enum name="multiply" value="14"/>
-            <!-- [Sa + Da - Sa * Da, Sc + Dc - Sc * Dc] -->
+            
             <enum name="screen" value="15"/>
-            <!-- Combines the tint and icon color and alpha channels, clamping the
-                 result to valid color values. Saturate(S + D) -->
+            
             <enum name="add" value="16"/>
         </attr>
     </declare-styleable>
@@ -10311,17 +10599,9 @@
     <attr format="dimension" name="indicatorInset"/>
     
     <attr name="indicatorDirectionCircular">
-      <!--
-        In the indeterminate mode, the spinner will spin clockwise; in the
-        determinate mode, the indicator will progress from the top (12 o'clock)
-        clockwise.
-      -->
+      
       <enum name="clockwise" value="0"/>
-      <!--
-        In the indeterminate mode, the spinner will spin counter-clockwise; in
-        the determinate mode, the indicator will progress from the top (12
-        o'clock) counter-clockwise.
-      -->
+      
       <enum name="counterclockwise" value="1"/>
     </attr>
   </declare-styleable>
@@ -10378,49 +10658,49 @@
 
     
     <attr name="collapsedTitleGravity">
-      <!-- Push title to the top of its container, not changing its size. -->
+      
       <flag name="top" value="0x30"/>
-      <!-- Push title to the bottom of its container, not changing its size. -->
+      
       <flag name="bottom" value="0x50"/>
-      <!-- Push title to the left of its container, not changing its size. -->
+      
       <flag name="left" value="0x03"/>
-      <!-- Push title to the right of its container, not changing its size. -->
+      
       <flag name="right" value="0x05"/>
-      <!-- Place title in the vertical center of its container, not changing its size. -->
+      
       <flag name="center_vertical" value="0x10"/>
-      <!-- Grow the vertical size of the title if needed so it completely fills its container. -->
+      
       <flag name="fill_vertical" value="0x70"/>
-      <!-- Place title in the horizontal center of its container, not changing its size. -->
+      
       <flag name="center_horizontal" value="0x01"/>
-      <!-- Place the title in the center of its container in both the vertical and horizontal axis, not changing its size. -->
+      
       <flag name="center" value="0x11"/>
-      <!-- Push title to the beginning of its container, not changing its size. -->
+      
       <flag name="start" value="0x00800003"/>
-      <!-- Push title to the end of its container, not changing its size. -->
+      
       <flag name="end" value="0x00800005"/>
     </attr>
 
     
     <attr name="expandedTitleGravity">
-      <!-- Push title to the top of its container, not changing its size. -->
+      
       <flag name="top" value="0x30"/>
-      <!-- Push title to the bottom of its container, not changing its size. -->
+      
       <flag name="bottom" value="0x50"/>
-      <!-- Push title to the left of its container, not changing its size. -->
+      
       <flag name="left" value="0x03"/>
-      <!-- Push title to the right of its container, not changing its size. -->
+      
       <flag name="right" value="0x05"/>
-      <!-- Place title in the vertical center of its container, not changing its size. -->
+      
       <flag name="center_vertical" value="0x10"/>
-      <!-- Grow the vertical size of the title if needed so it completely fills its container. -->
+      
       <flag name="fill_vertical" value="0x70"/>
-      <!-- Place title in the horizontal center of its container, not changing its size. -->
+      
       <flag name="center_horizontal" value="0x01"/>
-      <!-- Place the title in the center of its container in both the vertical and horizontal axis, not changing its size. -->
+      
       <flag name="center" value="0x11"/>
-      <!-- Push title to the beginning of its container, not changing its size. -->
+      
       <flag name="start" value="0x00800003"/>
-      <!-- Push title to the end of its container, not changing its size. -->
+      
       <flag name="end" value="0x00800005"/>
     </attr>
 
@@ -10430,9 +10710,9 @@
     <attr name="title"/>
     
     <attr name="titleCollapseMode">
-      <!-- The expanded title will continuously scale and translate to its final collapsed position. -->
+      
       <enum name="scale" value="0"/>
-      <!-- The expanded title will fade out and translate, and the collapsed title will fade in. -->
+      
       <enum name="fade" value="1"/>
     </attr>
     
@@ -10447,12 +10727,11 @@
   </declare-styleable>
     <declare-styleable name="CollapsingToolbarLayout_Layout">
     <attr name="layout_collapseMode">
-      <!-- The view will act as normal with no collapsing behavior. -->
+      
       <enum name="none" value="0"/>
-      <!-- The view will pin in place. -->
+      
       <enum name="pin" value="1"/>
-      <!-- The view will scroll in a parallax fashion. See the
-           layout_collapseParallaxMultiplier attribute to change the multiplier. -->
+      
       <enum name="parallax" value="2"/>
     </attr>
 
@@ -10478,22 +10757,17 @@
 
         
         <attr name="buttonTintMode">
-            <!-- The tint is drawn on top of the drawable.
-                 [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc] -->
+            
             <enum name="src_over" value="3"/>
-            <!-- The tint is masked by the alpha channel of the drawable. The drawable’s
-                 color channels are thrown out. [Sa * Da, Sc * Da] -->
+            
             <enum name="src_in" value="5"/>
-            <!-- The tint is drawn above the drawable, but with the drawable’s alpha
-                 channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc] -->
+            
             <enum name="src_atop" value="9"/>
-            <!-- Multiplies the color and alpha channels of the drawable with those of
-                 the tint. [Sa * Da, Sc * Dc] -->
+            
             <enum name="multiply" value="14"/>
-            <!-- [Sa + Da - Sa * Da, Sc + Dc - Sc * Dc] -->
+            
             <enum name="screen" value="15"/>
-            <!-- Combines the tint and icon color and alpha channels, clamping the
-                 result to valid color values. Saturate(S + D) -->
+            
             <enum name="add" value="16"/>
         </attr>
     </declare-styleable>
@@ -10951,6 +11225,7 @@
     </declare-styleable>
     <declare-styleable name="ConstraintSet">
         <attr format="reference" name="deriveConstraintsFrom"/>
+        <attr format="string" name="stateLabels"/>
         <attr format="enum" name="constraintRotate">
             <enum name="none" value="0"/>
             <enum name="right" value="1"/>
@@ -11111,76 +11386,70 @@
 
         
         <attr name="layout_anchorGravity">
-            <!-- Push object to the top of its container, not changing its size. -->
+            
             <flag name="top" value="0x30"/>
-            <!-- Push object to the bottom of its container, not changing its size. -->
+            
             <flag name="bottom" value="0x50"/>
-            <!-- Push object to the left of its container, not changing its size. -->
+            
             <flag name="left" value="0x03"/>
-            <!-- Push object to the right of its container, not changing its size. -->
+            
             <flag name="right" value="0x05"/>
-            <!-- Place object in the vertical center of its container, not changing its size. -->
+            
             <flag name="center_vertical" value="0x10"/>
-            <!-- Grow the vertical size of the object if needed so it completely fills its container. -->
+            
             <flag name="fill_vertical" value="0x70"/>
-            <!-- Place object in the horizontal center of its container, not changing its size. -->
+            
             <flag name="center_horizontal" value="0x01"/>
-            <!-- Grow the horizontal size of the object if needed so it completely fills its container. -->
+            
             <flag name="fill_horizontal" value="0x07"/>
-            <!-- Place the object in the center of its container in both the vertical and horizontal axis, not changing its size. -->
+            
             <flag name="center" value="0x11"/>
-            <!-- Grow the horizontal and vertical size of the object if needed so it completely fills its container. -->
+            
             <flag name="fill" value="0x77"/>
-            <!-- Additional option that can be set to have the top and/or bottom edges of
-                 the child clipped to its container's bounds.
-                 The clip will be based on the vertical gravity: a top gravity will clip the bottom
-                 edge, a bottom gravity will clip the top edge, and neither will clip both edges. -->
+            
             <flag name="clip_vertical" value="0x80"/>
-            <!-- Additional option that can be set to have the left and/or right edges of
-                 the child clipped to its container's bounds.
-                 The clip will be based on the horizontal gravity: a left gravity will clip the right
-                 edge, a right gravity will clip the left edge, and neither will clip both edges. -->
+            
             <flag name="clip_horizontal" value="0x08"/>
-            <!-- Push object to the beginning of its container, not changing its size. -->
+            
             <flag name="start" value="0x00800003"/>
-            <!-- Push object to the end of its container, not changing its size. -->
+            
             <flag name="end" value="0x00800005"/>
         </attr>
 
         
         <attr format="enum" name="layout_insetEdge">
-            <!-- Don't inset. -->
+            
             <enum name="none" value="0x0"/>
-            <!-- Inset the top edge. -->
+            
             <enum name="top" value="0x30"/>
-            <!-- Inset the bottom edge. -->
+            
             <enum name="bottom" value="0x50"/>
-            <!-- Inset the left edge. -->
+            
             <enum name="left" value="0x03"/>
-            <!-- Inset the right edge. -->
+            
             <enum name="right" value="0x05"/>
-            <!-- Inset the start edge. -->
+            
             <enum name="start" value="0x00800003"/>
-            <!-- Inset the end edge. -->
+            
             <enum name="end" value="0x00800005"/>
         </attr>
         
         <attr name="layout_dodgeInsetEdges">
-            <!-- Don't dodge any edges -->
+            
             <flag name="none" value="0x0"/>
-            <!-- Dodge the top inset edge. -->
+            
             <flag name="top" value="0x30"/>
-            <!-- Dodge the bottom inset edge. -->
+            
             <flag name="bottom" value="0x50"/>
-            <!-- Dodge the left inset edge. -->
+            
             <flag name="left" value="0x03"/>
-            <!-- Dodge the right inset edge. -->
+            
             <flag name="right" value="0x05"/>
-            <!-- Dodge the start inset edge. -->
+            
             <flag name="start" value="0x00800003"/>
-            <!-- Dodge the end inset edge. -->
+            
             <flag name="end" value="0x00800005"/>
-            <!-- Dodge all the inset edges. -->
+            
             <flag name="all" value="0x77"/>
         </attr>
     </declare-styleable>
@@ -11224,11 +11493,11 @@
     <attr name="elevation"/>
     
     <attr name="extendStrategy">
-      <!-- Strategy to extend FAB back to the width it shrunk from. -->
+      
       <enum name="auto" value="0"/>
-      <!-- Strategy to extend FAB to wrap content. -->
+      
       <enum name="wrap_content" value="1"/>
-      <!-- Strategy to extend FAB to match parent. -->
+      
       <enum name="match_parent" value="2"/>
     </attr>
     
@@ -11260,11 +11529,11 @@
 
     
     <attr name="fabSize">
-      <!-- A size which will change based on the window size. -->
+      
       <enum name="auto" value="-1"/>
-      <!-- The normal sized button. -->
+      
       <enum name="normal" value="0"/>
-      <!-- The mini sized button. -->
+      
       <enum name="mini" value="1"/>
     </attr>
     
@@ -11310,26 +11579,19 @@
         
         <attr format="string" name="fontProviderQuery"/>
         
+        <attr format="string" name="fontProviderFallbackQuery"/>
+        
         <attr format="reference" name="fontProviderCerts"/>
         
         <attr name="fontProviderFetchStrategy">
-            <!-- The blocking font fetch works as follows.
-              First, check the local cache, then if the requested font is not cached, request the
-              font from the provider and wait until it is finished.  You can change the length of
-              the timeout by modifying fontProviderFetchTimeout.  If the timeout happens, the
-              default typeface will be used instead. -->
+            
             <enum name="blocking" value="0"/>
-            <!-- The async font fetch works as follows.
-              First, check the local cache, then if the requeted font is not cached, trigger a
-              request the font and continue with layout inflation. Once the font fetch succeeds, the
-              target text view will be refreshed with the downloaded font data. The
-              fontProviderFetchTimeout will be ignored if async loading is specified. -->
+            
             <enum name="async" value="1"/>
         </attr>
         
         <attr format="integer" name="fontProviderFetchTimeout">
-            <!-- A special value for the timeout. In this case, the blocking font fetching will not
-              timeout and wait until a reply is received from the font provider. -->
+            
             <enum name="forever" value="-1"/>
         </attr>
         
@@ -11410,6 +11672,22 @@
         
         <attr name="android:color"/>
     </declare-styleable>
+    <declare-styleable name="Grid">
+        <attr format="integer" name="grid_rows"/>
+        <attr format="integer" name="grid_columns"/>
+        <attr format="string" name="grid_spans"/>
+        <attr format="string" name="grid_skips"/>
+        <attr format="string" name="grid_rowWeights"/>
+        <attr format="string" name="grid_columnWeights"/>
+        <attr format="enum" name="grid_orientation">
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
+        </attr>
+        <attr format="dimension" name="grid_horizontalGaps"/>
+        <attr format="dimension" name="grid_verticalGaps"/>
+        <attr format="boolean" name="grid_validateInputs"/>
+        <attr format="boolean" name="grid_useRtl"/>
+    </declare-styleable>
     <declare-styleable name="ImageFilterView">
         <attr format="reference" name="blendSrc"/>
         <attr format="reference" name="altSrc"/>
@@ -11431,6 +11709,7 @@
     <attr format="boolean" name="paddingBottomSystemWindowInsets"/>
     <attr format="boolean" name="paddingLeftSystemWindowInsets"/>
     <attr format="boolean" name="paddingRightSystemWindowInsets"/>
+    <attr format="boolean" name="paddingStartSystemWindowInsets"/>
     <attr format="boolean" name="paddingTopSystemWindowInsets"/>
     <attr format="boolean" name="marginLeftSystemWindowInsets"/>
     <attr format="boolean" name="marginRightSystemWindowInsets"/>
@@ -11499,6 +11778,7 @@
             <enum name="deltaRelative" value="0"/>
             <enum name="pathRelative" value="1"/>
             <enum name="parentRelative" value="2"/>
+            <enum name="axisRelative" value="3"/>
         </attr>
 
         
@@ -11683,34 +11963,24 @@
     <declare-styleable name="LinearProgressIndicator">
     
     <attr name="indeterminateAnimationType">
-      <!--
-        The track will be filled with three adjacent segments in iterative different colors.
-        This type is only available when there are three or more indicator
-        colors.
-      -->
+      
       <enum name="contiguous" value="0"/>
-      <!--
-        There will be two disjoint segments in the same color per cycle. The color iterates between cycles.
-      -->
+      
       <enum name="disjoint" value="1"/>
     </attr>
     
     <attr name="indicatorDirectionLinear">
-      <!-- Animated from the left end to the right end of the track. -->
+      
       <enum name="leftToRight" value="0"/>
-      <!-- Animated from the right end to the left end of the track. -->
+      
       <enum name="rightToLeft" value="1"/>
-      <!--
-        Animated from the start position to the end position of the track.
-        This will be same as the leftToRight for API before 17.
-      -->
+      
       <enum name="startToEnd" value="2"/>
-      <!--
-        Animated from the end position to the start position of the track.
-        This will be same as the rightToLeft for API before 17.
-      -->
+      
       <enum name="endToStart" value="3"/>
     </attr>
+    
+    <attr name="trackStopIndicatorSize"/>
   </declare-styleable>
     <declare-styleable name="ListPopupWindow">
         
@@ -11732,6 +12002,7 @@
 <attr format="boolean" name="circleCrop"/>
 </declare-styleable>
     <declare-styleable name="MaterialAlertDialog">
+    <attr name="backgroundTint"/>
     <attr format="dimension" name="backgroundInsetStart"/>
     <attr format="dimension" name="backgroundInsetTop"/>
     <attr format="dimension" name="backgroundInsetEnd"/>
@@ -11757,6 +12028,8 @@
     <attr format="color" name="simpleItemSelectedColor"/>
     
     <attr format="color" name="simpleItemSelectedRippleColor"/>
+    
+    <attr format="color" name="dropDownBackgroundTint"/>
   </declare-styleable>
     <declare-styleable name="MaterialButton">
     
@@ -11779,20 +12052,17 @@
     <attr format="dimension" name="iconPadding"/>
     
     <attr name="iconGravity">
-      <!-- Push icon to the start of the button. -->
+      
       <flag name="start" value="0x1"/>
-      <!-- Push the icon to the start of the text keeping a distance equal to
-           {@code iconPadding} from the text. -->
+      
       <flag name="textStart" value="0x2"/>
-      <!-- Push icon to the end of the button. -->
+      
       <flag name="end" value="0x3"/>
-      <!-- Push the icon to the end of the text keeping a distance equal to
-           {@code iconPadding} from the text. -->
+      
       <flag name="textEnd" value="0x4"/>
-      <!-- Push the icon to the top of the button. -->
+      
       <flag name="top" value="0x10"/>
-      <!-- Push the icon to the top of the text keeping a distance equal to
-           {@code iconPadding} from the text. -->
+      
       <flag name="textTop" value="0x20"/>
     </attr>
     
@@ -11827,6 +12097,7 @@
   </declare-styleable>
     <declare-styleable name="MaterialCalendar">
     <attr name="android:windowFullscreen"/>
+    <attr name="backgroundTint"/>
     <attr format="reference" name="dayStyle"/>
     <attr format="reference" name="dayInvalidStyle"/>
     <attr format="reference" name="daySelectedStyle"/>
@@ -11864,13 +12135,13 @@
     <attr format="dimension" name="checkedIconMargin"/>
     
     <attr name="checkedIconGravity">
-      <!-- Gravity.TOP | Gravity.END -->
+      
       <enum name="TOP_END" value="8388661"/>
-      <!-- Gravity.TOP | Gravity.START -->
+      
       <enum name="TOP_START" value="8388659"/>
-      <!-- Gravity.BOTTOM | Gravity.END -->
+      
       <enum name="BOTTOM_END" value="8388693"/>
-      <!-- Gravity.BOTTOM | Gravity.START -->
+      
       <enum name="BOTTOM_START" value="8388691"/>
     </attr>
     
@@ -11900,22 +12171,17 @@
     <attr format="reference|color" name="buttonIconTint"/>
     
     <attr name="buttonIconTintMode">
-      <!-- The tint is drawn on top of the drawable.
-           [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc] -->
+      
       <enum name="src_over" value="3"/>
-      <!-- The tint is masked by the alpha channel of the drawable. The drawable’s
-           color channels are thrown out. [Sa * Da, Sc * Da] -->
+      
       <enum name="src_in" value="5"/>
-      <!-- The tint is drawn above the drawable, but with the drawable’s alpha
-           channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc] -->
+      
       <enum name="src_atop" value="9"/>
-      <!-- Multiplies the color and alpha channels of the drawable with those of
-           the tint. [Sa * Da, Sc * Dc] -->
+      
       <enum name="multiply" value="14"/>
-      <!-- [Sa + Da - Sa * Da, Sc + Dc - Sc * Dc] -->
+      
       <enum name="screen" value="15"/>
-      <!-- Combines the tint and drawable color and alpha channels, clamping the
-           result to valid color values. Saturate(S + D) -->
+      
       <enum name="add" value="16"/>
     </attr>
     
@@ -11926,11 +12192,11 @@
     <attr format="string" name="errorAccessibilityLabel"/>
     
     <attr name="checkedState">
-      <!-- The unchecked state of the checkbox. -->
+      
       <enum name="unchecked" value="0"/>
-      <!-- The checked state of the checkbox. -->
+      
       <enum name="checked" value="1"/>
-      <!-- The indeterminate state of the checkbox. -->
+      
       <enum name="indeterminate" value="2"/>
     </attr>
   </declare-styleable>
@@ -11971,46 +12237,38 @@
     <attr format="color" name="thumbIconTint"/>
     
     <attr name="thumbIconTintMode">
-      <!-- The tint is drawn on top of the drawable.
-           [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc] -->
+      
       <enum name="src_over" value="3"/>
-      <!-- The tint is masked by the alpha channel of the drawable. The drawable’s
-           color channels are thrown out. [Sa * Da, Sc * Da] -->
+      
       <enum name="src_in" value="5"/>
-      <!-- The tint is drawn above the drawable, but with the drawable’s alpha
-           channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc] -->
+      
       <enum name="src_atop" value="9"/>
-      <!-- Multiplies the color and alpha channels of the drawable with those of
-           the tint. [Sa * Da, Sc * Dc] -->
+      
       <enum name="multiply" value="14"/>
-      <!-- [Sa + Da - Sa * Da, Sc + Dc - Sc * Dc] -->
+      
       <enum name="screen" value="15"/>
-      <!-- Combines the tint and drawable color and alpha channels, clamping the
-           result to valid color values. Saturate(S + D) -->
+      
       <enum name="add" value="16"/>
     </attr>
+    
+    <attr format="dimension" name="thumbIconSize"/>
     
     <attr format="reference" name="trackDecoration"/>
     
     <attr format="color" name="trackDecorationTint"/>
     
     <attr name="trackDecorationTintMode">
-      <!-- The tint is drawn on top of the drawable.
-           [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc] -->
+      
       <enum name="src_over" value="3"/>
-      <!-- The tint is masked by the alpha channel of the drawable. The drawable’s
-           color channels are thrown out. [Sa * Da, Sc * Da] -->
+      
       <enum name="src_in" value="5"/>
-      <!-- The tint is drawn above the drawable, but with the drawable’s alpha
-           channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc] -->
+      
       <enum name="src_atop" value="9"/>
-      <!-- Multiplies the color and alpha channels of the drawable with those of
-           the tint. [Sa * Da, Sc * Dc] -->
+      
       <enum name="multiply" value="14"/>
-      <!-- [Sa + Da - Sa * Da, Sc + Dc - Sc * Dc] -->
+      
       <enum name="screen" value="15"/>
-      <!-- Combines the tint and drawable color and alpha channels, clamping the
-           result to valid color values. Saturate(S + D) -->
+      
       <enum name="add" value="16"/>
     </attr>
   </declare-styleable>
@@ -12028,6 +12286,7 @@
 
     <attr name="keyboardIcon"/>
     <attr name="clockIcon"/>
+    <attr name="backgroundTint"/>
 
   </declare-styleable>
     <declare-styleable name="MaterialToolbar">
@@ -12041,27 +12300,21 @@
     <attr format="boolean" name="logoAdjustViewBounds"/>
     
     <attr name="logoScaleType">
-      <!-- Scale using the image matrix when drawing. See
-           {@link android.widget.ImageView#setImageMatrix(Matrix)}. -->
+      
       <enum name="matrix" value="0"/>
-      <!-- Scale the image using {@link android.graphics.Matrix.ScaleToFit#FILL}. -->
+      
       <enum name="fitXY" value="1"/>
-      <!-- Scale the image using {@link android.graphics.Matrix.ScaleToFit#START}. -->
+      
       <enum name="fitStart" value="2"/>
-      <!-- Scale the image using {@link android.graphics.Matrix.ScaleToFit#CENTER}. -->
+      
       <enum name="fitCenter" value="3"/>
-      <!-- Scale the image using {@link android.graphics.Matrix.ScaleToFit#END}. -->
+      
       <enum name="fitEnd" value="4"/>
-      <!-- Center the image in the view, but perform no scaling. -->
+      
       <enum name="center" value="5"/>
-      <!-- Scale the image uniformly (maintain the image's aspect ratio) so both dimensions
-           (width and height) of the image will be equal to or larger than the corresponding
-           dimension of the view (minus padding). The image is then centered in the view. -->
+      
       <enum name="centerCrop" value="6"/>
-      <!-- Scale the image uniformly (maintain the image's aspect ratio) so that both
-           dimensions (width and height) of the image will be equal to or less than the
-           corresponding dimension of the view (minus padding). The image is then centered in
-           the view. -->
+      
       <enum name="centerInside" value="7"/>
     </attr>
   </declare-styleable>
@@ -12149,24 +12402,15 @@
 
         
         <attr name="showAsAction">
-            <!-- Never show this item in an action bar, show it in the overflow menu instead.
-                 Mutually exclusive with "ifRoom" and "always". -->
+            
             <flag name="never" value="0"/>
-            <!-- Show this item in an action bar if there is room for it as determined
-                 by the system. Favor this option over "always" where possible.
-                 Mutually exclusive with "never" and "always". -->
+            
             <flag name="ifRoom" value="1"/>
-            <!-- Always show this item in an actionbar, even if it would override
-                 the system's limits of how much stuff to put there. This may make
-                 your action bar look bad on some screens. In most cases you should
-                 use "ifRoom" instead. Mutually exclusive with "ifRoom" and "never". -->
+            
             <flag name="always" value="2"/>
-            <!-- When this item is shown as an action in the action bar, show a text
-                 label with it even if it has an icon representation. -->
+            
             <flag name="withText" value="4"/>
-            <!-- This item's action view collapses to a normal menu
-                 item. When expanded, the action view takes over a
-                 larger segment of its container. -->
+            
             <flag name="collapseActionView" value="8"/>
         </attr>
 
@@ -12190,22 +12434,17 @@
 
         
         <attr name="iconTintMode">
-            <!-- The tint is drawn on top of the icon.
-                 [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc] -->
+            
             <enum name="src_over" value="3"/>
-            <!-- The tint is masked by the alpha channel of the icon. The icon’s
-                 color channels are thrown out. [Sa * Da, Sc * Da] -->
+            
             <enum name="src_in" value="5"/>
-            <!-- The tint is drawn above the icon, but with the icon’s alpha
-                 channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc] -->
+            
             <enum name="src_atop" value="9"/>
-            <!-- Multiplies the color and alpha channels of the icon with those of
-                 the tint. [Sa * Da, Sc * Dc] -->
+            
             <enum name="multiply" value="14"/>
-            <!-- [Sa + Da - Sa * Da, Sc + Dc - Sc * Dc] -->
+            
             <enum name="screen" value="15"/>
-            <!-- Combines the tint and icon color and alpha channels, clamping the
-                 result to valid color values. Saturate(S + D) -->
+            
             <enum name="add" value="16"/>
         </attr>
 
@@ -12347,14 +12586,13 @@
     <attr name="menu"/>
     
     <attr name="labelVisibilityMode">
-      <!-- Label behaves as "labeled" when there are 3 items or less, or "selected" when there are
-           4 items or more. -->
+      
       <enum name="auto" value="-1"/>
-      <!-- Label is shown on the selected navigation item. -->
+      
       <enum name="selected" value="0"/>
-      <!-- Label is shown on all navigation items. -->
+      
       <enum name="labeled" value="1"/>
-      <!-- Label is not shown on any navigation items. -->
+      
       <enum name="unlabeled" value="2"/>
     </attr>
     
@@ -12370,11 +12608,15 @@
     
     <attr format="reference" name="itemTextAppearanceActive"/>
     
+    <attr name="itemTextAppearanceActiveBoldEnabled"/>
+    
     <attr name="itemTextColor"/>
     
     <attr format="dimension" name="itemPaddingTop"/>
     
     <attr format="dimension" name="itemPaddingBottom"/>
+    
+    <attr format="dimension" name="activeIndicatorLabelPadding"/>
 
     
     <attr format="reference" name="itemActiveIndicatorStyle"/>
@@ -12390,20 +12632,26 @@
     <attr name="headerLayout"/>
    
     <attr name="menuGravity">
-      <!-- Navigation rail destinations will be aligned as a group at the top. This is the default behavior. -->
-      <!-- Gravity.TOP | Gravity.CENTER_HORIZONTAL-->
+      
+      
       <enum name="top" value="49"/>
-      <!-- Navigation rail destinations will be aligned as a group at the center. -->
-      <!-- Gravity.CENTER -->
+      
+      
       <enum name="center" value="17"/>
-      <!-- Navigation rail destinations will be aligned as a group at the bottom. -->
-      <!-- Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL -->
+      
+      
       <enum name="bottom" value="81"/>
     </attr>
     
     <attr name="paddingTopSystemWindowInsets"/>
     
     <attr name="paddingBottomSystemWindowInsets"/>
+    
+    <attr name="paddingStartSystemWindowInsets"/>
+    
+    <attr name="shapeAppearance"/>
+    
+    <attr name="shapeAppearanceOverlay"/>
   </declare-styleable>
     <declare-styleable name="NavigationView">
     <attr name="android:background"/>
@@ -12421,6 +12669,8 @@
     <attr format="reference" name="itemBackground"/>
     <attr name="itemRippleColor"/>
     <attr format="reference" name="itemTextAppearance"/>
+    
+    <attr format="boolean" name="itemTextAppearanceActiveBoldEnabled"/>
     
     <attr name="headerLayout"/>
     
@@ -12599,6 +12849,8 @@
     
     <attr name="android:hint"/>
     
+    <attr name="backgroundTint"/>
+    
     <attr name="elevation"/>
     
     <attr format="boolean" name="defaultMarginsEnabled"/>
@@ -12617,7 +12869,7 @@
     
     <attr name="strokeWidth"/>
   </declare-styleable>
-    <declare-styleable name="SearchView"><attr format="reference" name="layout"/><attr format="boolean" name="iconifiedByDefault"/><attr name="android:maxWidth"/><attr format="string" name="queryHint"/><attr format="string" name="defaultQueryHint"/><attr name="android:imeOptions"/><attr name="android:inputType"/><attr format="reference" name="closeIcon"/><attr format="reference" name="goIcon"/><attr format="reference" name="searchIcon"/><attr format="reference" name="searchHintIcon"/><attr format="reference" name="voiceIcon"/><attr format="reference" name="commitIcon"/><attr format="reference" name="suggestionRowLayout"/><attr format="reference" name="queryBackground"/><attr format="reference" name="submitBackground"/><attr name="android:focusable"/><attr name="android:textAppearance"/><attr name="android:text"/><attr name="android:hint"/><attr format="string" name="searchPrefixText"/><attr format="boolean" name="useDrawerArrowDrawable"/><attr format="boolean" name="animateNavigationIcon"/><attr format="boolean" name="animateMenuItems"/><attr name="hideNavigationIcon"/><attr format="boolean" name="autoShowKeyboard"/><attr name="headerLayout"/></declare-styleable>
+    <declare-styleable name="SearchView"><attr format="reference" name="layout"/><attr format="boolean" name="iconifiedByDefault"/><attr name="android:maxWidth"/><attr format="string" name="queryHint"/><attr format="string" name="defaultQueryHint"/><attr name="android:imeOptions"/><attr name="android:inputType"/><attr format="reference" name="closeIcon"/><attr format="reference" name="goIcon"/><attr format="reference" name="searchIcon"/><attr format="reference" name="searchHintIcon"/><attr format="reference" name="voiceIcon"/><attr format="reference" name="commitIcon"/><attr format="reference" name="suggestionRowLayout"/><attr format="reference" name="queryBackground"/><attr format="reference" name="submitBackground"/><attr name="android:focusable"/><attr name="android:textAppearance"/><attr name="android:text"/><attr name="android:hint"/><attr name="backgroundTint"/><attr format="string" name="searchPrefixText"/><attr format="boolean" name="useDrawerArrowDrawable"/><attr format="boolean" name="animateNavigationIcon"/><attr format="boolean" name="animateMenuItems"/><attr name="hideNavigationIcon"/><attr format="boolean" name="autoShowKeyboard"/><attr name="headerLayout"/><attr format="boolean" name="backHandlingEnabled"/></declare-styleable>
     <declare-styleable name="ShapeAppearance">
     
     <attr format="dimension|fraction" name="cornerSize"/>
@@ -12724,13 +12976,13 @@
     <attr format="dimension" name="haloRadius"/>
     
     <attr name="labelBehavior">
-      <!-- Mode that draws the label floating above the bounds of this view. -->
+      
       <enum name="floating" value="0"/>
-      <!-- Mode that draws the label within the bounds of the view. -->
+      
       <enum name="withinBounds" value="1"/>
-      <!-- Mode that prevents the label from being drawn. -->
+      
       <enum name="gone" value="2"/>
-      <!-- Mode that always draws the label. -->
+      
       <enum name="visible" value="3"/>
     </attr>
     
@@ -12740,11 +12992,17 @@
     
     <attr format="dimension" name="thumbElevation"/>
     
+    <attr format="dimension" name="thumbWidth"/>
+    
+    <attr format="dimension" name="thumbHeight"/>
+    
     <attr format="dimension" name="thumbRadius"/>
     
     <attr format="color" name="thumbStrokeColor"/>
     
     <attr format="dimension" name="thumbStrokeWidth"/>
+    
+    <attr format="dimension" name="thumbTrackGapSize"/>
     
     <attr name="minTouchTargetSize"/>
     
@@ -12767,6 +13025,10 @@
     <attr format="color" name="trackColorInactive"/>
     
     <attr format="dimension" name="trackHeight"/>
+    
+    <attr format="dimension" name="trackInsideCornerSize"/>
+    
+    <attr name="trackStopIndicatorSize"/>
   </declare-styleable>
     <declare-styleable name="Snackbar">
     
@@ -12782,9 +13044,9 @@
     <attr format="dimension" name="maxActionInlineWidth"/>
     
     <attr format="enum" name="animationMode">
-      <!-- Mode that corresponds to the slide in and out animations. -->
+      
       <enum name="slide" value="0"/>
-      <!-- Mode that corresponds to the fade in and out animations. -->
+      
       <enum name="fade" value="1"/>
     </attr>
     
@@ -12846,22 +13108,17 @@
         <attr format="color" name="thumbTint"/>
         
         <attr name="thumbTintMode">
-            <!-- The tint is drawn on top of the drawable.
-                 [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc] -->
+            
             <enum name="src_over" value="3"/>
-            <!-- The tint is masked by the alpha channel of the drawable. The drawable’s
-                 color channels are thrown out. [Sa * Da, Sc * Da] -->
+            
             <enum name="src_in" value="5"/>
-            <!-- The tint is drawn above the drawable, but with the drawable’s alpha
-                 channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc] -->
+            
             <enum name="src_atop" value="9"/>
-            <!-- Multiplies the color and alpha channels of the drawable with those of
-                 the tint. [Sa * Da, Sc * Dc] -->
+            
             <enum name="multiply" value="14"/>
-            <!-- [Sa + Da - Sa * Da, Sc + Dc - Sc * Dc] -->
+            
             <enum name="screen" value="15"/>
-            <!-- Combines the tint and drawable color and alpha channels, clamping the
-                 result to valid color values. Saturate(S + D) -->
+            
             <enum name="add" value="16"/>
         </attr>
         
@@ -12870,22 +13127,17 @@
         <attr format="color" name="trackTint"/>
         
         <attr name="trackTintMode">
-            <!-- The tint is drawn on top of the drawable.
-                 [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc] -->
+            
             <enum name="src_over" value="3"/>
-            <!-- The tint is masked by the alpha channel of the drawable. The drawable’s
-                 color channels are thrown out. [Sa * Da, Sc * Da] -->
+            
             <enum name="src_in" value="5"/>
-            <!-- The tint is drawn above the drawable, but with the drawable’s alpha
-                 channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc] -->
+            
             <enum name="src_atop" value="9"/>
-            <!-- Multiplies the color and alpha channels of the drawable with those of
-                 the tint. [Sa * Da, Sc * Dc] -->
+            
             <enum name="multiply" value="14"/>
-            <!-- [Sa + Da - Sa * Da, Sc + Dc - Sc * Dc] -->
+            
             <enum name="screen" value="15"/>
-            <!-- Combines the tint and drawable color and alpha channels, clamping the
-                 result to valid color values. Saturate(S + D) -->
+            
             <enum name="add" value="16"/>
         </attr>
         
@@ -12930,13 +13182,13 @@
     <attr format="reference" name="tabIndicator"/>
     
     <attr name="tabIndicatorGravity">
-      <!-- Align indicator to the bottom of this tab layout. -->
+      
       <enum name="bottom" value="0"/>
-      <!-- Align indicator along the center of this tab layout. -->
+      
       <enum name="center" value="1"/>
-      <!-- Align indicator to the top of this tab layout. -->
+      
       <enum name="top" value="2"/>
-      <!-- Stretch indicator to match the height and width of a tab item in this layout. -->
+      
       <enum name="stretch" value="3"/>
     </attr>
     
@@ -12945,17 +13197,11 @@
     <attr format="boolean" name="tabIndicatorFullWidth"/>
     
     <attr name="tabIndicatorAnimationMode">
-      <!-- Animate the selection indicator's left and right bounds in step with
-           each other. -->
+      
       <enum name="linear" value="0"/>
-      <!-- Animate the selection indicator's left and right bounds out of step
-           with each other, decelerating the front and accelerating the back.
-           This causes the indicator to look like it stretches between destinations
-           an then shrinks back down to fit the size of it's target tab. -->
+      
       <enum name="elastic" value="1"/>
-      <!-- Animate the selection indicator by sequentially fading it out from
-           its current destination and then fading it in at its new
-           destination. -->
+      
       <enum name="fade" value="2"/>
     </attr>
     
@@ -13102,21 +13348,22 @@
     <attr format="reference" name="errorIconTint"/>
     
     <attr name="errorIconTintMode">
-      <!-- The tint is drawn on top of the drawable.
-           [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc] -->
+      
       <enum name="src_over" value="3"/>
-      <!-- The tint is masked by the alpha channel of the drawable. The drawable’s
-           color channels are thrown out. [Sa * Da, Sc * Da] -->
+      
       <enum name="src_in" value="5"/>
-      <!-- The tint is drawn above the drawable, but with the drawable’s alpha
-           channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc] -->
+      
       <enum name="src_atop" value="9"/>
-      <!-- Multiplies the color and alpha channels of the drawable with those of
-           the tint. [Sa * Da, Sc * Dc] -->
+      
       <enum name="multiply" value="14"/>
-      <!-- [Sa + Da - Sa * Da, Sc + Dc - Sc * Dc] -->
+      
       <enum name="screen" value="15"/>
     </attr>
+
+    
+    <attr format="color" name="cursorColor"/>
+    
+    <attr format="color" name="cursorErrorColor"/>
 
     
     <attr format="boolean" name="counterEnabled"/>
@@ -13161,56 +13408,47 @@
     <attr format="color" name="startIconTint"/>
     
     <attr name="startIconTintMode">
-      <!-- The tint is drawn on top of the drawable.
-           [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc] -->
+      
       <enum name="src_over" value="3"/>
-      <!-- The tint is masked by the alpha channel of the drawable. The drawable’s
-           color channels are thrown out. [Sa * Da, Sc * Da] -->
+      
       <enum name="src_in" value="5"/>
-      <!-- The tint is drawn above the drawable, but with the drawable’s alpha
-           channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc] -->
+      
       <enum name="src_atop" value="9"/>
-      <!-- Multiplies the color and alpha channels of the drawable with those of
-           the tint. [Sa * Da, Sc * Dc] -->
+      
       <enum name="multiply" value="14"/>
-      <!-- [Sa + Da - Sa * Da, Sc + Dc - Sc * Dc] -->
+      
       <enum name="screen" value="15"/>
     </attr>
     
     <attr format="dimension" name="startIconMinSize"/>
     
     <attr name="startIconScaleType">
-      <!-- Scale the image using {@link android.graphics.Matrix.ScaleToFit#FILL}. -->
+      
       <enum name="fitXY" value="0"/>
-      <!-- Scale the image using {@link android.graphics.Matrix.ScaleToFit#START}. -->
+      
       <enum name="fitStart" value="1"/>
-      <!-- Scale the image using {@link android.graphics.Matrix.ScaleToFit#CENTER}. -->
+      
       <enum name="fitCenter" value="2"/>
-      <!-- Scale the image using {@link android.graphics.Matrix.ScaleToFit#END}. -->
+      
       <enum name="fitEnd" value="3"/>
-      <!-- Center the image in the view, but perform no scaling. -->
+      
       <enum name="center" value="4"/>
-      <!-- Scale the image uniformly (maintain the image's aspect ratio) so both dimensions
-           (width and height) of the image will be equal to or larger than the corresponding
-           dimension of the view (minus padding). The image is then centered in the view. -->
+      
       <enum name="centerCrop" value="5"/>
-      <!-- Scale the image uniformly (maintain the image's aspect ratio) so that both
-           dimensions (width and height) of the image will be equal to or less than the
-           corresponding dimension of the view (minus padding). The image is then centered in
-           the view. -->
+      
       <enum name="centerInside" value="6"/>
     </attr>
     
     <attr name="endIconMode">
-      <!-- The view will display a custom icon specified by the user. -->
+      
       <enum name="custom" value="-1"/>
-      <!-- No end icon. -->
+      
       <enum name="none" value="0"/>
-      <!-- The view will display a toggle when the EditText has a password. -->
+      
       <enum name="password_toggle" value="1"/>
-      <!-- The view will display a clear text button while the EditText contains input. -->
+      
       <enum name="clear_text" value="2"/>
-      <!-- The view will display a toggle that displays/hides a dropdown menu. -->
+      
       <enum name="dropdown_menu" value="3"/>
     </attr>
     
@@ -13223,53 +13461,44 @@
     <attr format="color" name="endIconTint"/>
     
     <attr name="endIconTintMode">
-      <!-- The tint is drawn on top of the drawable.
-           [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc] -->
+      
       <enum name="src_over" value="3"/>
-      <!-- The tint is masked by the alpha channel of the drawable. The drawable’s
-           color channels are thrown out. [Sa * Da, Sc * Da] -->
+      
       <enum name="src_in" value="5"/>
-      <!-- The tint is drawn above the drawable, but with the drawable’s alpha
-           channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc] -->
+      
       <enum name="src_atop" value="9"/>
-      <!-- Multiplies the color and alpha channels of the drawable with those of
-           the tint. [Sa * Da, Sc * Dc] -->
+      
       <enum name="multiply" value="14"/>
-      <!-- [Sa + Da - Sa * Da, Sc + Dc - Sc * Dc] -->
+      
       <enum name="screen" value="15"/>
     </attr>
     
     <attr format="dimension" name="endIconMinSize"/>
     
     <attr name="endIconScaleType">
-      <!-- Scale the image using {@link android.graphics.Matrix.ScaleToFit#FILL}. -->
+      
       <enum name="fitXY" value="0"/>
-      <!-- Scale the image using {@link android.graphics.Matrix.ScaleToFit#START}. -->
+      
       <enum name="fitStart" value="1"/>
-      <!-- Scale the image using {@link android.graphics.Matrix.ScaleToFit#CENTER}. -->
+      
       <enum name="fitCenter" value="2"/>
-      <!-- Scale the image using {@link android.graphics.Matrix.ScaleToFit#END}. -->
+      
       <enum name="fitEnd" value="3"/>
-      <!-- Center the image in the view, but perform no scaling. -->
+      
       <enum name="center" value="4"/>
-      <!-- Scale the image uniformly (maintain the image's aspect ratio) so both dimensions
-           (width and height) of the image will be equal to or larger than the corresponding
-           dimension of the view (minus padding). The image is then centered in the view. -->
+      
       <enum name="centerCrop" value="5"/>
-      <!-- Scale the image uniformly (maintain the image's aspect ratio) so that both
-           dimensions (width and height) of the image will be equal to or less than the
-           corresponding dimension of the view (minus padding). The image is then centered in
-           the view. -->
+      
       <enum name="centerInside" value="6"/>
     </attr>
 
     
     <attr name="boxBackgroundMode">
-      <!-- Specifies that there should be no box set on the text input area. -->
+      
       <enum name="none" value="0"/>
-      <!-- Filled box mode for the text input box. -->
+      
       <enum name="filled" value="1"/>
-      <!-- Outline box mode for the text input box. -->
+      
       <enum name="outline" value="2"/>
     </attr>
     
@@ -13308,19 +13537,15 @@
     <attr format="color" name="passwordToggleTint"/>
     
     <attr name="passwordToggleTintMode">
-      <!-- The tint is drawn on top of the drawable.
-           [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc] -->
+      
       <enum name="src_over" value="3"/>
-      <!-- The tint is masked by the alpha channel of the drawable. The drawable’s
-           color channels are thrown out. [Sa * Da, Sc * Da] -->
+      
       <enum name="src_in" value="5"/>
-      <!-- The tint is drawn above the drawable, but with the drawable’s alpha
-           channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc] -->
+      
       <enum name="src_atop" value="9"/>
-      <!-- Multiplies the color and alpha channels of the drawable with those of
-           the tint. [Sa * Da, Sc * Dc] -->
+      
       <enum name="multiply" value="14"/>
-      <!-- [Sa + Da - Sa * Da, Sc + Dc - Sc * Dc] -->
+      
       <enum name="screen" value="15"/>
     </attr>
   </declare-styleable>
@@ -13358,11 +13583,11 @@
         <attr name="contentInsetEndWithActions"/>
         <attr format="dimension" name="maxButtonHeight"/>
         <attr name="buttonGravity">
-            <!-- Place object in the vertical center of its container, not changing its size. -->
+            
             <flag name="center_vertical" value="0x10"/>
-            <!-- Push object to the top of its container, not changing its size. -->
+            
             <flag name="top" value="0x30"/>
-            <!-- Push object to the bottom of its container, not changing its size. -->
+            
             <flag name="bottom" value="0x50"/>
         </attr>
         
@@ -13396,6 +13621,7 @@
     <attr name="android:minHeight"/>
     <attr name="android:padding"/>
     <attr format="color" name="backgroundTint"/>
+    <attr format="boolean" name="showMarker"/>
   </declare-styleable>
     <declare-styleable name="Transform">
         
@@ -13495,22 +13721,17 @@
 
         
         <attr name="backgroundTintMode">
-            <!-- The tint is drawn on top of the drawable.
-                 [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc] -->
+            
             <enum name="src_over" value="3"/>
-            <!-- The tint is masked by the alpha channel of the drawable. The drawable’s
-                 color channels are thrown out. [Sa * Da, Sc * Da] -->
+            
             <enum name="src_in" value="5"/>
-            <!-- The tint is drawn above the drawable, but with the drawable’s alpha
-                 channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc] -->
+            
             <enum name="src_atop" value="9"/>
-            <!-- Multiplies the color and alpha channels of the drawable with those of
-                 the tint. [Sa * Da, Sc * Dc] -->
+            
             <enum name="multiply" value="14"/>
-            <!-- [Sa + Da - Sa * Da, Sc + Dc - Sc * Dc] -->
+            
             <enum name="screen" value="15"/>
-            <!-- Combines the tint and icon color and alpha channels, clamping the
-                 result to valid color values. Saturate(S + D) -->
+            
             <enum name="add" value="16"/>
         </attr>
     </declare-styleable>
@@ -13549,7 +13770,7 @@
     <macro name="m3_comp_badge_color">?attr/colorError</macro>
     <macro name="m3_comp_badge_large_label_text_color">?attr/colorOnError</macro>
     <macro name="m3_comp_badge_large_label_text_type">?attr/textAppearanceLabelSmall</macro>
-    <macro name="m3_comp_bottom_app_bar_container_color">?attr/colorSurface</macro>
+    <macro name="m3_comp_bottom_app_bar_container_color">?attr/colorSurfaceContainer</macro>
     <macro name="m3_comp_checkbox_selected_container_color">?attr/colorPrimary</macro>
     <macro name="m3_comp_checkbox_selected_disabled_container_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_checkbox_selected_disabled_icon_color">?attr/colorSurface</macro>
@@ -13557,15 +13778,36 @@
     <macro name="m3_comp_checkbox_selected_error_icon_color">?attr/colorOnError</macro>
     <macro name="m3_comp_checkbox_selected_icon_color">?attr/colorOnPrimary</macro>
     <macro name="m3_comp_checkbox_unselected_outline_color">?attr/colorOnSurfaceVariant</macro>
-    <macro name="m3_comp_circular_progress_indicator_active_indicator_color">?attr/colorPrimary</macro>
+    <macro name="m3_comp_date_picker_modal_container_color">?attr/colorSurfaceContainerHigh</macro>
+    <macro name="m3_comp_date_picker_modal_container_shape">?attr/shapeAppearanceCornerExtraLarge</macro>
+    <macro name="m3_comp_date_picker_modal_date_label_text_type">?attr/textAppearanceBodyLarge</macro>
+    <macro name="m3_comp_date_picker_modal_date_selected_container_color">?attr/colorPrimary</macro>
+    <macro name="m3_comp_date_picker_modal_date_selected_label_text_color">?attr/colorOnPrimary</macro>
+    <macro name="m3_comp_date_picker_modal_date_today_container_outline_color">?attr/colorPrimary</macro>
+    <macro name="m3_comp_date_picker_modal_date_today_label_text_color">?attr/colorPrimary</macro>
+    <macro name="m3_comp_date_picker_modal_date_unselected_label_text_color">?attr/colorOnSurface</macro>
+    <macro name="m3_comp_date_picker_modal_header_headline_color">?attr/colorOnSurfaceVariant</macro>
+    <macro name="m3_comp_date_picker_modal_header_headline_type">?attr/textAppearanceHeadlineLarge</macro>
+    <macro name="m3_comp_date_picker_modal_header_supporting_text_color">?attr/colorOnSurfaceVariant</macro>
+    <macro name="m3_comp_date_picker_modal_header_supporting_text_type">?attr/textAppearanceLabelLarge</macro>
+    <macro name="m3_comp_date_picker_modal_range_selection_active_indicator_container_color">?attr/colorSecondaryContainer</macro>
+    <macro name="m3_comp_date_picker_modal_range_selection_header_headline_type">?attr/textAppearanceTitleLarge</macro>
+    <macro name="m3_comp_date_picker_modal_range_selection_month_subhead_color">?attr/colorOnSurfaceVariant</macro>
+    <macro name="m3_comp_date_picker_modal_range_selection_month_subhead_type">?attr/textAppearanceTitleSmall</macro>
+    <macro name="m3_comp_date_picker_modal_weekdays_label_text_color">?attr/colorOnSurface</macro>
+    <macro name="m3_comp_date_picker_modal_weekdays_label_text_type">?attr/textAppearanceBodyLarge</macro>
+    <macro name="m3_comp_date_picker_modal_year_selection_year_selected_container_color">?attr/colorPrimary</macro>
+    <macro name="m3_comp_date_picker_modal_year_selection_year_selected_label_text_color">?attr/colorOnPrimary</macro>
+    <macro name="m3_comp_date_picker_modal_year_selection_year_unselected_label_text_color">?attr/colorOnSurfaceVariant</macro>
+    <macro name="m3_comp_dialog_container_color">?attr/colorSurfaceContainerHigh</macro>
     <macro name="m3_comp_dialog_container_shape">?attr/shapeAppearanceCornerExtraLarge</macro>
     <macro name="m3_comp_dialog_headline_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_dialog_headline_type">?attr/textAppearanceHeadlineSmall</macro>
     <macro name="m3_comp_dialog_supporting_text_color">?attr/colorOnSurfaceVariant</macro>
     <macro name="m3_comp_dialog_supporting_text_type">?attr/textAppearanceBodyMedium</macro>
     <macro name="m3_comp_divider_color">?attr/colorOutlineVariant</macro>
-    <macro name="m3_comp_elevated_button_container_color">?attr/colorSurface</macro>
-    <macro name="m3_comp_elevated_card_container_color">?attr/colorSurface</macro>
+    <macro name="m3_comp_elevated_button_container_color">?attr/colorSurfaceContainerLow</macro>
+    <macro name="m3_comp_elevated_card_container_color">?attr/colorSurfaceContainerLow</macro>
     <macro name="m3_comp_elevated_card_container_shape">?attr/shapeAppearanceCornerMedium</macro>
     <macro name="m3_comp_extended_fab_primary_container_color">?attr/colorPrimaryContainer</macro>
     <macro name="m3_comp_extended_fab_primary_container_shape">?attr/shapeAppearanceCornerLarge</macro>
@@ -13573,7 +13815,7 @@
     <macro name="m3_comp_extended_fab_primary_label_text_type">?attr/textAppearanceLabelLarge</macro>
     <macro name="m3_comp_extended_fab_secondary_container_color">?attr/colorSecondaryContainer</macro>
     <macro name="m3_comp_extended_fab_secondary_icon_color">?attr/colorOnSecondaryContainer</macro>
-    <macro name="m3_comp_extended_fab_surface_container_color">?attr/colorSurface</macro>
+    <macro name="m3_comp_extended_fab_surface_container_color">?attr/colorSurfaceContainerHigh</macro>
     <macro name="m3_comp_extended_fab_surface_icon_color">?attr/colorPrimary</macro>
     <macro name="m3_comp_extended_fab_tertiary_container_color">?attr/colorTertiaryContainer</macro>
     <macro name="m3_comp_extended_fab_tertiary_icon_color">?attr/colorOnTertiaryContainer</macro>
@@ -13584,26 +13826,27 @@
     <macro name="m3_comp_fab_primary_small_container_shape">?attr/shapeAppearanceCornerMedium</macro>
     <macro name="m3_comp_fab_secondary_container_color">?attr/colorSecondaryContainer</macro>
     <macro name="m3_comp_fab_secondary_icon_color">?attr/colorOnSecondaryContainer</macro>
-    <macro name="m3_comp_fab_surface_container_color">?attr/colorSurface</macro>
+    <macro name="m3_comp_fab_surface_container_color">?attr/colorSurfaceContainerHigh</macro>
     <macro name="m3_comp_fab_surface_icon_color">?attr/colorPrimary</macro>
     <macro name="m3_comp_fab_tertiary_container_color">?attr/colorTertiaryContainer</macro>
     <macro name="m3_comp_fab_tertiary_icon_color">?attr/colorOnTertiaryContainer</macro>
-    <macro name="m3_comp_filled_autocomplete_menu_list_item_selected_container_color">?attr/colorSurfaceVariant</macro>
+    <macro name="m3_comp_filled_autocomplete_menu_container_color">?attr/colorSurfaceContainer</macro>
     <macro name="m3_comp_filled_autocomplete_text_field_input_text_type">?attr/textAppearanceBodyLarge</macro>
     <macro name="m3_comp_filled_button_container_color">?attr/colorPrimary</macro>
     <macro name="m3_comp_filled_button_label_text_color">?attr/colorOnPrimary</macro>
     <macro name="m3_comp_filled_button_label_text_type">?attr/textAppearanceLabelLarge</macro>
-    <macro name="m3_comp_filled_card_container_color">?attr/colorSurfaceVariant</macro>
+    <macro name="m3_comp_filled_card_container_color">?attr/colorSurfaceContainerHighest</macro>
     <macro name="m3_comp_filled_card_container_shape">?attr/shapeAppearanceCornerMedium</macro>
     <macro name="m3_comp_filled_icon_button_container_color">?attr/colorPrimary</macro>
     <macro name="m3_comp_filled_icon_button_toggle_selected_icon_color">?attr/colorOnPrimary</macro>
     <macro name="m3_comp_filled_icon_button_toggle_unselected_icon_color">?attr/colorPrimary</macro>
-    <macro name="m3_comp_filled_text_field_container_color">?attr/colorSurfaceVariant</macro>
+    <macro name="m3_comp_filled_text_field_container_color">?attr/colorSurfaceContainerHighest</macro>
     <macro name="m3_comp_filled_text_field_container_shape">?attr/shapeAppearanceCornerExtraSmall</macro>
     <macro name="m3_comp_filled_text_field_error_active_indicator_color">?attr/colorError</macro>
     <macro name="m3_comp_filled_text_field_error_supporting_text_color">?attr/colorError</macro>
     <macro name="m3_comp_filled_text_field_error_trailing_icon_color">?attr/colorError</macro>
     <macro name="m3_comp_filled_text_field_input_text_type">?attr/textAppearanceBodyLarge</macro>
+    <macro name="m3_comp_filled_text_field_supporting_text_type">?attr/textAppearanceBodySmall</macro>
     <macro name="m3_comp_filled_tonal_button_container_color">?attr/colorSecondaryContainer</macro>
     <macro name="m3_comp_filled_tonal_button_label_text_color">?attr/colorOnSecondaryContainer</macro>
     <macro name="m3_comp_filled_tonal_icon_button_container_color">?attr/colorSecondaryContainer</macro>
@@ -13615,9 +13858,8 @@
     <macro name="m3_comp_icon_button_unselected_icon_color">?attr/colorOnSurfaceVariant</macro>
     <macro name="m3_comp_input_chip_container_shape">?attr/shapeAppearanceCornerSmall</macro>
     <macro name="m3_comp_input_chip_label_text_type">?attr/textAppearanceLabelLarge</macro>
-    <macro name="m3_comp_linear_progress_indicator_active_indicator_color">?attr/colorPrimary</macro>
-    <macro name="m3_comp_linear_progress_indicator_track_color">?attr/colorSurfaceVariant</macro>
-    <macro name="m3_comp_menu_container_color">?attr/colorSurface</macro>
+    <macro name="m3_comp_menu_container_color">?attr/colorSurfaceContainer</macro>
+    <macro name="m3_comp_menu_list_item_selected_container_color">?attr/colorSecondaryContainer</macro>
     <macro name="m3_comp_navigation_bar_active_focus_icon_color">?attr/colorOnSecondaryContainer</macro>
     <macro name="m3_comp_navigation_bar_active_focus_label_text_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_navigation_bar_active_focus_state_layer_color">?attr/colorOnSurface</macro>
@@ -13630,7 +13872,7 @@
     <macro name="m3_comp_navigation_bar_active_pressed_icon_color">?attr/colorOnSecondaryContainer</macro>
     <macro name="m3_comp_navigation_bar_active_pressed_label_text_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_navigation_bar_active_pressed_state_layer_color">?attr/colorOnSurface</macro>
-    <macro name="m3_comp_navigation_bar_container_color">?attr/colorSurface</macro>
+    <macro name="m3_comp_navigation_bar_container_color">?attr/colorSurfaceContainer</macro>
     <macro name="m3_comp_navigation_bar_inactive_focus_icon_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_navigation_bar_inactive_focus_label_text_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_navigation_bar_inactive_focus_state_layer_color">?attr/colorOnSurface</macro>
@@ -13655,7 +13897,6 @@
     <macro name="m3_comp_navigation_drawer_active_pressed_icon_color">?attr/colorOnSecondaryContainer</macro>
     <macro name="m3_comp_navigation_drawer_active_pressed_label_text_color">?attr/colorOnSecondaryContainer</macro>
     <macro name="m3_comp_navigation_drawer_active_pressed_state_layer_color">?attr/colorOnSecondaryContainer</macro>
-    <macro name="m3_comp_navigation_drawer_container_color">?attr/colorSurface</macro>
     <macro name="m3_comp_navigation_drawer_headline_color">?attr/colorOnSurfaceVariant</macro>
     <macro name="m3_comp_navigation_drawer_headline_type">?attr/textAppearanceTitleSmall</macro>
     <macro name="m3_comp_navigation_drawer_inactive_focus_icon_color">?attr/colorOnSurface</macro>
@@ -13670,10 +13911,21 @@
     <macro name="m3_comp_navigation_drawer_inactive_pressed_label_text_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_navigation_drawer_inactive_pressed_state_layer_color">?attr/colorOnSecondaryContainer</macro>
     <macro name="m3_comp_navigation_drawer_label_text_type">?attr/textAppearanceLabelLarge</macro>
+    <macro name="m3_comp_navigation_drawer_modal_container_color">?attr/colorSurfaceContainerLow</macro>
+    <macro name="m3_comp_navigation_rail_active_focus_state_layer_color">?attr/colorOnSurface</macro>
+    <macro name="m3_comp_navigation_rail_active_hover_state_layer_color">?attr/colorOnSurface</macro>
+    <macro name="m3_comp_navigation_rail_active_icon_color">?attr/colorOnSecondaryContainer</macro>
     <macro name="m3_comp_navigation_rail_active_indicator_color">?attr/colorSecondaryContainer</macro>
+    <macro name="m3_comp_navigation_rail_active_label_text_color">?attr/colorOnSurface</macro>
+    <macro name="m3_comp_navigation_rail_active_pressed_state_layer_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_navigation_rail_container_color">?attr/colorSurface</macro>
+    <macro name="m3_comp_navigation_rail_inactive_focus_state_layer_color">?attr/colorOnSurface</macro>
+    <macro name="m3_comp_navigation_rail_inactive_hover_state_layer_color">?attr/colorOnSurface</macro>
+    <macro name="m3_comp_navigation_rail_inactive_icon_color">?attr/colorOnSurfaceVariant</macro>
+    <macro name="m3_comp_navigation_rail_inactive_label_text_color">?attr/colorOnSurfaceVariant</macro>
+    <macro name="m3_comp_navigation_rail_inactive_pressed_state_layer_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_navigation_rail_label_text_type">?attr/textAppearanceLabelMedium</macro>
-    <macro name="m3_comp_outlined_autocomplete_menu_list_item_selected_container_color">?attr/colorSurfaceVariant</macro>
+    <macro name="m3_comp_outlined_autocomplete_menu_container_color">?attr/colorSurfaceContainer</macro>
     <macro name="m3_comp_outlined_autocomplete_text_field_caret_color">?attr/colorPrimary</macro>
     <macro name="m3_comp_outlined_autocomplete_text_field_input_text_type">?attr/textAppearanceBodyLarge</macro>
     <macro name="m3_comp_outlined_button_disabled_outline_color">?attr/colorOnSurface</macro>
@@ -13717,7 +13969,6 @@
     <macro name="m3_comp_primary_navigation_tab_active_indicator_color">?attr/colorPrimary</macro>
     <macro name="m3_comp_primary_navigation_tab_active_pressed_state_layer_color">?attr/colorPrimary</macro>
     <macro name="m3_comp_primary_navigation_tab_container_color">?attr/colorSurface</macro>
-    <macro name="m3_comp_primary_navigation_tab_divider_color">?attr/colorSurfaceVariant</macro>
     <macro name="m3_comp_primary_navigation_tab_inactive_focus_state_layer_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_primary_navigation_tab_inactive_hover_state_layer_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_primary_navigation_tab_inactive_pressed_state_layer_color">?attr/colorPrimary</macro>
@@ -13726,6 +13977,8 @@
     <macro name="m3_comp_primary_navigation_tab_with_label_text_active_label_text_color">?attr/colorPrimary</macro>
     <macro name="m3_comp_primary_navigation_tab_with_label_text_inactive_label_text_color">?attr/colorOnSurfaceVariant</macro>
     <macro name="m3_comp_primary_navigation_tab_with_label_text_label_text_type">?attr/textAppearanceTitleSmall</macro>
+    <macro name="m3_comp_progress_indicator_active_indicator_color">?attr/colorPrimary</macro>
+    <macro name="m3_comp_progress_indicator_track_color">?attr/colorSecondaryContainer</macro>
     <macro name="m3_comp_radio_button_disabled_selected_icon_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_radio_button_disabled_unselected_icon_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_radio_button_selected_focus_icon_color">?attr/colorPrimary</macro>
@@ -13742,8 +13995,7 @@
     <macro name="m3_comp_radio_button_unselected_icon_color">?attr/colorOnSurfaceVariant</macro>
     <macro name="m3_comp_radio_button_unselected_pressed_icon_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_radio_button_unselected_pressed_state_layer_color">?attr/colorPrimary</macro>
-    <macro name="m3_comp_search_bar_container_color">?attr/colorSurface</macro>
-    <macro name="m3_comp_search_bar_container_surface_tint_layer_color">?attr/elevationOverlayColor</macro>
+    <macro name="m3_comp_search_bar_container_color">?attr/colorSurfaceContainerHigh</macro>
     <macro name="m3_comp_search_bar_hover_state_layer_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_search_bar_hover_supporting_text_color">?attr/colorOnSurfaceVariant</macro>
     <macro name="m3_comp_search_bar_input_text_color">?attr/colorOnSurface</macro>
@@ -13754,8 +14006,7 @@
     <macro name="m3_comp_search_bar_supporting_text_color">?attr/colorOnSurfaceVariant</macro>
     <macro name="m3_comp_search_bar_supporting_text_type">?attr/textAppearanceBodyLarge</macro>
     <macro name="m3_comp_search_bar_trailing_icon_color">?attr/colorOnSurfaceVariant</macro>
-    <macro name="m3_comp_search_view_container_color">?attr/colorSurface</macro>
-    <macro name="m3_comp_search_view_container_surface_tint_layer_color">?attr/elevationOverlayColor</macro>
+    <macro name="m3_comp_search_view_container_color">?attr/colorSurfaceContainerHigh</macro>
     <macro name="m3_comp_search_view_divider_color">?attr/colorOutline</macro>
     <macro name="m3_comp_search_view_docked_container_shape">?attr/shapeAppearanceCornerExtraLarge</macro>
     <macro name="m3_comp_search_view_header_input_text_color">?attr/colorOnSurface</macro>
@@ -13774,20 +14025,22 @@
     <macro name="m3_comp_secondary_navigation_tab_pressed_state_layer_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_secondary_navigation_tab_with_icon_active_icon_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_secondary_navigation_tab_with_icon_inactive_icon_color">?attr/colorOnSurfaceVariant</macro>
-    <macro name="m3_comp_sheet_bottom_docked_container_color">?attr/colorSurface</macro>
+    <macro name="m3_comp_sheet_bottom_docked_container_color">?attr/colorSurfaceContainerLow</macro>
     <macro name="m3_comp_sheet_bottom_docked_container_shape">?attr/shapeAppearanceCornerExtraLarge</macro>
     <macro name="m3_comp_sheet_bottom_docked_drag_handle_color">?attr/colorOnSurfaceVariant</macro>
     <macro name="m3_comp_sheet_side_detached_container_shape">?attr/shapeAppearanceCornerLarge</macro>
-    <macro name="m3_comp_sheet_side_docked_container_color">?attr/colorSurface</macro>
+    <macro name="m3_comp_sheet_side_docked_modal_container_color">?attr/colorSurfaceContainerLow</macro>
     <macro name="m3_comp_sheet_side_docked_modal_container_shape">?attr/shapeAppearanceCornerLarge</macro>
+    <macro name="m3_comp_sheet_side_docked_standard_container_color">?attr/colorSurface</macro>
     <macro name="m3_comp_slider_active_track_color">?attr/colorPrimary</macro>
     <macro name="m3_comp_slider_disabled_active_track_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_slider_disabled_handle_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_slider_disabled_inactive_track_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_slider_handle_color">?attr/colorPrimary</macro>
-    <macro name="m3_comp_slider_inactive_track_color">?attr/colorSurfaceVariant</macro>
-    <macro name="m3_comp_slider_label_container_color">?attr/colorPrimary</macro>
-    <macro name="m3_comp_slider_label_label_text_color">?attr/colorOnPrimary</macro>
+    <macro name="m3_comp_slider_inactive_track_color">?attr/colorSecondaryContainer</macro>
+    <macro name="m3_comp_slider_label_container_color">?attr/colorSurfaceInverse</macro>
+    <macro name="m3_comp_slider_label_label_text_color">?attr/colorOnSurfaceInverse</macro>
+    <macro name="m3_comp_snackbar_container_color">?attr/colorSurfaceInverse</macro>
     <macro name="m3_comp_snackbar_container_shape">?attr/shapeAppearanceCornerExtraSmall</macro>
     <macro name="m3_comp_snackbar_supporting_text_color">?attr/colorOnSurfaceInverse</macro>
     <macro name="m3_comp_snackbar_supporting_text_type">?attr/textAppearanceBodyMedium</macro>
@@ -13797,8 +14050,8 @@
     <macro name="m3_comp_switch_disabled_selected_icon_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_switch_disabled_selected_track_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_switch_disabled_unselected_handle_color">?attr/colorOnSurface</macro>
-    <macro name="m3_comp_switch_disabled_unselected_icon_color">?attr/colorSurfaceVariant</macro>
-    <macro name="m3_comp_switch_disabled_unselected_track_color">?attr/colorSurfaceVariant</macro>
+    <macro name="m3_comp_switch_disabled_unselected_icon_color">?attr/colorSurfaceContainerHighest</macro>
+    <macro name="m3_comp_switch_disabled_unselected_track_color">?attr/colorSurfaceContainerHighest</macro>
     <macro name="m3_comp_switch_disabled_unselected_track_outline_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_switch_selected_focus_handle_color">?attr/colorPrimaryContainer</macro>
     <macro name="m3_comp_switch_selected_focus_icon_color">?attr/colorOnPrimaryContainer</macro>
@@ -13816,23 +14069,23 @@
     <macro name="m3_comp_switch_selected_pressed_track_color">?attr/colorPrimary</macro>
     <macro name="m3_comp_switch_selected_track_color">?attr/colorPrimary</macro>
     <macro name="m3_comp_switch_unselected_focus_handle_color">?attr/colorOnSurfaceVariant</macro>
-    <macro name="m3_comp_switch_unselected_focus_icon_color">?attr/colorSurfaceVariant</macro>
+    <macro name="m3_comp_switch_unselected_focus_icon_color">?attr/colorSurfaceContainerHighest</macro>
     <macro name="m3_comp_switch_unselected_focus_state_layer_color">?attr/colorOnSurface</macro>
-    <macro name="m3_comp_switch_unselected_focus_track_color">?attr/colorSurfaceVariant</macro>
+    <macro name="m3_comp_switch_unselected_focus_track_color">?attr/colorSurfaceContainerHighest</macro>
     <macro name="m3_comp_switch_unselected_focus_track_outline_color">?attr/colorOutline</macro>
     <macro name="m3_comp_switch_unselected_handle_color">?attr/colorOutline</macro>
     <macro name="m3_comp_switch_unselected_hover_handle_color">?attr/colorOnSurfaceVariant</macro>
-    <macro name="m3_comp_switch_unselected_hover_icon_color">?attr/colorSurfaceVariant</macro>
+    <macro name="m3_comp_switch_unselected_hover_icon_color">?attr/colorSurfaceContainerHighest</macro>
     <macro name="m3_comp_switch_unselected_hover_state_layer_color">?attr/colorOnSurface</macro>
-    <macro name="m3_comp_switch_unselected_hover_track_color">?attr/colorSurfaceVariant</macro>
+    <macro name="m3_comp_switch_unselected_hover_track_color">?attr/colorSurfaceContainerHighest</macro>
     <macro name="m3_comp_switch_unselected_hover_track_outline_color">?attr/colorOutline</macro>
-    <macro name="m3_comp_switch_unselected_icon_color">?attr/colorSurfaceVariant</macro>
+    <macro name="m3_comp_switch_unselected_icon_color">?attr/colorSurfaceContainerHighest</macro>
     <macro name="m3_comp_switch_unselected_pressed_handle_color">?attr/colorOnSurfaceVariant</macro>
-    <macro name="m3_comp_switch_unselected_pressed_icon_color">?attr/colorSurfaceVariant</macro>
+    <macro name="m3_comp_switch_unselected_pressed_icon_color">?attr/colorSurfaceContainerHighest</macro>
     <macro name="m3_comp_switch_unselected_pressed_state_layer_color">?attr/colorOnSurface</macro>
-    <macro name="m3_comp_switch_unselected_pressed_track_color">?attr/colorSurfaceVariant</macro>
+    <macro name="m3_comp_switch_unselected_pressed_track_color">?attr/colorSurfaceContainerHighest</macro>
     <macro name="m3_comp_switch_unselected_pressed_track_outline_color">?attr/colorOutline</macro>
-    <macro name="m3_comp_switch_unselected_track_color">?attr/colorSurfaceVariant</macro>
+    <macro name="m3_comp_switch_unselected_track_color">?attr/colorSurfaceContainerHighest</macro>
     <macro name="m3_comp_switch_unselected_track_outline_color">?attr/colorOutline</macro>
     <macro name="m3_comp_text_button_focus_state_layer_color">?attr/colorPrimary</macro>
     <macro name="m3_comp_text_button_hover_state_layer_color">?attr/colorPrimary</macro>
@@ -13844,8 +14097,9 @@
     <macro name="m3_comp_time_input_time_input_field_label_text_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_time_input_time_input_field_supporting_text_color">?attr/colorOnSurfaceVariant</macro>
     <macro name="m3_comp_time_input_time_input_field_supporting_text_type">?attr/textAppearanceBodySmall</macro>
-    <macro name="m3_comp_time_picker_clock_dial_color">?attr/colorSurfaceVariant</macro>
+    <macro name="m3_comp_time_picker_clock_dial_color">?attr/colorSurfaceContainerHighest</macro>
     <macro name="m3_comp_time_picker_clock_dial_selector_handle_container_color">?attr/colorPrimary</macro>
+    <macro name="m3_comp_time_picker_container_color">?attr/colorSurfaceContainerHigh</macro>
     <macro name="m3_comp_time_picker_container_shape">?attr/shapeAppearanceCornerExtraLarge</macro>
     <macro name="m3_comp_time_picker_headline_color">?attr/colorOnSurfaceVariant</macro>
     <macro name="m3_comp_time_picker_headline_type">?attr/textAppearanceLabelMedium</macro>
@@ -13870,7 +14124,7 @@
     <macro name="m3_comp_time_picker_time_selector_selected_pressed_state_layer_color">?attr/colorOnPrimaryContainer</macro>
     <macro name="m3_comp_time_picker_time_selector_separator_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_time_picker_time_selector_separator_type">?attr/textAppearanceDisplayLarge</macro>
-    <macro name="m3_comp_time_picker_time_selector_unselected_container_color">?attr/colorSurfaceVariant</macro>
+    <macro name="m3_comp_time_picker_time_selector_unselected_container_color">?attr/colorSurfaceContainerHighest</macro>
     <macro name="m3_comp_time_picker_time_selector_unselected_focus_state_layer_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_time_picker_time_selector_unselected_hover_state_layer_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_time_picker_time_selector_unselected_label_text_color">?attr/colorOnSurface</macro>
@@ -13882,6 +14136,7 @@
     <macro name="m3_comp_top_app_bar_small_headline_color">?attr/colorOnSurface</macro>
     <macro name="m3_comp_top_app_bar_small_headline_type">?attr/textAppearanceTitleLarge</macro>
     <macro name="m3_comp_top_app_bar_small_leading_icon_color">?attr/colorOnSurface</macro>
+    <macro name="m3_comp_top_app_bar_small_on_scroll_container_color">?attr/colorSurfaceContainer</macro>
     <macro name="m3_comp_top_app_bar_small_trailing_icon_color">?attr/colorOnSurfaceVariant</macro>
     <macro name="m3_sys_color_dark_surface_tint">?attr/colorPrimary</macro>
     <macro name="m3_sys_color_light_surface_tint">?attr/colorPrimary</macro>

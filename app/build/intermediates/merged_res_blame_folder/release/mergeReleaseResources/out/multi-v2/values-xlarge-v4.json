@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.bizzkoot.parkinglocator.app-mergeReleaseResources-34:/values-xlarge-v4/values-xlarge-v4.xml",
+            "outputFile": "com.bizzkoot.parkinglocator.app-mergeReleaseResources-63:/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "/Users/muhammadfaiz/.gradle/caches/8.11.1/transforms/bdee4a5560ccb7295df8a5ed83500ccb/transformed/appcompat-1.6.1/res/values-xlarge-v4/values-xlarge-v4.xml",
+                    "source": "/Users/muhammadfaiz/.gradle/caches/8.11.1/transforms/b9ffa80720f0707e83161d2082d83de5/transformed/appcompat-1.7.0/res/values-xlarge-v4/values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",

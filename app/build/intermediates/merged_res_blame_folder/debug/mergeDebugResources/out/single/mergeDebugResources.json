@@ -1,86 +1,86 @@
 [
     {
-        "merged": "com.bizzkoot.parkinglocator.app-debug-36:/drawable_loading_animation.xml.flat",
-        "source": "com.bizzkoot.parkinglocator.app-main-38:/drawable/loading_animation.xml"
+        "merged": "com.bizzkoot.parkinglocator.app-debug-65:/drawable_ic_location.xml.flat",
+        "source": "com.bizzkoot.parkinglocator.app-main-67:/drawable/ic_location.xml"
     },
     {
-        "merged": "com.bizzkoot.parkinglocator.app-debug-36:/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "com.bizzkoot.parkinglocator.app-main-38:/mipmap-xhdpi/ic_launcher.png"
+        "merged": "com.bizzkoot.parkinglocator.app-debug-65:/layout_bottom_sheet_location.xml.flat",
+        "source": "com.bizzkoot.parkinglocator.app-main-67:/layout/bottom_sheet_location.xml"
     },
     {
-        "merged": "com.bizzkoot.parkinglocator.app-debug-36:/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "com.bizzkoot.parkinglocator.app-main-38:/mipmap-hdpi/ic_launcher.png"
+        "merged": "com.bizzkoot.parkinglocator.app-debug-65:/drawable_loading_animation.xml.flat",
+        "source": "com.bizzkoot.parkinglocator.app-main-67:/drawable/loading_animation.xml"
     },
     {
-        "merged": "com.bizzkoot.parkinglocator.app-debug-36:/anim_m3_side_sheet_enter_from_left.xml.flat",
-        "source": "com.bizzkoot.parkinglocator.app-main-38:/anim/m3_side_sheet_enter_from_left.xml"
+        "merged": "com.bizzkoot.parkinglocator.app-debug-65:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.bizzkoot.parkinglocator.app-main-67:/drawable/ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.bizzkoot.parkinglocator.app-debug-36:/drawable_camera_grid_overlay.xml.flat",
-        "source": "com.bizzkoot.parkinglocator.app-main-38:/drawable/camera_grid_overlay.xml"
+        "merged": "com.bizzkoot.parkinglocator.app-debug-65:/drawable_camera_grid_overlay.xml.flat",
+        "source": "com.bizzkoot.parkinglocator.app-main-67:/drawable/camera_grid_overlay.xml"
     },
     {
-        "merged": "com.bizzkoot.parkinglocator.app-debug-36:/anim_m3_side_sheet_exit_to_left.xml.flat",
-        "source": "com.bizzkoot.parkinglocator.app-main-38:/anim/m3_side_sheet_exit_to_left.xml"
+        "merged": "com.bizzkoot.parkinglocator.app-debug-65:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.bizzkoot.parkinglocator.app-main-67:/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "com.bizzkoot.parkinglocator.app-debug-36:/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "com.bizzkoot.parkinglocator.app-main-38:/mipmap-mdpi/ic_launcher.png"
+        "merged": "com.bizzkoot.parkinglocator.app-debug-65:/drawable_bottom_sheet_handle.xml.flat",
+        "source": "com.bizzkoot.parkinglocator.app-main-67:/drawable/bottom_sheet_handle.xml"
     },
     {
-        "merged": "com.bizzkoot.parkinglocator.app-debug-36:/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "com.bizzkoot.parkinglocator.app-main-38:/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "com.bizzkoot.parkinglocator.app-debug-65:/layout_dialog_parking_details.xml.flat",
+        "source": "com.bizzkoot.parkinglocator.app-main-67:/layout/dialog_parking_details.xml"
     },
     {
-        "merged": "com.bizzkoot.parkinglocator.app-debug-36:/drawable_ic_navigation.xml.flat",
-        "source": "com.bizzkoot.parkinglocator.app-main-38:/drawable/ic_navigation.xml"
+        "merged": "com.bizzkoot.parkinglocator.app-debug-65:/anim_m3_side_sheet_enter_from_left.xml.flat",
+        "source": "com.bizzkoot.parkinglocator.app-main-67:/anim/m3_side_sheet_enter_from_left.xml"
     },
     {
-        "merged": "com.bizzkoot.parkinglocator.app-debug-36:/layout_activity_main.xml.flat",
-        "source": "com.bizzkoot.parkinglocator.app-main-38:/layout/activity_main.xml"
+        "merged": "com.bizzkoot.parkinglocator.app-debug-65:/anim_m3_side_sheet_exit_to_left.xml.flat",
+        "source": "com.bizzkoot.parkinglocator.app-main-67:/anim/m3_side_sheet_exit_to_left.xml"
     },
     {
-        "merged": "com.bizzkoot.parkinglocator.app-debug-36:/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "com.bizzkoot.parkinglocator.app-main-38:/mipmap-xxxhdpi/ic_launcher.png"
+        "merged": "com.bizzkoot.parkinglocator.app-debug-65:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.bizzkoot.parkinglocator.app-main-67:/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "com.bizzkoot.parkinglocator.app-debug-36:/layout_bottom_sheet_location.xml.flat",
-        "source": "com.bizzkoot.parkinglocator.app-main-38:/layout/bottom_sheet_location.xml"
+        "merged": "com.bizzkoot.parkinglocator.app-debug-65:/drawable_ic_navigation.xml.flat",
+        "source": "com.bizzkoot.parkinglocator.app-main-67:/drawable/ic_navigation.xml"
     },
     {
-        "merged": "com.bizzkoot.parkinglocator.app-debug-36:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.bizzkoot.parkinglocator.app-main-38:/drawable/ic_launcher_foreground.xml"
+        "merged": "com.bizzkoot.parkinglocator.app-debug-65:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.bizzkoot.parkinglocator.app-main-67:/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "com.bizzkoot.parkinglocator.app-debug-36:/drawable_loading_circle.xml.flat",
-        "source": "com.bizzkoot.parkinglocator.app-main-38:/drawable/loading_circle.xml"
+        "merged": "com.bizzkoot.parkinglocator.app-debug-65:/animator_button_state_list_anim.xml.flat",
+        "source": "com.bizzkoot.parkinglocator.app-main-67:/animator/button_state_list_anim.xml"
     },
     {
-        "merged": "com.bizzkoot.parkinglocator.app-debug-36:/layout_dialog_parking_details.xml.flat",
-        "source": "com.bizzkoot.parkinglocator.app-main-38:/layout/dialog_parking_details.xml"
+        "merged": "com.bizzkoot.parkinglocator.app-debug-65:/layout_activity_main.xml.flat",
+        "source": "com.bizzkoot.parkinglocator.app-main-67:/layout/activity_main.xml"
     },
     {
-        "merged": "com.bizzkoot.parkinglocator.app-debug-36:/animator_button_state_list_anim.xml.flat",
-        "source": "com.bizzkoot.parkinglocator.app-main-38:/animator/button_state_list_anim.xml"
+        "merged": "com.bizzkoot.parkinglocator.app-debug-65:/animator_loading_rotation.xml.flat",
+        "source": "com.bizzkoot.parkinglocator.app-main-67:/animator/loading_rotation.xml"
     },
     {
-        "merged": "com.bizzkoot.parkinglocator.app-debug-36:/drawable_ic_location.xml.flat",
-        "source": "com.bizzkoot.parkinglocator.app-main-38:/drawable/ic_location.xml"
+        "merged": "com.bizzkoot.parkinglocator.app-debug-65:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.bizzkoot.parkinglocator.app-main-67:/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "com.bizzkoot.parkinglocator.app-debug-36:/drawable_ic_camera.xml.flat",
-        "source": "com.bizzkoot.parkinglocator.app-main-38:/drawable/ic_camera.xml"
+        "merged": "com.bizzkoot.parkinglocator.app-debug-65:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.bizzkoot.parkinglocator.app-main-67:/mipmap-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "com.bizzkoot.parkinglocator.app-debug-36:/drawable_bottom_sheet_handle.xml.flat",
-        "source": "com.bizzkoot.parkinglocator.app-main-38:/drawable/bottom_sheet_handle.xml"
+        "merged": "com.bizzkoot.parkinglocator.app-debug-65:/drawable_rounded_camera_preview.xml.flat",
+        "source": "com.bizzkoot.parkinglocator.app-main-67:/drawable/rounded_camera_preview.xml"
     },
     {
-        "merged": "com.bizzkoot.parkinglocator.app-debug-36:/drawable_rounded_camera_preview.xml.flat",
-        "source": "com.bizzkoot.parkinglocator.app-main-38:/drawable/rounded_camera_preview.xml"
+        "merged": "com.bizzkoot.parkinglocator.app-debug-65:/drawable_ic_camera.xml.flat",
+        "source": "com.bizzkoot.parkinglocator.app-main-67:/drawable/ic_camera.xml"
     },
     {
-        "merged": "com.bizzkoot.parkinglocator.app-debug-36:/animator_loading_rotation.xml.flat",
-        "source": "com.bizzkoot.parkinglocator.app-main-38:/animator/loading_rotation.xml"
+        "merged": "com.bizzkoot.parkinglocator.app-debug-65:/drawable_loading_circle.xml.flat",
+        "source": "com.bizzkoot.parkinglocator.app-main-67:/drawable/loading_circle.xml"
     }
 ]
