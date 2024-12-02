@@ -6,40 +6,39 @@ plugins {
 android {
     namespace 'com.bizzkoot.parkinglocator'
     compileSdk 34
-
+    
     defaultConfig {
         applicationId "com.bizzkoot.parkinglocator"
         minSdk 24
         targetSdk 34
         versionCode 1
         versionName "1.0"
-        
-        // Add these configurations
-        ndk {
-            abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("../keystore/release.keystore")
+            storePassword "Faiz2015#"
+            keyAlias "parking_locator"
+            keyPassword "Faiz2015#"
         }
-        
-        vectorDrawables {
-            useSupportLibrary true
-        }
-        
-        multiDexEnabled true
-        
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            signingConfig signingConfigs.release
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
+
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
 }
 dependencies {

@@ -30,10 +30,11 @@ com.bizzkoot.parkinglocator.app-lifecycle-livedata-core-2.5.1-28 /Users/muhammad
 com.bizzkoot.parkinglocator.app-jetified-play-services-basement-18.1.0-29 /Users/muhammadfaiz/.gradle/caches/8.11.1/transforms/e5e6c48fd385e6b246419db349fcaa00/transformed/jetified-play-services-basement-18.1.0/res
 com.bizzkoot.parkinglocator.app-jetified-play-services-base-18.1.0-30 /Users/muhammadfaiz/.gradle/caches/8.11.1/transforms/f51188175196661535da9f4d96b3af2d/transformed/jetified-play-services-base-18.1.0/res
 com.bizzkoot.parkinglocator.app-drawerlayout-1.1.1-31 /Users/muhammadfaiz/.gradle/caches/8.11.1/transforms/f76e992c0972f53d7646271fdeff4976/transformed/drawerlayout-1.1.1/res
-com.bizzkoot.parkinglocator.app-resValues-32 /Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/build/generated/res/resValues/release
-com.bizzkoot.parkinglocator.app-rs-33 /Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/build/generated/res/rs/release
-com.bizzkoot.parkinglocator.app-mergeReleaseResources-34 /Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/build/intermediates/incremental/release/mergeReleaseResources/merged.dir
-com.bizzkoot.parkinglocator.app-mergeReleaseResources-35 /Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/build/intermediates/incremental/release/mergeReleaseResources/stripped.dir
-com.bizzkoot.parkinglocator.app-merged_res-36 /Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/build/intermediates/merged_res/release
-com.bizzkoot.parkinglocator.app-main-37 /Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/src/main/res
-com.bizzkoot.parkinglocator.app-release-38 /Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/src/release/res
+com.bizzkoot.parkinglocator.app-pngs-32 /Users/muhammadfaiz/Desktop/parking_locator_app/app/build/generated/res/pngs/release
+com.bizzkoot.parkinglocator.app-resValues-33 /Users/muhammadfaiz/Desktop/parking_locator_app/app/build/generated/res/resValues/release
+com.bizzkoot.parkinglocator.app-rs-34 /Users/muhammadfaiz/Desktop/parking_locator_app/app/build/generated/res/rs/release
+com.bizzkoot.parkinglocator.app-mergeReleaseResources-35 /Users/muhammadfaiz/Desktop/parking_locator_app/app/build/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.bizzkoot.parkinglocator.app-mergeReleaseResources-36 /Users/muhammadfaiz/Desktop/parking_locator_app/app/build/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.bizzkoot.parkinglocator.app-merged_res-37 /Users/muhammadfaiz/Desktop/parking_locator_app/app/build/intermediates/merged_res/release
+com.bizzkoot.parkinglocator.app-main-38 /Users/muhammadfaiz/Desktop/parking_locator_app/app/src/main/res
+com.bizzkoot.parkinglocator.app-release-39 /Users/muhammadfaiz/Desktop/parking_locator_app/app/src/release/res

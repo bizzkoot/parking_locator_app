@@ -6,22 +6,22 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="24"
-8-->/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml
+8-->/Users/muhammadfaiz/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="34" />
-9-->/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml
+9-->/Users/muhammadfaiz/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.CAMERA" />
-11-->/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:5:5-64
-11-->/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:5:22-62
+11-->/Users/muhammadfaiz/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:5:5-64
+11-->/Users/muhammadfaiz/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:5:22-62
 12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-12-->/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:6:5-78
-12-->/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:6:22-76
+12-->/Users/muhammadfaiz/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:6:5-78
+12-->/Users/muhammadfaiz/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:6:22-76
 13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-13-->/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:7:5-80
-13-->/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:7:22-78
+13-->/Users/muhammadfaiz/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:7:5-80
+13-->/Users/muhammadfaiz/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:7:22-78
 14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-14-->/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:8:5-80
-14-->/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:8:22-78
+14-->/Users/muhammadfaiz/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:8:5-80
+14-->/Users/muhammadfaiz/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:8:22-78
 15
 16    <permission
 16-->[androidx.core:core:1.12.0] /Users/muhammadfaiz/.gradle/caches/8.11.1/transforms/9b8e2d2758de2bd3153289c6eafe527f/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
@@ -35,35 +35,35 @@
 20-->[androidx.core:core:1.12.0] /Users/muhammadfaiz/.gradle/caches/8.11.1/transforms/9b8e2d2758de2bd3153289c6eafe527f/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
 21
 22    <application
-22-->/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:10:5-24:19
+22-->/Users/muhammadfaiz/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:10:5-24:19
 23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 23-->[androidx.core:core:1.12.0] /Users/muhammadfaiz/.gradle/caches/8.11.1/transforms/9b8e2d2758de2bd3153289c6eafe527f/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
 24        android:extractNativeLibs="false"
 25        android:icon="@mipmap/ic_launcher"
-25-->/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:11:9-43
+25-->/Users/muhammadfaiz/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:11:9-43
 26        android:label="@string/app_name"
-26-->/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:12:9-41
+26-->/Users/muhammadfaiz/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:12:9-41
 27        android:supportsRtl="true"
-27-->/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:13:9-35
+27-->/Users/muhammadfaiz/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:13:9-35
 28        android:theme="@style/Theme.ParkingLocator" >
-28-->/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:14:9-52
+28-->/Users/muhammadfaiz/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:14:9-52
 29        <activity
-29-->/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:15:9-23:20
+29-->/Users/muhammadfaiz/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:15:9-23:20
 30            android:name="com.bizzkoot.parkinglocator.MainActivity"
-30-->/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:16:13-41
+30-->/Users/muhammadfaiz/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:16:13-41
 31            android:exported="true"
-31-->/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:17:13-36
+31-->/Users/muhammadfaiz/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:17:13-36
 32            android:theme="@style/Theme.App.Starting" >
-32-->/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:18:13-54
+32-->/Users/muhammadfaiz/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:18:13-54
 33            <intent-filter>
-33-->/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:19:13-22:29
+33-->/Users/muhammadfaiz/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:19:13-22:29
 34                <action android:name="android.intent.action.MAIN" />
-34-->/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:20:17-69
-34-->/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:20:25-66
+34-->/Users/muhammadfaiz/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:20:17-69
+34-->/Users/muhammadfaiz/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:20:25-66
 35
 36                <category android:name="android.intent.category.LAUNCHER" />
-36-->/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:21:17-77
-36-->/Users/muhammadfaiz/Library/Mobile Documents/com~apple~CloudDocs/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:21:27-74
+36-->/Users/muhammadfaiz/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:21:17-77
+36-->/Users/muhammadfaiz/Desktop/parking_locator_app/app/src/main/AndroidManifest.xml:21:27-74
 37            </intent-filter>
 38        </activity>
 39        <!--
