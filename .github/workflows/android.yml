@@ -19,6 +19,9 @@ jobs:
         id: get_version
         run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
       - name: Build Release APK
+        env:
+          KEYSTORE_PASSWORD: "Faiz2015#"
+          KEY_PASSWORD: "Faiz2015#"
         run: ./gradlew assembleRelease
       - name: List APK files
         run: find . -name "*.apk"
