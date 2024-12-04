@@ -36,4 +36,4 @@ jobs:
         with:
           files: "Parking Locator ${{ env.VERSION }}.apk"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}          files: "Parking Locator ${{ env.VERSION }}.apk"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
