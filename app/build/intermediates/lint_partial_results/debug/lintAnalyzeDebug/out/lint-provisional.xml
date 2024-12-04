@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.7.2" type="conditional_incidents">
+
+    <incident
+        id="ScopedStorage"
+        severity="warning"
+        message="">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="7"
+            column="36"
+            startOffset="367"
+            endLine="7"
+            endColumn="77"
+            endOffset="408"/>
+        <map>
+            <entry
+                name="maxSdkVersion"
+                int="2147483647"/>
+            <entry
+                name="read"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="NewApi"
+        severity="error"
+        message="">
+        <fix-data minSdk="ffffffffff800000" requiresApi="ffffffffc0000000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/themes.xml"
+            line="15"
+            column="15"
+            startOffset="790"
+            endLine="15"
+            endColumn="60"
+            endOffset="835"/>
+        <map>
+            <entry
+                name="message"
+                string="`android:windowSplashScreenAnimatedIcon` requires API level 31 (current min is %1$s)"/>
+            <api-levels id="minSdk"
+                value="ffffffffff800000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffc0000000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="VectorRaster"
+        severity="warning"
+        message="">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/loading_circle.xml"
+            line="14"
+            column="34"
+            startOffset="421"
+            endLine="14"
+            endColumn="48"
+            endOffset="435"/>
+        <map>
+            <entry
+                name="containsFillType"
+                boolean="false"/>
+            <entry
+                name="containsGradient"
+                boolean="false"/>
+            <entry
+                name="folderVersion"
+                int="-1"/>
+            <entry
+                name="message"
+                string="Resource references will not work correctly in images generated for this vector icon for API &lt; %1$d; check generated icon to make sure it looks acceptable"/>
+        </map>
+    </incident>
+
+    <incident
+        id="PermissionImpliesUnsupportedChromeOsHardware"
+        severity="error"
+        message="Permission exists without corresponding hardware `&lt;uses-feature android:name=&quot;android.hardware.camera&quot; required=&quot;false&quot;>` tag">
+        <fix-data featureName="android.hardware.camera"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="4"
+            column="6"
+            startOffset="115"
+            endLine="4"
+            endColumn="21"
+            endOffset="130"/>
+        <map>
+            <condition library="false"/>
+        </map>
+    </incident>
+
+</incidents>
