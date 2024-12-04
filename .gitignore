@@ -11,3 +11,8 @@
 app/build/
 app/release/
 *.keystore
+~/Desktop/parking_locator_app/
+build_files.txt
+repository_files.txt
+source_files.txt
+error_gradle
