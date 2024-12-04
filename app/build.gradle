@@ -21,7 +21,7 @@ android {
 
     signingConfigs {
         release {
-            storeFile file("${rootProject.projectDir}/keystore/release.keystore")
+            storeFile file("${rootDir}/keystore/release.keystore")
             storePassword "Faiz2015#"
             keyAlias "parking_locator"
             keyPassword "Faiz2015#"
