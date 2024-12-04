@@ -20,9 +20,13 @@ jobs:
         run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
       - name: Build Release APK
         run: ./gradlew assembleRelease
+      - name: List APK files
+        run: find . -name "*.apk"
       - name: Rename APK
-        run: mv app/build/outputs/apk/release/app-release.apk "app/build/outputs/apk/release/Parking Locator ${{ env.VERSION }}.apk"
+        run: |
+          APK_PATH=$(find . -name "*.apk")
+          mv "$APK_PATH" "Parking Locator ${{ env.VERSION }}.apk"
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          files: "app/build/outputs/apk/release/Parking Locator ${{ env.VERSION }}.apk"
+          files: "Parking Locator ${{ env.VERSION }}.apk"
