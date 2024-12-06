@@ -1,0 +1,17 @@
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+*.hprof
+app/build/
+app/release/
+~/Desktop/parking_locator_app/
+build_files.txt
+repository_files.txt
+source_files.txt
+error_gradle
