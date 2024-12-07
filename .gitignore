@@ -17,3 +17,6 @@ source_files.txt
 error_gradle
 .vscode/
 *.keystore
+keystore/
+local.properties
+gradle.properties
