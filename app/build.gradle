@@ -22,7 +22,12 @@ def getNextVersion() {
         def minor = parts[1].toInteger()
         def patch = parts[2].toInteger()
 
-        patch++
+        if (patch == 99) {
+            patch = 0
+            minor++
+        } else {
+            patch++
+        }
 
         return "${major}.${minor}.${patch}"
     } catch (Exception e) {
@@ -53,9 +58,9 @@ android {
     signingConfigs {
         release {
             storeFile file("${rootDir}/keystore/release.keystore")
-            storePassword "Faiz2015#"
+            storePassword System.getenv('KEYSTORE_PASSWORD')
             keyAlias "parking_locator"
-            keyPassword "Faiz2015#"
+            keyPassword System.getenv('KEY_PASSWORD')
         }
     }
 
