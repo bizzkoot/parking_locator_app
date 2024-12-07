@@ -5,8 +5,10 @@
         <item name="cornerSize">12dp</item>
     </style>
     <style name="CustomDialogStyle" parent="Theme.MaterialComponents.DayNight.Dialog.Alert">
-    <item name="android:textColorLink">@color/primary</item>
-    <item name="android:textColorPrimary">@color/text_on_surface</item>
-    <item name="android:background">@color/surface</item>
+        <item name="android:background">@color/surface</item>
+        <item name="android:textColorPrimary">@color/text_on_surface</item>
+        <item name="android:buttonBarButtonStyle">@color/primary</item>
+        <item name="android:windowMinWidthMajor">85%</item>
+        <item name="android:windowMinWidthMinor">85%</item>
     </style>
 </resources>
