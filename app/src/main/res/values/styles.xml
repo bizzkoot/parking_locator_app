@@ -4,4 +4,9 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">12dp</item>
     </style>
+    <style name="CustomDialogStyle" parent="Theme.MaterialComponents.DayNight.Dialog.Alert">
+    <item name="android:textColorLink">@color/primary</item>
+    <item name="android:textColorPrimary">@color/text_on_surface</item>
+    <item name="android:background">@color/surface</item>
+    </style>
 </resources>

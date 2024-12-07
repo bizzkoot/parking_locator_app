@@ -44,6 +44,11 @@ import androidx.core.view.GravityCompat
 import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
+import android.text.SpannableString
+import android.text.method.LinkMovementMethod
+import android.text.style.ClickableSpan
+import android.text.Spanned
+import android.content.DialogInterface
 
 
 class MainActivity : AppCompatActivity() {
@@ -127,28 +132,108 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
     private fun showAboutDialog() {
-        AlertDialog.Builder(this)
-            .setTitle("About Parking Locator")
-            .setMessage("Version ${BuildConfig.VERSION_NAME}\n\nA smart application to help you remember where you parked your car.")
-            .setPositiveButton("OK", null)
-            .show()
-    }
+        val versionName = packageManager.getPackageInfo(packageName, 0).versionName
+        val buildVersion = BuildConfig.VERSION_CODE
+        val githubUrl = "https://github.com/bizzkoot/parking_locator_app"
+        val releasesUrl = "$githubUrl/releases"
+         
+        val message = """
+            Version $versionName (Build $buildVersion)
 
-    private fun showHowToUseDialog() {
+            Parking Locator helps you never forget where you parked your car!
+
+            Key Features:
+            • Photo Documentation
+              Capture visual references of your parking spot
+              
+            • Location Tracking
+              Precise GPS coordinates of your parked vehicle
+              
+            • Floor Level Management
+              Track multi-level parking structures
+              
+            • Navigation Assistant
+              Direct walking routes back to your car
+              
+            • Easy to Use Interface
+              Simple, intuitive controls for quick parking records
+              
+                %-40s%s
+                
+            Developed by Bizzkoot
+            Copyright © 2024
+        """.format("Source Code", "Check Updates").trimIndent()
+
+        val spannableString = SpannableString(message)
+
+        // Make "Source Code" clickable
+        val sourceCodeStart = message.indexOf("Source Code")
+        spannableString.setSpan(
+            object : ClickableSpan() {
+                override fun onClick(view: View) {
+                    openUrl(githubUrl)
+                }
+            },
+            sourceCodeStart,
+            sourceCodeStart + "Source Code".length,
+            Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
+
+        // Make "Check Updates" clickable
+        val updatesStart = message.indexOf("Check Updates")
+        spannableString.setSpan(
+            object : ClickableSpan() {
+                override fun onClick(view: View) {
+                    openUrl(releasesUrl)
+                }
+            },
+            updatesStart,
+            updatesStart + "Check Updates".length,
+            Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
+
+        AlertDialog.Builder(this, R.style.CustomDialogStyle)
+            .setTitle("About Parking Locator")
+            .setMessage(spannableString as CharSequence)
+            .setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }  // Simplified lambda
+            .show()
+            .apply {
+                findViewById<TextView>(android.R.id.message)?.apply {
+                    movementMethod = LinkMovementMethod.getInstance()
+                    setLinkTextColor(ContextCompat.getColor(context, R.color.primary))
+                }
+            }
+    }    private fun showHowToUseDialog() {
         AlertDialog.Builder(this)
             .setTitle("How to Use")
             .setMessage("""
-                1. Enter your parking floor level
-                2. Tap 'Save Parking Location' to capture photo
-                3. View saved location anytime
-                4. Use navigation to find your car
+                1. Enter Floor Level
+                    • Type the parking floor number/level (if applicable)
+                   
+                2. Save Your Location
+                    • Click the 'Capture' button
+                    • Take a clear photo of your surroundings
+                    • Your location and photo will be saved automatically
+                   
+                3. Find Your Car Later
+                    • Click 'View Location' to see your saved spot
+                    • Check the photo and floor level
+                    • Use 'Navigate' for walking directions
+                   
+                Tips:
+                • Take photos of nearby landmarks or parking spot numbers
+                • Always verify the floor level before saving
+                • Make sure GPS is enabled for accurate location
             """.trimIndent())
-            .setPositiveButton("OK", null)
+            .setPositiveButton("Got it") { dialog, _ -> dialog.dismiss() }
             .show()
     }
 
+    private fun openUrl(url: String) {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+        startActivity(intent)
+    }
     private fun setupButtonListeners() {
         captureButton.setOnClickListener {
             captureLocation()
