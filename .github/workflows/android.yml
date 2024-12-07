@@ -110,5 +110,11 @@ jobs:
       - name: Create keystore
         run: echo "${{ secrets.RELEASE_KEYSTORE }}" | base64 --decode > keystore/release.keystore
 
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
       - name: Build with Gradle
         run: ./gradlew clean assembleRelease
