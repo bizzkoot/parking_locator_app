@@ -22,28 +22,60 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Set up Keystore
-        run: |
-          mkdir -p keystore
-          echo "${{ secrets.RELEASE_KEYSTORE }}" | base64 --decode > keystore/release.keystore
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
 
-      - name: Build Release APK
-        env:
-          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
-          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-        run: ./gradlew clean assembleRelease
+      - name: Build Project
+        run: |
+          ./gradlew wrapper
+          ./gradlew assembleDebug --stacktrace --info
 
       - name: List APK files
-        run: find . -name "*.apk"
+        run: find . -name "*debug.apk"
+
+      - name: Get Latest Version
+        id: version
+        run: |
+          # Fetch all tags
+          git fetch --tags
+          
+          # Get latest version tag (e.g., v1.0.0)
+          LATEST_TAG=$(git tag -l "v*" | sort -V | tail -n 1)
+          
+          if [ -z "$LATEST_TAG" ]; then
+            # If no tags exist, start with v1.0.0
+            NEW_VERSION="v1.0.0"
+          else
+            # Extract version numbers
+            MAJOR=$(echo $LATEST_TAG | sed 's/v\([0-9]*\).\([0-9]*\).\([0-9]*\)/\1/')
+            MINOR=$(echo $LATEST_TAG | sed 's/v\([0-9]*\).\([0-9]*\).\([0-9]*\)/\2/')
+            PATCH=$(echo $LATEST_TAG | sed 's/v\([0-9]*\).\([0-9]*\).\([0-9]*\)/\3/')
+            
+            # Increment patch version
+            PATCH=$((PATCH + 1))
+            
+            NEW_VERSION="v$MAJOR.$MINOR.$PATCH"
+          fi
+          
+          echo "NEW_VERSION=$NEW_VERSION" >> $GITHUB_OUTPUT
+          echo "New version will be: $NEW_VERSION"
+
+      - name: Set Release Type
+        id: release_type
+        run: |
+          echo "IS_RELEASE=false" >> $GITHUB_OUTPUT
+          echo "APK_TYPE=debug" >> $GITHUB_OUTPUT
 
       - name: Rename APK
         run: |
-          APK_PATH=$(find . -name "*.apk")
-          mv "$APK_PATH" "Parking Locator ${{ github.ref }}.apk"
+          APK_PATH=$(find . -name "*debug.apk" | head -n 1)
+          mv "$APK_PATH" "Parking Locator ${{ steps.version.outputs.NEW_VERSION }}.apk"
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          files: "Parking Locator ${{ github.ref }}.apk"
+          tag_name: ${{ steps.version.outputs.NEW_VERSION }}
+          files: "Parking Locator ${{ steps.version.outputs.NEW_VERSION }}.apk"
+          prerelease: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
