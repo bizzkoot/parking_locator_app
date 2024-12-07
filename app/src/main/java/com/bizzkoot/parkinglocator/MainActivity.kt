@@ -161,7 +161,7 @@ class MainActivity : AppCompatActivity() {
               
                 %-40s%s
                 
-            Developed by Bizzkoot
+            Developed by bizzkoot
             Copyright © 2024
         """.format("Source Code", "Check Updates").trimIndent()
 
@@ -368,8 +368,6 @@ class MainActivity : AppCompatActivity() {
                 Floor: ${location.floorLevel}
                 Time: $dateTime
             """.trimIndent()
-
-            locationText.setTextColor(Color.WHITE)
             
             dialog.show()
         } else {

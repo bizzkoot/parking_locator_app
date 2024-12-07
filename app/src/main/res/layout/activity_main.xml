@@ -5,33 +5,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/background">
 
-    <!-- Main Content -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/transparent">
+        android:background="@color/background">
 
-        <!-- Add Toolbar here, at the top -->
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/primary"
             android:elevation="4dp"
-            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light"
             app:layout_constraintTop_toTopOf="parent"/>
 
-        <!-- Update PreviewView to constrain to toolbar -->
         <androidx.camera.view.PreviewView
             android:id="@+id/viewFinder"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="16dp"
+            android:background="@color/surface"
             app:layout_constraintBottom_toTopOf="@+id/controlsContainer"
             app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/controlsContainer"
             android:layout_width="match_parent"
@@ -39,6 +39,7 @@
             android:layout_margin="16dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/surface"
             app:layout_constraintBottom_toBottomOf="parent">
 
             <LinearLayout
@@ -51,14 +52,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/floor_level"
+                    android:textColorHint="@color/text_on_surface"
+                    app:boxStrokeColor="@color/primary"
+                    app:hintTextColor="@color/primary"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/floorLevelInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColorHint="#757575"/>
-
+                        android:textColor="@color/text_on_surface"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.button.MaterialButton
@@ -68,7 +71,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="@string/save_parking_location"
-                    android:textColor="#212121"
+                    android:textColor="@color/text_on_primary"
+                    app:backgroundTint="@color/primary"
                     app:icon="@drawable/ic_camera"
                     app:iconTint="@color/text_on_primary"/>
 
@@ -79,9 +83,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="@string/view_saved_location"
-                    android:textColor="#1976D2"
+                    android:textColor="@color/primary"
                     app:icon="@drawable/ic_location"
-                    app:iconTint="@color/primary"/>
+                    app:iconTint="@color/primary"
+                    app:strokeColor="@color/primary"/>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -90,7 +95,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="gone"
-            android:background="@color/camera_button_dark"
+            android:background="#80000000"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent">
 
@@ -105,7 +110,6 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Navigation Drawer -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationView"
         android:layout_width="wrap_content"
@@ -113,6 +117,9 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header"
-        app:menu="@menu/nav_menu"/>
+        app:menu="@menu/nav_menu"
+        android:background="@color/surface"
+        app:itemTextColor="@color/text_on_surface"
+        app:itemIconTint="@color/primary"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>
