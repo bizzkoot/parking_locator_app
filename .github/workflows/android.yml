@@ -42,7 +42,6 @@ jobs:
         uses: github/codeql-action/init@v3
         with:
           languages: java
-          default: false
           
       - name: Build Release with Gradle
         env:
