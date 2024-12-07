@@ -10,57 +10,6 @@ on:
     branches:
       - main
 
-# Removing the analyze job to prevent autobuild errors
-# jobs:
-#   analyze:
-#     runs-on: ubuntu-latest
-#     permissions:
-#       security-events: write
-#       actions: read
-#       contents: read
-#     if: github.ref == 'refs/heads/main'
-#     steps:
-#       - uses: actions/checkout@v3
-#       
-#       - name: Set up JDK
-#         uses: actions/setup-java@v3
-#         with:
-#           java-version: '17'
-#           distribution: 'temurin'
-#           cache: gradle
-
-#       # Add keystore setup steps
-#       - name: Create keystore directory
-#         run: mkdir -p keystore
-
-#       - name: Decode and create keystore file
-#         run: echo "${{ secrets.RELEASE_KEYSTORE }}" | base64 --decode > keystore/release.keystore
-          
-#       - name: Grant execute permission for gradlew
-#         run: chmod +x gradlew
-          
-#       # - name: Initialize CodeQL
-#       #   uses: github/codeql-action/init@v3
-#       #   with:
-#       #     languages: java
-#       #     default: false
-#       #     build: false  # Disable the automatic build
-
-#       - name: Build Release with Gradle
-#         env:
-#           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
-#           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-#         run: |
-#           ./gradlew clean
-#           ./gradlew assembleRelease --no-daemon
-          
-#       # - name: Perform CodeQL Analysis
-#       #   uses: github/codeql-action/analyze@v3
-
-#       # - name: Notify CodeQL Analysis Failure
-#       #   if: failure()
-#       #   run: echo "CodeQL analysis failed! Please check the logs."
-
   release:
     runs-on: ubuntu-latest
     if: startsWith(github.ref, 'refs/tags/')
@@ -140,3 +89,54 @@ on:
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: ./gradlew assembleRelease --no-daemon
+
+# Removing the analyze job to prevent autobuild errors
+# jobs:
+#   analyze:
+#     runs-on: ubuntu-latest
+#     permissions:
+#       security-events: write
+#       actions: read
+#       contents: read
+#     if: github.ref == 'refs/heads/main'
+#     steps:
+#       - uses: actions/checkout@v3
+#       
+#       - name: Set up JDK
+#         uses: actions/setup-java@v3
+#         with:
+#           java-version: '17'
+#           distribution: 'temurin'
+#           cache: gradle
+
+#       # Add keystore setup steps
+#       - name: Create keystore directory
+#         run: mkdir -p keystore
+
+#       - name: Decode and create keystore file
+#         run: echo "${{ secrets.RELEASE_KEYSTORE }}" | base64 --decode > keystore/release.keystore
+          
+#       - name: Grant execute permission for gradlew
+#         run: chmod +x gradlew
+          
+#       # - name: Initialize CodeQL
+#       #   uses: github/codeql-action/init@v3
+#       #   with:
+#       #     languages: java
+#       #     default: false
+#       #     build: false  # Disable the automatic build
+
+#       - name: Build Release with Gradle
+#         env:
+#           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+#           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+#         run: |
+#           ./gradlew clean
+#           ./gradlew assembleRelease --no-daemon
+          
+#       # - name: Perform CodeQL Analysis
+#       #   uses: github/codeql-action/analyze@v3
+
+#       # - name: Notify CodeQL Analysis Failure
+#       #   if: failure()
+#       #   run: echo "CodeQL analysis failed! Please check the logs."
