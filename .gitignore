@@ -15,3 +15,5 @@ build_files.txt
 repository_files.txt
 source_files.txt
 error_gradle
+.vscode/
+*.keystore
