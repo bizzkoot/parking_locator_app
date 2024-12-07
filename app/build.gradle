@@ -65,6 +65,7 @@ android {
         release {
             def keystorePropertiesFile = rootProject.file("keystore/keystore.properties")
             if (keystorePropertiesFile.exists()) {
+                // Local development with keystore.properties
                 def keystoreProperties = new Properties()
                 keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
                 storeFile file(keystoreProperties['storeFile'])
@@ -72,10 +73,11 @@ android {
                 keyAlias keystoreProperties['keyAlias']
                 keyPassword keystoreProperties['keyPassword']
             } else {
+                // CI environment with environment variables
                 storeFile file("${rootDir}/keystore/release.keystore")
-                storePassword System.getenv('KEYSTORE_PASSWORD')
+                storePassword System.getenv('KEYSTORE_PASSWORD') ?: "debug"
                 keyAlias "parking_locator"
-                keyPassword System.getenv('KEY_PASSWORD')
+                keyPassword System.getenv('KEY_PASSWORD') ?: "debug"
             }
         }
     }
@@ -83,7 +85,6 @@ android {
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
-            debuggable true
         }
         release {
             signingConfig signingConfigs.release

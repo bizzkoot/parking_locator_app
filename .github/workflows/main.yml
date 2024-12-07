@@ -106,11 +106,13 @@ jobs:
         uses: github/codeql-action/init@v2
         with:
           languages: java
-          # Specify debug build for CodeQL
           build-mode: manual
 
       - name: Build for CodeQL
+        env:
+          GRADLE_OPTS: "-Dorg.gradle.daemon=false -Dorg.gradle.workers.max=2"
         run: |
+          ./gradlew clean
           ./gradlew assembleDebug --no-daemon
 
       - name: Perform CodeQL Analysis
