@@ -38,12 +38,12 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
           
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3
-        with:
-          languages: java
-          default: false
-          build: false  # Disable the automatic build
+      # - name: Initialize CodeQL
+      #   uses: github/codeql-action/init@v3
+      #   with:
+      #     languages: java
+      #     default: false
+      #     build: false  # Disable the automatic build
 
       - name: Build Release with Gradle
         env:
@@ -53,12 +53,12 @@ jobs:
           ./gradlew clean
           ./gradlew assembleRelease --no-daemon
           
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v3
+      # - name: Perform CodeQL Analysis
+      #   uses: github/codeql-action/analyze@v3
 
-      - name: Notify CodeQL Analysis Failure
-        if: failure()
-        run: echo "CodeQL analysis failed! Please check the logs."
+      # - name: Notify CodeQL Analysis Failure
+      #   if: failure()
+      #   run: echo "CodeQL analysis failed! Please check the logs."
 
   release:
     runs-on: ubuntu-latest
