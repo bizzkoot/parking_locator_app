@@ -64,31 +64,32 @@ on:
         if: failure()
         run: echo "Release creation failed! Please check the logs."
 
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Create keystore directory
-        run: mkdir -p keystore
-
-      - name: Decode and create keystore file
-        run: echo "${{ secrets.RELEASE_KEYSTORE }}" | base64 --decode > keystore/release.keystore
-
-      - name: Set up JDK
-        uses: actions/setup-java@v3
-        with:
-          java-version: '17'
-          distribution: 'temurin'
-
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-
-      - name: Build with Gradle
-        env:
-          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
-          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-        run: ./gradlew assembleRelease --no-daemon
+# Removing the build job as it is not needed for the current workflow
+# build:
+#   runs-on: ubuntu-latest
+#   steps:
+#     - uses: actions/checkout@v3
+#     
+#     - name: Create keystore directory
+#       run: mkdir -p keystore
+#     
+#     - name: Decode and create keystore file
+#       run: echo "${{ secrets.RELEASE_KEYSTORE }}" | base64 --decode > keystore/release.keystore
+#     
+#     - name: Set up JDK
+#       uses: actions/setup-java@v3
+#       with:
+#         java-version: '17'
+#         distribution: 'temurin'
+#     
+#     - name: Grant execute permission for gradlew
+#       run: chmod +x gradlew
+#     
+#     - name: Build with Gradle
+#       env:
+#         KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+#         KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+#       run: ./gradlew assembleRelease --no-daemon
 
 # Removing the analyze job to prevent autobuild errors
 # jobs:
