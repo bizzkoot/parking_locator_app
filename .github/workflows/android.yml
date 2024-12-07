@@ -104,6 +104,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Create keystore directory
+        run: mkdir -p keystore
+
       - name: Create keystore
         run: echo "${{ secrets.RELEASE_KEYSTORE }}" | base64 --decode > keystore/release.keystore
 
