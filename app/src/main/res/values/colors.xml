@@ -10,4 +10,5 @@
     <color name="text_on_surface">#000000</color>
     <color name="text_on_primary">#FFFFFF</color>
     <color name="camera_button_dark">#1A237E</color>
+    <color name="text_secondary">#99FFFFFF</color>
 </resources>
