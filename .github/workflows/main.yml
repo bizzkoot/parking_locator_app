@@ -8,13 +8,14 @@ on:
     branches:
       - main
 
+env:
+  GRADLE_OPTS: "-Xmx4g -Dorg.gradle.daemon=false -Dorg.gradle.workers.max=2"
+  JAVA_TOOL_OPTIONS: "-Xmx4g"
+
 jobs:
   build:
     runs-on: ubuntu-latest
     
-    env:
-      GRADLE_OPTS: "-Dorg.gradle.daemon=false -Dorg.gradle.workers.max=2"
-      
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
@@ -102,18 +103,27 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v2
+        
+      - name: Accept Android SDK Licenses
+        run: |
+          yes | sdkmanager --licenses
+          sdkmanager "platform-tools" "platforms;android-35"
+      
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v2
         with:
           languages: java
-          build-mode: manual
-
+          build-mode: manual  # Explicitly set manual mode
+          
       - name: Build for CodeQL
         env:
-          GRADLE_OPTS: "-Dorg.gradle.daemon=false -Dorg.gradle.workers.max=2"
+          GRADLE_OPTS: "-Xmx4g -Dorg.gradle.daemon=false -Dorg.gradle.workers.max=2"
         run: |
-          ./gradlew clean
-          ./gradlew assembleDebug --no-daemon
-
+          chmod +x gradlew
+          ./gradlew clean --no-daemon
+          ./gradlew assembleDebug --no-daemon --stacktrace --info
+          
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
