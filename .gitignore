@@ -1,22 +1,38 @@
+# IDE
 *.iml
+.idea/
+.vscode/
+
+# Gradle
 .gradle/
+build/
+app/build/
+android/build/
+android/.gradle/
+
+# Android
 /local.properties
-/.idea/
-.DS_Store
-/build/
 /captures/
 .externalNativeBuild/
 .cxx/
 *.hprof
-app/build/
 app/release/
-~/Desktop/parking_locator_app/
+
+# Keystores
+*.keystore
+!android/app/debug.keystore
+keystore/
+
+# System files
+.DS_Store
+*/.DS_Store
+
+# Config files
+local.properties
+gradle.properties
+
+# Temp files
 build_files.txt
 repository_files.txt
 source_files.txt
 error_gradle
-.vscode/
-*.keystore
-keystore/
-local.properties
-gradle.properties
