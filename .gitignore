@@ -41,3 +41,6 @@ error_gradle
 # GitHub Actions SSH keys
 github-actions-deploy
 github-actions-deploy.pub
+
+# Dependencies
+node_modules/
