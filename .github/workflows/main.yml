@@ -26,6 +26,14 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v2
+        
+      - name: Accept Android SDK Licenses
+        run: |
+          yes | sdkmanager --licenses
+          sdkmanager "platform-tools" "platforms;android-35"
+
       - name: Setup Keystore
         run: |
           mkdir -p keystore
@@ -57,6 +65,7 @@ jobs:
 
       - name: List APK files
         run: find . -name "*release.apk"
+
       - name: Get Next Version
         id: get_version
         run: |
@@ -83,6 +92,7 @@ jobs:
         run: |
           git tag -a ${{ steps.get_version.outputs.new_version }} -m "Release ${{ steps.get_version.outputs.new_version }}"
           git push origin ${{ steps.get_version.outputs.new_version }}
+
       - name: Set Release Type
         id: release_type
         run: |
@@ -103,27 +113,22 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v2
-        
-      - name: Accept Android SDK Licenses
-        run: |
-          yes | sdkmanager --licenses
-          sdkmanager "platform-tools" "platforms;android-35"
-      
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v2
         with:
           languages: java
-          build-mode: manual  # Explicitly set manual mode
-          
+          build-mode: manual
+          queries: security-and-quality
+
       - name: Build for CodeQL
-        env:
-          GRADLE_OPTS: "-Xmx4g -Dorg.gradle.daemon=false -Dorg.gradle.workers.max=2"
         run: |
           chmod +x gradlew
-          ./gradlew clean --no-daemon
-          ./gradlew assembleDebug --no-daemon --stacktrace --info
-          
+          ./gradlew clean
+          ./gradlew compileDebugJavaWithJavac --no-daemon
+        env:
+          GRADLE_OPTS: "-Xmx4g -Dorg.gradle.daemon=false -Dorg.gradle.workers.max=2"
+
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
+        with:
+          category: "/language:java"
