@@ -37,3 +37,7 @@ build_files.txt
 repository_files.txt
 source_files.txt
 error_gradle
+
+# GitHub Actions SSH keys
+github-actions-deploy
+github-actions-deploy.pub
