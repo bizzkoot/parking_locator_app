@@ -18,10 +18,11 @@ android/.gradle/
 *.hprof
 app/release/
 
-# Keystores
+# Keystores and signing configs
 *.keystore
 !android/app/debug.keystore
 keystore/
+keystore.properties
 
 # System files
 .DS_Store
