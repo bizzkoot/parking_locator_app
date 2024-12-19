@@ -66,6 +66,9 @@ jobs:
         run: |
           echo "${{ secrets.ANDROID_KEYSTORE_BASE64 }}" | base64 --decode > android/app/release.keystore
 
+      - name: Grant execute permission for gradlew
+        run: chmod +x android/gradlew
+  
       - name: Build Android Release
         env:
           KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
