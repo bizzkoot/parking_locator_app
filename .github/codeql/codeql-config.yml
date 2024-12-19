@@ -1,0 +1,20 @@
+name: "CodeQL Config"
+
+queries:
+  - uses: security-and-quality
+
+paths:
+  - android
+  - src
+
+paths-ignore:
+  - node_modules
+  - '**/*.test.ts'
+  - '**/*.test.tsx'
+  - '**/__tests__/**'
+
+build:
+  command: |
+    cd android
+    chmod +x ./gradlew
+    ./gradlew assembleDebug

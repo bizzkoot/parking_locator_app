@@ -65,7 +65,7 @@ android {
         release {
             storeFile file("${rootDir}/keystore/release.keystore")
             storePassword System.getenv('KEYSTORE_PASSWORD')
-            keyAlias "parking_locator"
+            keyAlias System.getenv('KEY_ALIAS')
             keyPassword System.getenv('KEY_PASSWORD')
         }
     }
@@ -107,9 +107,9 @@ android {
         }
     }
 
-    dexOptions {
-        javaMaxHeapSize "4g"
-    }
+//    dexOptions {
+//        javaMaxHeapSize "4g"
+//    }
 }
 
 dependencies {
