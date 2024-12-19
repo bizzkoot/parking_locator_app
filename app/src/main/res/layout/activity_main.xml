@@ -117,7 +117,7 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header"
-        app:menu="@menu/nav_menu"
+        app:menu="@menu/drawer_menu"
         android:background="@color/surface"
         app:itemTextColor="@color/text_on_surface"
         app:itemIconTint="@color/primary"/>

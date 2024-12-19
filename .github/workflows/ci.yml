@@ -78,8 +78,12 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
 
+      - name: Grant execute permission for gradlew
+        run: chmod +x android/gradlew
+
       - name: Build Android Debug
-        run: yarn build:android
+        run: cd android && ./gradlew assembleDebug
+
 
       - name: Upload Android APK
         uses: actions/upload-artifact@v3
