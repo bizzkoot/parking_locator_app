@@ -49,6 +49,7 @@ import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
 import android.text.Spanned
 import android.content.DialogInterface
+import androidx.appcompat.app.AppCompatDelegate
 
 
 class MainActivity : AppCompatActivity() {
@@ -118,6 +119,11 @@ class MainActivity : AppCompatActivity() {
     private fun setupNavigationDrawer() {
         navigationView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
+                R.id.nav_theme -> {
+                    showThemeDialog()
+                    drawerLayout.closeDrawer(GravityCompat.START)
+                    true
+                }
                 R.id.nav_about -> {
                     showAboutDialog()
                     drawerLayout.closeDrawer(GravityCompat.START)
@@ -130,6 +136,30 @@ class MainActivity : AppCompatActivity() {
                 }
                 else -> false
             }
+        }
+    }
+
+    private fun showThemeDialog() {
+        val themes = arrayOf("System Default", "Light", "Dark")
+        AlertDialog.Builder(this, R.style.CustomDialogStyle)
+            .setTitle("Select Theme")
+            .setSingleChoiceItems(themes, getCurrentThemeIndex()) { dialog, which ->
+                when (which) {
+                    0 -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+                    1 -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                    2 -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                }
+                dialog.dismiss()
+            }
+            .show()
+    }
+
+    private fun getCurrentThemeIndex(): Int {
+        return when (AppCompatDelegate.getDefaultNightMode()) {
+            AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM -> 0
+            AppCompatDelegate.MODE_NIGHT_NO -> 1
+            AppCompatDelegate.MODE_NIGHT_YES -> 2
+            else -> 0
         }
     }
     private fun showAboutDialog() {
@@ -163,12 +193,12 @@ class MainActivity : AppCompatActivity() {
                 
             Developed by bizzkoot
             Copyright © 2024
-        """.format("Source Code", "Check Updates").trimIndent()
+        """.format("Github", "Updates").trimIndent()
 
         val spannableString = SpannableString(message)
 
-        // Make "Source Code" clickable
-        val sourceCodeStart = message.indexOf("Source Code")
+        // Make "Github" clickable
+        val sourceCodeStart = message.indexOf("Github")
         spannableString.setSpan(
             object : ClickableSpan() {
                 override fun onClick(view: View) {
@@ -176,12 +206,12 @@ class MainActivity : AppCompatActivity() {
                 }
             },
             sourceCodeStart,
-            sourceCodeStart + "Source Code".length,
+            sourceCodeStart + "Github".length,
             Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
         )
 
-        // Make "Check Updates" clickable
-        val updatesStart = message.indexOf("Check Updates")
+        // Make "Updates" clickable
+        val updatesStart = message.indexOf("Updates")
         spannableString.setSpan(
             object : ClickableSpan() {
                 override fun onClick(view: View) {
@@ -189,7 +219,7 @@ class MainActivity : AppCompatActivity() {
                 }
             },
             updatesStart,
-            updatesStart + "Check Updates".length,
+            updatesStart + "Updates".length,
             Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
         )
 

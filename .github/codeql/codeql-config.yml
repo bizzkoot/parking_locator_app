@@ -1,0 +1,12 @@
+name: "CodeQL Config"
+
+queries:
+  - uses: security-and-quality
+
+paths:
+  - app/src/main/java
+  - app/src/main/kotlin
+
+paths-ignore:
+  - '**/build/**'
+  - '**/generated/**'
