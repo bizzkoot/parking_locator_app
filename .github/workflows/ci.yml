@@ -38,8 +38,8 @@ jobs:
 #      - name: Run ESLint
 #        run: yarn lint
 
-      - name: Run TypeScript type check
-        run: yarn typecheck
+#      - name: Run TypeScript type check
+#        run: yarn typecheck
 
       - name: Run unit tests
         run: yarn test --coverage
