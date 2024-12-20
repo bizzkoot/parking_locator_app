@@ -44,7 +44,6 @@ jobs:
         config-file: .github/codeql/codeql-config.yml
         queries: security-and-quality
         tools: latest
-        debug: true
 
     - name: Setup Java
       if: matrix.language == 'java'
@@ -54,12 +53,12 @@ jobs:
         java-version: '17'
         cache: 'gradle'
 
-    - name: Autobuild
-      uses: github/codeql-action/autobuild@v2
-      env:
-        GRADLE_OPTS: "-Dorg.gradle.daemon=false -Dorg.gradle.debug=true"
-        JAVA_TOOL_OPTIONS: "-Xmx4096m"
-        
+    - name: Build Java
+      if: matrix.language == 'java'
+      run: |
+        cd android
+        chmod +x ./gradlew
+        ./gradlew assembleDebug --info --stacktrace        
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
       with:
