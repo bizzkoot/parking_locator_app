@@ -12,7 +12,6 @@ jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
-    timeout-minutes: 360
     permissions:
       actions: read
       contents: read
@@ -27,45 +26,23 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Cache Gradle packages
-      uses: actions/cache@v3
-      with:
-        path: |
-          ~/.gradle/caches
-          ~/.gradle/wrapper
-        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-        restore-keys: |
-          ${{ runner.os }}-gradle-
-
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v2
       with:
         languages: ${{ matrix.language }}
         config-file: .github/codeql/codeql-config.yml
-        queries: security-and-quality
         tools: latest
 
     - name: Setup Java
-      if: matrix.language == 'java'
       uses: actions/setup-java@v3
       with:
         distribution: 'temurin'
         java-version: '17'
-        cache: 'gradle'
 
     - name: Build Java
-      if: matrix.language == 'java'
-      env:
-        JAVA_HOME: /usr/lib/jvm/temurin-17-jdk-amd64
-        GRADLE_OPTS: "-Dorg.gradle.daemon=false -Xmx4g"
       run: |
         chmod +x ./gradlew
-        ./gradlew assembleDebug \
-          --no-daemon \
-          -Dorg.gradle.dependency.verification=off \
-          -Dorg.gradle.warning.mode=none \
-          --info --stacktrace        
+        ./gradlew assembleDebug
+
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
-      with:
-        category: "/language:${{matrix.language}}"

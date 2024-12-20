@@ -8,9 +8,5 @@ paths:
   - app/src/main/kotlin
 
 paths-ignore:
-  - node_modules
-  - '**/*.test.ts'
-  - '**/*.test.tsx'
-  - '**/__tests__/**'
   - '**/build/**'
   - '**/generated/**'
