@@ -82,7 +82,9 @@ jobs:
         run: chmod +x android/gradlew
 
       - name: Build Android Debug
-        run: cd android && ./gradlew assembleDebug
+        run:  |
+          chmod +x ./gradlew
+          ./gradlew assembleDebug --stacktrace --warning-mode all
 
 
       - name: Upload Android APK
