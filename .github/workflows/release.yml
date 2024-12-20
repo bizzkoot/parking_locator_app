@@ -16,6 +16,7 @@ on:
 jobs:
   build_android:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     permissions:
       contents: 'write'
 
@@ -26,6 +27,18 @@ jobs:
           fetch-depth: 0
           ssh-key: ${{ secrets.DEPLOY_KEY }}
 
+      # Cache steps grouped together for better performance
+      - name: Cache Gradle packages
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      # Development environment setup grouped together
       - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
@@ -39,15 +52,17 @@ jobs:
           node-version: '18'
           cache: 'yarn'
 
-      - name: Install dependencies
-        run: yarn install
-
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2.3'
           bundler-cache: true
 
+      # Dependencies installation
+      - name: Install dependencies
+        run: yarn install
+
+      # Version management steps grouped together
       - name: Bump versions
         run: bundle exec fastlane bump_version version_type:${{ github.event.inputs.version_type }}
 
@@ -62,20 +77,21 @@ jobs:
           git tag "v${{ env.VERSION }}"
           git push origin "v${{ env.VERSION }}"
 
+      # Build steps grouped together
       - name: Setup Android Keystore
         run: |
           echo "${{ secrets.ANDROID_KEYSTORE_BASE64 }}" | base64 --decode > android/app/release.keystore
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x android/gradlew
-  
       - name: Build Android Release
         env:
           KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
           KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
-        run: yarn build:android
+        run: |
+          chmod +x ./gradlew
+          ./gradlew assembleRelease --scan
 
+      # Release creation as final step
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
@@ -83,5 +99,18 @@ jobs:
           tag_name: "v${{ env.VERSION }}"
           name: "Release v${{ env.VERSION }}"
           generate_release_notes: true
+          body: |
+            ## What's Changed
+            
+            For full changelog, see the [commits since previous release](https://github.com/${{ github.repository }}/compare/${{ github.event.before }}...${{ github.sha }})
+            
+            ## Installation
+            1. Download the APK
+            2. Enable "Install from Unknown Sources" in Android settings
+            3. Install the APK
+            
+            ## Notes
+            - Minimum Android version required: Android 6.0 (API 23)
+            - Permissions required: Camera, Location
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

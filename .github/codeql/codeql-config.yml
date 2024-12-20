@@ -6,15 +6,18 @@ queries:
 paths:
   - android
   - src
+  - app/src/main/java
+  - app/src/main/kotlin
 
 paths-ignore:
   - node_modules
   - '**/*.test.ts'
   - '**/*.test.tsx'
   - '**/__tests__/**'
+  - '**/build/**'
+  - '**/generated/**'
 
 build:
   command: |
-    cd android
     chmod +x ./gradlew
-    ./gradlew assembleDebug
+    ./gradlew assembleDebug --scan
