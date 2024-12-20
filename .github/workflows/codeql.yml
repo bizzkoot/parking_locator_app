@@ -55,10 +55,17 @@ jobs:
 
     - name: Build Java
       if: matrix.language == 'java'
+      env:
+        JAVA_HOME: /usr/lib/jvm/temurin-17-jdk-amd64
+        GRADLE_OPTS: "-Dorg.gradle.daemon=false -Xmx4g"
       run: |
-        cd android
         chmod +x ./gradlew
-        ./gradlew assembleDebug --info --stacktrace        
+        ./gradlew assembleDebug \
+          --no-daemon \
+          -Dorg.gradle.dependency.verification=off \
+          -Dorg.gradle.warning.mode=none \
+          --info --stacktrace
+        
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
       with:
