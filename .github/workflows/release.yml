@@ -27,7 +27,6 @@ jobs:
           fetch-depth: 0
           ssh-key: ${{ secrets.DEPLOY_KEY }}
 
-      # Cache steps grouped together for better performance
       - name: Cache Gradle packages
         uses: actions/cache@v3
         with:
@@ -38,7 +37,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
-      # Development environment setup grouped together
       - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
@@ -46,23 +44,12 @@ jobs:
           java-version: '17'
           cache: 'gradle'
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-          cache: 'yarn'
-
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2.3'
           bundler-cache: true
 
-      # Dependencies installation
-      - name: Install dependencies
-        run: yarn install
-
-      # Version management steps grouped together
       - name: Bump versions
         run: bundle exec fastlane bump_version version_type:${{ github.event.inputs.version_type }}
 
@@ -71,16 +58,15 @@ jobs:
           echo "VERSION=$(cat .version)" >> $GITHUB_ENV
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add .version package.json android/app/build.gradle
+          git add .version app/build.gradle
           git commit -m "chore(release): bump version to ${{ env.VERSION }}"
           git push
           git tag "v${{ env.VERSION }}"
           git push origin "v${{ env.VERSION }}"
 
-      # Build steps grouped together
       - name: Setup Android Keystore
         run: |
-          echo "${{ secrets.ANDROID_KEYSTORE_BASE64 }}" | base64 --decode > android/app/release.keystore
+          echo "${{ secrets.ANDROID_KEYSTORE_BASE64 }}" | base64 --decode > app/release.keystore
 
       - name: Build Android Release
         env:
@@ -89,13 +75,12 @@ jobs:
           KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
         run: |
           chmod +x ./gradlew
-          ./gradlew assembleRelease --scan
+          ./gradlew assembleRelease
 
-      # Release creation as final step
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
-          files: android/app/build/outputs/apk/release/app-release.apk
+          files: app/build/outputs/apk/release/app-release.apk
           tag_name: "v${{ env.VERSION }}"
           name: "Release v${{ env.VERSION }}"
           generate_release_notes: true
