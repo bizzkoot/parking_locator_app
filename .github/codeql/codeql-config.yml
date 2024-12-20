@@ -18,6 +18,7 @@ paths-ignore:
   - '**/generated/**'
 
 build:
+  debug: true
   command: |
     chmod +x ./gradlew
-    ./gradlew assembleDebug --scan
+    ./gradlew assembleDebug --info --stacktrace

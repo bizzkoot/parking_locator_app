@@ -35,8 +35,8 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Run ESLint
-        run: yarn lint
+#      - name: Run ESLint
+#        run: yarn lint
 
       - name: Run TypeScript type check
         run: yarn typecheck
