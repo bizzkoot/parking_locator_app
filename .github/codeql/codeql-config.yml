@@ -4,8 +4,6 @@ queries:
   - uses: security-and-quality
 
 paths:
-  - android
-  - src
   - app/src/main/java
   - app/src/main/kotlin
 

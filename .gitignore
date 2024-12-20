@@ -7,22 +7,18 @@
 .gradle/
 build/
 app/build/
-android/build/
-android/.gradle/
+*.hprof
 
 # Android
 /local.properties
 /captures/
 .externalNativeBuild/
 .cxx/
-*.hprof
 app/release/
 
-# Keystores and signing configs
+# Keystores
 *.keystore
-!android/app/debug.keystore
-keystore/
-keystore.properties
+!app/debug.keystore
 
 # System files
 .DS_Store
@@ -31,6 +27,9 @@ keystore.properties
 # Config files
 local.properties
 gradle.properties
+
+# Environment
+.env
 
 # Temp files
 build_files.txt
@@ -44,4 +43,6 @@ github-actions-deploy.pub
 
 # Dependencies
 node_modules/
-.env
+
+# Backup
+backup_old/
