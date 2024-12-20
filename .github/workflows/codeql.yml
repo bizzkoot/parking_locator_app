@@ -23,15 +23,7 @@ jobs:
         language: [ 'java' ]
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
-    - name: Initialize CodeQL
-      uses: github/codeql-action/init@v2
-      with:
-        languages: ${{ matrix.language }}
-        config-file: .github/codeql/codeql-config.yml
-        tools: latest
+    - uses: actions/checkout@v4
 
     - name: Setup Java
       uses: actions/setup-java@v3
@@ -39,10 +31,17 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
 
-    - name: Build Java
-      run: |
-        chmod +x ./gradlew
-        ./gradlew assembleDebug
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: ${{ matrix.language }}
+        config-file: .github/codeql/codeql-config.yml
+
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+      
+    - name: Build with Gradle
+      run: ./gradlew assembleDebug --no-daemon
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
