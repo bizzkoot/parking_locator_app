@@ -57,17 +57,18 @@ jobs:
         config-file: .github/codeql/codeql-config.yml
         queries: security-and-quality
         debug: true
+        tools: latest
+        source-root: app/src/main
 
-    - name: Build Project
+    - name: Manual Build
       run: |
         chmod +x ./gradlew
         ./gradlew clean
-        ./gradlew compileDebugKotlin
-        ./gradlew compileDebugJavaWithJavac
+        ./gradlew compileDebugKotlin --no-daemon
+        ./gradlew compileDebugJavaWithJavac --no-daemon
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
       with:
         category: "/language:${{matrix.language}}"
         upload: true
-        checkout_path: ${{ github.workspace }}
