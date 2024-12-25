@@ -48,7 +48,12 @@ jobs:
         cache: 'gradle'
 
     - name: Setup Android SDK
-      uses: android-actions/setup-android@v2
+      uses: android-actions/setup-android@v3
+      with:
+        cmdline-tools-version: latest
+
+    - name: Accept Android SDK Licenses
+      run: yes | sdkmanager --licenses
 
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v2
@@ -69,4 +74,5 @@ jobs:
       with:
         category: "/language:${{matrix.language}}"
         upload: true
+        checkout_path: ${{ github.workspace }}
         checkout_path: ${{ github.workspace }}

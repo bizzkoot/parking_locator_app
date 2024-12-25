@@ -42,7 +42,12 @@ jobs:
           cache: 'gradle'
 
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v2
+        uses: android-actions/setup-android@v3
+        with:
+          cmdline-tools-version: latest
+
+      - name: Accept Android SDK Licenses
+        run: yes | sdkmanager --licenses
 
       - name: Run Lint Check
         run: ./gradlew lint
@@ -66,5 +71,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: test-results
-          path: app/build/reports/
           path: app/build/reports/
