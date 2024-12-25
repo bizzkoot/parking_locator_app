@@ -42,9 +42,7 @@ jobs:
           cache: 'gradle'
 
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-        with:
-          cmdline-tools-version: latest
+        uses: android-actions/setup-android@v2
 
       - name: Accept Android SDK Licenses
         run: yes | sdkmanager --licenses
