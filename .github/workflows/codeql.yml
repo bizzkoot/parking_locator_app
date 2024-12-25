@@ -50,9 +50,6 @@ jobs:
     - name: Setup Android SDK
       uses: android-actions/setup-android@v2
 
-    - name: Accept Android SDK Licenses
-      run: yes | sdkmanager --licenses
-
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v2
       with:
@@ -61,11 +58,12 @@ jobs:
         queries: security-and-quality
         debug: true
 
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-      
-    - name: Build with Gradle
-      run: ./gradlew assembleDebug --no-daemon
+    - name: Build Project
+      run: |
+        chmod +x ./gradlew
+        ./gradlew clean
+        ./gradlew compileDebugKotlin
+        ./gradlew compileDebugJavaWithJavac
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
