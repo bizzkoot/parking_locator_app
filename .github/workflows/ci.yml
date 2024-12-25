@@ -41,6 +41,9 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
 
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v2
+
       - name: Run Lint Check
         run: ./gradlew lint
 
@@ -63,4 +66,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: test-results
+          path: app/build/reports/
           path: app/build/reports/

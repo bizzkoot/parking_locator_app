@@ -47,6 +47,9 @@ jobs:
         java-version: '17'
         cache: 'gradle'
 
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v2
+
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v2
       with:
