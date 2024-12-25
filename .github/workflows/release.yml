@@ -13,12 +13,17 @@ on:
           - minor
           - patch
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build_android:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     permissions:
       contents: 'write'
+      security-events: write
 
     steps:
       - name: Checkout code
@@ -49,6 +54,9 @@ jobs:
         with:
           ruby-version: '3.2.3'
           bundler-cache: true
+
+      - name: Run Tests
+        run: ./gradlew test
 
       - name: Bump versions
         run: bundle exec fastlane bump_version version_type:${{ github.event.inputs.version_type }}
@@ -84,6 +92,8 @@ jobs:
           tag_name: "v${{ env.VERSION }}"
           name: "Release v${{ env.VERSION }}"
           generate_release_notes: true
+          draft: true
+          prerelease: false
           body: |
             ## What's Changed
             
@@ -97,5 +107,16 @@ jobs:
             ## Notes
             - Minimum Android version required: Android 6.0 (API 23)
             - Permissions required: Camera, Location
+            
+            ## Test Results
+            - All unit tests passed ✅
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: release-artifacts
+          path: |
+            app/build/outputs/apk/release/
+            app/build/reports/
