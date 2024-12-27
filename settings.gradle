@@ -15,11 +15,3 @@ dependencyResolutionManagement {
 }
 rootProject.name = "parking_locator_app"
 include ':app'
-
-gradle.taskGraph.whenReady {
-    gradle.taskGraph.allTasks.each { task ->
-        if (task.name.contains("testClasses")) {
-            task.enabled = false
-        }
-    }
-}
