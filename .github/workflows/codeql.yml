@@ -63,9 +63,7 @@ jobs:
     - name: Manual Build
       run: |
         chmod +x ./gradlew
-        ./gradlew clean
-        ./gradlew compileDebugKotlin --no-daemon
-        ./gradlew compileDebugJavaWithJavac --no-daemon
+        ./gradlew codeqlBuild --no-daemon
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
