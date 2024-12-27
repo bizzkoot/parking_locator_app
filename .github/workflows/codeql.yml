@@ -58,14 +58,13 @@ jobs:
         debug: true
         tools: latest
         source-root: app/src/main
+        build-mode: none # Added build-mode: none
 
     - name: Manual Build
       run: |
         chmod +x ./gradlew
         ./gradlew clean
-        ./gradlew compileDebugKotlin --no-daemon
-        ./gradlew compileDebugJavaWithJavac --no-daemon
-
+        ./gradlew assembleDebug --no-daemon # Updated to assembleDebug
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
       with:
