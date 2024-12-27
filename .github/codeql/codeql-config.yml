@@ -1,9 +1,5 @@
 name: "CodeQL Config"
 
-queries:
-  - uses: security-and-quality
-  - uses: security-extended
-
 paths:
   - app/src/main/java
   - app/src/main/kotlin
