@@ -118,10 +118,12 @@ android {
             useJUnitPlatform()
         }
     }
-
-//    dexOptions {
-//        javaMaxHeapSize "4g"
-//    }
+    
+    android {
+        buildFeatures {
+            buildConfig = true
+        }
+    }
 }
 
 dependencies {

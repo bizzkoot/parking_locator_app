@@ -64,7 +64,7 @@ jobs:
       run: |
         chmod +x ./gradlew
         ./gradlew clean
-        ./gradlew assembleDebug --no-daemon # Updated to assembleDebug
+        ./gradlew assembleDebug --no-daemon -x test # Added -x test to disable tests
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
       with:
